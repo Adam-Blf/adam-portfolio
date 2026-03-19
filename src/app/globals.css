@@ -48,143 +48,143 @@ section {
   background: var(--color-surface);
   border-radius: var(--radius);
   box-shadow: var(--shadow-md);
-  margin: var(--space-lg) 0;
-  padding: var(--space-xl);
-}
 
-header {
-  background: var(--color-surface);
-  box-shadow: var(--shadow-sm);
-}
-
-footer {
-  background: var(--color-surface);
-  color: var(--color-secondary);
-  font-size: 0.95rem;
-  padding: var(--space-lg);
-  border-top: 1px solid var(--color-border);
-}
-
-/* Animations Apple-like */
-[root] {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.fade-in {
-  animation: fade-in 0.7s cubic-bezier(0.16,1,0.3,1);
-}
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--font-display), -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    letter-spacing: -0.015em;
-    font-weight: 600;
+  /* Apple-like Design System */
+  :root {
+    --color-primary: #111111;
+    --color-secondary: #555555;
+    --color-bg: #f5f5f7;
+    --color-bg-dark: #1a1a1a;
+    --color-accent: #0071e3;
+    --radius: 28px;
+    --shadow: 0 8px 32px 0 rgba(60,60,60,0.08);
+    --font-main: 'Inter', 'San Francisco', 'SF Pro Display', Arial, sans-serif;
   }
 
-  ::selection {
-    background: var(--color-cta);
-    color: #ffffff;
+  html, body {
+    font-family: var(--font-main);
+    background: var(--color-bg);
+    color: var(--color-primary);
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-}
 
-@layer components {
-
-  /* Apple Official Structural Container */
   .container-apple {
-    max-width: 1024px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 0 22px;
+    padding: 0 2.5rem;
   }
 
-  /* Apple-Style Buttons */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 1s cubic-bezier(.4,0,.2,1) forwards;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
   .btn-apple-primary {
-    background-color: var(--color-cta);
-    color: #ffffff;
-    padding: 11px 21px;
-    border-radius: 980px;
-    /* Official pill shape */
-    font-weight: 500;
-    font-size: 17px;
-    transition: all 400ms cubic-bezier(0.4, 0, 0.25, 1);
+    display: inline-block;
+    background: var(--color-accent);
+    color: #fff;
+    font-weight: 600;
+    padding: 0.85em 2.2em;
+    border-radius: 999px;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.08);
+    transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+    border: none;
+    outline: none;
     cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    border: 1px solid transparent;
+    text-decoration: none;
   }
-
   .btn-apple-primary:hover {
-    filter: brightness(1.1);
-    transform: scale(1.02);
+    background: #005bb5;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.12);
+    transform: translateY(-2px) scale(1.03);
   }
 
   .btn-apple-secondary {
-    background-color: transparent;
-    color: var(--color-cta);
-    padding: 10px 20px;
-    border-radius: 980px;
-    font-weight: 400;
-    font-size: 17px;
-    transition: all 400ms cubic-bezier(0.4, 0, 0.25, 1);
+    display: inline-block;
+    background: #fff;
+    color: var(--color-primary);
+    font-weight: 600;
+    padding: 0.85em 2.2em;
+    border-radius: 999px;
+    font-size: 1.1rem;
+    border: 1.5px solid #d1d5db;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.04);
+    transition: background 0.2s, box-shadow 0.2s, color 0.2s, transform 0.1s;
+    outline: none;
     cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
+    text-decoration: none;
   }
-
   .btn-apple-secondary:hover {
-    text-decoration: underline;
+    background: #f5f5f7;
+    color: var(--color-accent);
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+    transform: translateY(-2px) scale(1.03);
   }
 
-  /* Apple Cards */
   .card-apple {
-    background-color: var(--color-surface);
-    border-radius: 20px;
-    padding: 32px;
-    box-shadow: var(--shadow-sm);
-    transition: transform 500ms cubic-bezier(0.4, 0, 0.25, 1), box-shadow 500ms ease;
-    cursor: pointer;
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 2.5rem 2rem 2rem 2rem;
+    transition: box-shadow 0.2s, transform 0.15s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 260px;
+    position: relative;
     overflow: hidden;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 0.5rem;
   }
-
-  .dark .card-apple {
-    border-color: rgba(255, 255, 255, 0.05);
-  }
-
   .card-apple:hover {
-    box-shadow: var(--shadow-xl);
-    transform: scale(1.02);
+    box-shadow: 0 12px 40px 0 rgba(0,0,0,0.13);
+    transform: translateY(-4px) scale(1.025);
   }
 
-  /* Navigation Blur */
-  .nav-blur {
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  .text-secondary {
+    color: var(--color-secondary);
   }
 
-  .dark .nav-blur {
-    background-color: rgba(0, 0, 0, 0.8);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  /* Responsive */
+  @media (max-width: 900px) {
+    .container-apple {
+      padding: 0 1rem;
+    }
+    .card-apple {
+      padding: 2rem 1.2rem 1.5rem 1.2rem;
+    }
   }
 
-  .logo-apple {
-    transition: filter 400ms ease;
+  @media (max-width: 600px) {
+    .container-apple {
+      padding: 0 0.5rem;
+    }
+    .card-apple {
+      padding: 1.2rem 0.7rem 1rem 0.7rem;
+    }
+    h1 {
+      font-size: 2.2rem !important;
+    }
+    h2 {
+      font-size: 1.5rem !important;
+    }
   }
-
-  .dark .logo-apple {
-    filter: invert(1) brightness(2);
-  }
-}
-
 @layer utilities {
   .text-apple-hero {
     font-size: clamp(40px, 10vw, 56px);
