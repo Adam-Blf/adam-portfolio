@@ -1,6 +1,79 @@
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   }
+/* Design System Apple-like */
 
+:root {
+  --color-background: #f5f5f7;
+  --color-surface: #ffffff;
+  --color-primary: #1d1d1f;
+  --color-secondary: #6e6e73;
+  --color-accent: #0071e3;
+  --color-border: #e0e0e5;
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 12px 24px rgba(0,0,0,0.12);
+  --radius: 18px;
+  --font-display: 'SF Pro Display', 'Archivo', 'Inter', sans-serif;
+  --font-body: 'SF Pro Text', 'Space Grotesk', 'Inter', sans-serif;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+}
+
+button, a {
+  font-family: var(--font-display);
+  border-radius: var(--radius);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+section {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  margin: var(--space-lg) 0;
+  padding: var(--space-xl);
+}
+
+header {
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+footer {
+  background: var(--color-surface);
+  color: var(--color-secondary);
+  font-size: 0.95rem;
+  padding: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+/* Animations Apple-like */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fade-in 0.7s cubic-bezier(0.16,1,0.3,1);
+}
   h1,
   h2,
   h3,
