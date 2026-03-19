@@ -183,7 +183,7 @@ export default function RootLayout({
             <a href="#main-content" className="skip-link">
               Aller au contenu principal
             </a>
-            <Header />
+            <HeaderApple />
             <main id="main-content" tabIndex={-1}>{children}</main>
             <Footer />
           </I18nProvider>
