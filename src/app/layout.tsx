@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Inter, Fira_Code } from 'next/font/google'
 
 import Header from '@/components/layout/Header'
+import HeaderApple from '@/components/layout/HeaderApple'
 import Footer from '@/components/layout/Footer'
 import { ThemeProvider } from '@/components/providers/ThemeProvider'
 import { I18nProvider } from '@/lib/i18n'
