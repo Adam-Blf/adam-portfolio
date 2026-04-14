@@ -19,7 +19,8 @@ const config: Config = {
       fontFamily: {
         display: ['var(--font-display)', 'Inter', 'sans-serif'],
         sans: ['var(--font-body)', 'Inter', 'sans-serif'],
-        mono: ['var(--font-mono)', 'monospace'],
+        serif: ['"Instrument Serif"', 'serif'],
+        mono: ['var(--font-mono)', '"JetBrains Mono"', 'monospace'],
       },
       boxShadow: {
         sm: 'var(--shadow-sm)',
