@@ -175,7 +175,7 @@ export default function EvolutionPage() {
             {years.map(year => (
               <div key={year} className="mb-16">
                 <div className="flex items-baseline gap-4 mb-8">
-                  <h2 className="text-4xl font-bold text-primary">{year}</h2>
+                  <h2 className="text-4xl font-bold text-primary tabular-nums">{year}</h2>
                   <div className="h-px flex-1 bg-black/5 dark:bg-white/10" />
                 </div>
 

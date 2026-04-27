@@ -98,7 +98,7 @@ export default function Home() {
       <div className="group py-6 bg-[#0a0a0b] text-[#f5f1ea] overflow-hidden border-y border-[#f5f1ea]/10">
         <div
           className="whitespace-nowrap flex gap-10 font-serif text-3xl italic group-hover:[animation-play-state:paused]"
-          style={{ animation: 'scroll 45s linear infinite' }}
+          style={reduce ? undefined : { animation: 'scroll 45s linear infinite' }}
         >
           {[
             'Python',

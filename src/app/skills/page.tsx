@@ -139,7 +139,7 @@ export default function SkillsPage() {
               <RevealCard key={stat.label} delay={i * 0.08}>
                 <div className="card p-8 text-center flex flex-col justify-center">
                   <p className="text-xs font-bold uppercase tracking-widest text-secondary mb-2">{stat.label}</p>
-                  <p className="text-4xl font-semibold text-primary">{stat.value}</p>
+                  <p className="text-4xl font-semibold text-primary tabular-nums">{stat.value}</p>
                 </div>
               </RevealCard>
             ))}
@@ -205,7 +205,7 @@ export default function SkillsPage() {
                     <div>
                       <h3 className="text-xl font-semibold text-primary mb-1">{cert.name}</h3>
                       <p className="text-secondary font-medium mb-1">{cert.issuer}</p>
-                      <p className="text-sm text-secondary/60 font-medium">{cert.year}</p>
+                      <p className="text-sm text-secondary/60 font-medium tabular-nums">{cert.year}</p>
                     </div>
                   </div>
                 </RevealCard>

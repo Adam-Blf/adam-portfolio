@@ -121,7 +121,7 @@ export default function FormationPage() {
                   <Award className="mb-6 opacity-80" size={32} />
                   <h3 className="text-2xl font-semibold mb-2">Certification RNCP</h3>
                   <p className="font-medium opacity-90 mb-4">{activeFormation.rncpTitle}</p>
-                  <div className="inline-block px-3 py-1 bg-white/20 rounded-full text-xs font-bold uppercase tracking-wider">
+                  <div className="inline-block px-3 py-1 bg-white/20 rounded-full text-xs font-bold uppercase tracking-wider tabular-nums">
                     {activeFormation.rncp}
                   </div>
                 </div>
@@ -149,7 +149,7 @@ export default function FormationPage() {
                       <div key={idx}>
                         <div className="flex justify-between text-xs font-bold mb-2">
                           <span className="uppercase tracking-widest text-secondary/60">{skill.name}</span>
-                          <span>{skill.level}%</span>
+                          <span className="tabular-nums">{skill.level}%</span>
                         </div>
                         <div className="h-1 w-full bg-black/10 dark:bg-white/10 rounded-full overflow-hidden">
                           <div className="h-full bg-cta/80" style={{ width: `${skill.level}%` }} />

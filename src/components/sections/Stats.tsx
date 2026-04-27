@@ -13,7 +13,7 @@ interface GitHubStats {
 function StatCard({ label, value, loading }: { label: string; value: string; loading: boolean }) {
   return (
     <div className="card p-8 text-center flex flex-col justify-center">
-      <p className="text-4xl font-semibold text-primary mb-2">
+      <p className="text-4xl font-semibold text-primary mb-2 tabular-nums">
         {loading ? '...' : value}
       </p>
       <p className="text-xs font-bold uppercase tracking-widest text-secondary">
