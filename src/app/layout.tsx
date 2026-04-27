@@ -1,3 +1,5 @@
+import './globals.css'
+
 import type { Metadata, Viewport } from 'next'
 import { Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google'
 
