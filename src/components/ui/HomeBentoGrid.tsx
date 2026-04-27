@@ -16,7 +16,7 @@ function BentoProfile() {
     <LiquidGlassCard className="flex flex-col items-center justify-center min-h-[160px]">
       {/* TODO: Add memoji/avatar and magnetic button */}
       <span className="text-lg font-semibold">About Me</span>
-      <button className="mt-4 px-6 py-2 rounded-full bg-glass-bg glass-liquid font-medium transition-transform hover:scale-105">Magnetic Button</button>
+      <button className="mt-4 px-6 py-2 rounded-full bg-glass-bg glass-liquid font-medium transition-transform motion-reduce:transition-none hover:scale-105 motion-reduce:hover:scale-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]">Magnetic Button</button>
     </LiquidGlassCard>
   );
 }
@@ -35,7 +35,7 @@ function BentoBusiness() {
     <LiquidGlassCard className="flex flex-col items-center justify-center min-h-[160px]">
       {/* TODO: Link to Douille project, entrepreneurial framing */}
       <span className="text-lg font-semibold">Douille Project</span>
-      <a href="/projects/douille" className="mt-2 underline text-accent">Entrepreneurial Foundation</a>
+      <a href="/projects/douille" className="mt-2 underline text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]">Entrepreneurial Foundation</a>
     </LiquidGlassCard>
   );
 }

@@ -67,7 +67,7 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`px-4 py-1 text-xs font-normal tracking-wide transition-colors rounded-full ${pathname === item.href
+                  className={`px-4 py-1 text-xs font-normal tracking-wide transition-colors motion-reduce:transition-none rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0] ${pathname === item.href
                     ? 'text-primary font-medium'
                     : 'text-secondary hover:text-primary'
                     }`}
@@ -81,7 +81,7 @@ export default function Header() {
               <div className="relative ml-2" ref={langMenuRef}>
                 <button
                   onClick={() => setShowLangMenu(!showLangMenu)}
-                  className="flex items-center gap-1.5 px-3 py-1 text-[10px] font-medium text-secondary hover:text-primary transition-colors tracking-widest"
+                  className="flex items-center gap-1.5 px-3 py-1 text-[10px] font-medium text-secondary hover:text-primary transition-colors motion-reduce:transition-none tracking-widest focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]"
                   aria-label="Change language"
                 >
                   <Globe size={13} />
@@ -104,7 +104,7 @@ export default function Header() {
                           setLocale(lang.value as Locale)
                           setShowLangMenu(false)
                         }}
-                        className={`flex items-center w-full px-4 py-2 text-sm rounded-xl transition-colors ${locale === lang.value
+                        className={`flex items-center w-full px-4 py-2 text-sm rounded-xl transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0] ${locale === lang.value
                           ? 'bg-black/5 dark:bg-white/10 text-primary font-medium'
                           : 'text-secondary hover:bg-black/5 dark:hover:bg-white/5'
                           }`}
@@ -121,7 +121,7 @@ export default function Header() {
             <div className="flex items-center md:hidden">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="p-2 text-primary opacity-80"
+                className="p-2 text-primary opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]"
                 aria-label="Toggle menu"
               >
                 {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -142,7 +142,7 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`text-2xl font-semibold tracking-tight ${pathname === item.href ? 'text-cta' : 'text-primary'
+                className={`text-2xl font-semibold tracking-tight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0b] ${pathname === item.href ? 'text-cta' : 'text-primary'
                   }`}
               >
                 {t(`nav.${item.key}`)}
@@ -157,7 +157,7 @@ export default function Header() {
                     setLocale(lang as Locale)
                     setIsMobileMenuOpen(false)
                   }}
-                  className={`text-lg uppercase font-medium ${locale === lang ? 'text-cta' : 'text-secondary'
+                  className={`text-lg uppercase font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0b] ${locale === lang ? 'text-cta' : 'text-secondary'
                     }`}
                 >
                   {lang}

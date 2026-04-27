@@ -4,6 +4,36 @@
 
 /* Design System Apple-like */
 
+/* Accessibility · skip link visible only on focus (WCAG 2.4.1) */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  z-index: 9999;
+}
+.skip-link:focus {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  background: #0a0a0b;
+  color: #faf7f0;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  outline: 3px solid #6b4c7a;
+  outline-offset: 2px;
+}
+
+/* Easing global token · reuse en CSS pur hors framer-motion */
+:root {
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
 :root {
   --color-background: #f5f5f7;
   --color-surface: #ffffff;

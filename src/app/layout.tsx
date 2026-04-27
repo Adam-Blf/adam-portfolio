@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, Fira_Code } from 'next/font/google'
+import { Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google'
 
 import Header from '@/components/layout/Header'
 import HeaderApple from '@/components/layout/HeaderApple'
@@ -7,23 +7,23 @@ import Footer from '@/components/layout/Footer'
 import { ThemeProvider } from '@/components/providers/ThemeProvider'
 import { I18nProvider } from '@/lib/i18n'
 
-const inter = Inter({
+const inter = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800'],
+  weight: ['400', '500', '600', '700', '800'],
   display: 'swap',
   variable: '--font-display',
 })
 
-const interBody = Inter({
+const interBody = Plus_Jakarta_Sans({
   subsets: ['latin'],
   weight: ['400', '500'],
   display: 'swap',
   variable: '--font-body',
 })
 
-const firaCode = Fira_Code({
+const firaCode = JetBrains_Mono({
   subsets: ['latin'],
-  weight: ['400', '500'],
+  weight: ['400', '500', '700'],
   display: 'swap',
   variable: '--font-mono',
 })
@@ -181,7 +181,7 @@ export default function RootLayout({
         <ThemeProvider>
           <I18nProvider>
             {/* Skip link for accessibility */}
-            <a href="#main-content" className="skip-link">
+            <a href="#main-content" className="skip-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]">
               Aller au contenu principal
             </a>
             <HeaderApple />

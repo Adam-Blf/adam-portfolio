@@ -47,12 +47,12 @@ export default function AboutPreview() {
           </div>
 
           <div className="flex flex-wrap gap-8 items-center">
-            <Link href="/timeline" className="btn-apple-primary">
+            <Link href="/timeline" className="btn-apple-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]">
               Mon Parcours
             </Link>
-            <Link href="/contact" className="btn-apple-secondary group py-0 h-fit">
+            <Link href="/contact" className="btn-apple-secondary group py-0 h-fit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]">
               Me contacter
-              <span className="ml-1 opacity-70 group-hover:translate-x-0.5 transition-transform">›</span>
+              <span className="ml-1 opacity-70 group-hover:translate-x-0.5 motion-reduce:group-hover:translate-x-0 transition-transform motion-reduce:transition-none">›</span>
             </Link>
           </div>
         </div>

@@ -24,7 +24,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-10 gap-x-8 mb-16">
           {/* Logo Section */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1 border-b md:border-b-0 border-black/5 dark:border-white/5 pb-8 md:pb-0 mb-4 md:mb-0">
-            <Link href="/" className="inline-block opacity-90 hover:opacity-100 transition-opacity logo-apple">
+            <Link href="/" className="inline-block opacity-90 hover:opacity-100 transition-opacity motion-reduce:transition-none logo-apple focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]">
               <Image
                 src="/logo-adam.svg"
                 alt="Adam Beloucif"
@@ -43,7 +43,7 @@ export default function Footer() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-secondary hover:text-primary text-[12px] transition-colors font-normal"
+                  className="text-secondary hover:text-primary text-[12px] transition-colors motion-reduce:transition-none font-normal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]"
                 >
                   {t(`nav.${item.key}`)}
                 </Link>
@@ -55,7 +55,7 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <h4 className="text-primary text-[12px] font-semibold tracking-tight">Contact</h4>
             <div className="flex flex-col gap-2.5 text-[12px] text-secondary font-normal">
-              <a href={`mailto:${personalInfo.email}`} className="hover:text-primary transition-colors">
+              <a href={`mailto:${personalInfo.email}`} className="hover:text-primary transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]">
                 Email
               </a>
               <span className="opacity-80">Paris, France</span>
@@ -66,10 +66,10 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <h4 className="text-primary text-[12px] font-semibold tracking-tight">Social</h4>
             <div className="flex flex-col gap-2.5 text-[12px] text-secondary font-normal">
-              <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]">
                 GitHub
               </a>
-              <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]">
                 LinkedIn
               </a>
             </div>

@@ -123,7 +123,10 @@ export default function GlobalError({
                 display: 'flex',
                 alignItems: 'center',
                 gap: '8px',
+                outlineOffset: '2px',
               }}
+              onFocus={(e) => { e.currentTarget.style.outline = '2px solid #6b4c7a' }}
+              onBlur={(e) => { e.currentTarget.style.outline = 'none' }}
             >
               Reessayer
             </button>
@@ -138,7 +141,10 @@ export default function GlobalError({
                 border: '1px solid rgba(255,255,255,0.2)',
                 borderRadius: '4px',
                 cursor: 'pointer',
+                outlineOffset: '2px',
               }}
+              onFocus={(e) => { e.currentTarget.style.outline = '2px solid #6b4c7a' }}
+              onBlur={(e) => { e.currentTarget.style.outline = 'none' }}
             >
               Accueil
             </button>

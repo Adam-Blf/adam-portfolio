@@ -33,10 +33,10 @@ export default function MinimalProHero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-[19px]">
-            <Link href="/projects" className="btn-apple-primary">
+            <Link href="/projects" className="btn-apple-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]">
               {t('hero.exploreProjects')}
             </Link>
-            <Link href="/contact" className="btn-apple-secondary">
+            <Link href="/contact" className="btn-apple-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]">
               {t('hero.getInTouch')} <span className="ml-1 opacity-70">›</span>
             </Link>
           </div>

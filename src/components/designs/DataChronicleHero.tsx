@@ -221,14 +221,14 @@ export default function DataChronicleHero() {
             <div className="column-content opacity-0 flex flex-wrap gap-4 pt-4">
               <Link
                 href="/projects"
-                className="group inline-flex items-center gap-2 px-6 py-3 bg-amber-500 text-black font-bold text-sm hover:bg-amber-400 transition-colors"
+                className="group inline-flex items-center gap-2 px-6 py-3 bg-amber-500 text-black font-bold text-sm hover:bg-amber-400 transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0b]"
               >
                 View Projects
-                <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:group-hover:translate-x-0 motion-reduce:group-hover:translate-y-0 transition-transform motion-reduce:transition-none" />
               </Link>
               <Link
                 href="/timeline"
-                className="inline-flex items-center gap-2 px-6 py-3 border border-zinc-700 text-zinc-300 font-medium text-sm hover:border-amber-500 hover:text-amber-500 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-zinc-700 text-zinc-300 font-medium text-sm hover:border-amber-500 hover:text-amber-500 transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0b]"
               >
                 View Timeline
               </Link>
@@ -301,7 +301,7 @@ export default function DataChronicleHero() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-between text-sm text-zinc-400 hover:text-amber-500 transition-colors"
+                    className="flex items-center justify-between text-sm text-zinc-400 hover:text-amber-500 transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0b]"
                   >
                     {link.label}
                     <ArrowUpRight size={12} />

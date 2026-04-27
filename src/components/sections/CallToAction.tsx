@@ -21,16 +21,16 @@ export default function CallToAction({ variant = 'default' }: CallToActionProps)
             je suis prêt pour votre prochain défi technique.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link href="/contact" className="btn-primary !bg-white !text-black hover:!bg-gray-100">
+            <Link href="/contact" className="btn-primary !bg-white !text-black hover:!bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0b]">
               Me contacter
             </Link>
             <a
               href={personalInfo.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary !text-white hover:underline group"
+              className="btn-secondary !text-white hover:underline group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0b]"
             >
-              Voir mon GitHub <ChevronRight size={20} className="inline ml-1 transition-transform group-hover:translate-x-1" />
+              Voir mon GitHub <ChevronRight size={20} className="inline ml-1 transition-transform motion-reduce:transition-none group-hover:translate-x-1 motion-reduce:group-hover:translate-x-0" />
             </a>
           </div>
         </div>

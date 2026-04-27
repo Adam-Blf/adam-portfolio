@@ -605,10 +605,10 @@ export default function Hero() {
                   href={link.href}
                   target={link.label !== 'Email' ? '_blank' : undefined}
                   rel={link.label !== 'Email' ? 'noopener noreferrer' : undefined}
-                  className="flex items-center gap-2 text-[--text-secondary] hover:text-accent transition-colors group"
+                  className="flex items-center gap-2 text-[--text-secondary] hover:text-accent transition-colors motion-reduce:transition-none group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0b]"
                   aria-label={link.label}
                 >
-                  <link.icon size={18} className="group-hover:scale-110 transition-transform" />
+                  <link.icon size={18} className="group-hover:scale-110 motion-reduce:group-hover:scale-100 transition-transform motion-reduce:transition-none" />
                   <span className="text-sm font-mono hidden sm:inline">{link.label}</span>
                 </a>
               ))}
@@ -619,7 +619,7 @@ export default function Hero() {
               ref={scrollRef}
               type="button"
               aria-label={t('hero.scroll')}
-              className="flex items-center gap-3 text-[--text-muted] cursor-pointer hover:text-accent transition-colors"
+              className="flex items-center gap-3 text-[--text-muted] cursor-pointer hover:text-accent transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0b]"
               onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
             >
               <span className="font-mono text-xs tracking-wider hidden md:inline">{t('hero.scroll')}</span>

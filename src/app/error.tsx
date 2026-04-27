@@ -162,7 +162,7 @@ export default function Error({
             <div className="animate-in mb-6 anim-hidden">
               <button
                 onClick={() => setShowDetails(!showDetails)}
-                className="text-xs text-[--text-muted] hover:text-accent transition-colors flex items-center gap-2 mx-auto"
+                className="text-xs text-[--text-muted] hover:text-accent transition-colors motion-reduce:transition-none flex items-center gap-2 mx-auto focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]"
               >
                 <Terminal size={12} />
                 {showDetails ? 'Masquer' : 'Afficher'} les details
@@ -193,13 +193,13 @@ export default function Error({
           >
             <button
               onClick={handleRetry}
-              className="retry-btn btn btn-primary group"
+              className="retry-btn btn btn-primary group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]"
             >
-              <RefreshCw size={16} className="group-hover:rotate-180 transition-transform duration-500" />
+              <RefreshCw size={16} className="group-hover:rotate-180 transition-transform motion-reduce:transition-none duration-500" />
               Reessayer
             </button>
-            <Link href="/" className="btn btn-outline group">
-              <Home size={16} className="group-hover:scale-110 transition-transform" />
+            <Link href="/" className="btn btn-outline group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]">
+              <Home size={16} className="group-hover:scale-110 transition-transform motion-reduce:transition-none" />
               Retour a l&apos;accueil
             </Link>
           </div>

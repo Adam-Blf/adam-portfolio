@@ -33,7 +33,7 @@ export default function FeaturedProjects() {
           </h2>
           <Link
             href="/projects"
-            className="text-cta hover:underline font-medium text-sm flex items-center gap-1 group"
+            className="text-cta hover:underline font-medium text-sm flex items-center gap-1 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]"
           >
             Tout explorer
             <span className="opacity-70 group-hover:translate-x-0.5 transition-transform">›</span>
@@ -85,7 +85,7 @@ export default function FeaturedProjects() {
                         href={githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-cta hover:underline font-medium text-sm inline-flex items-center gap-1.5"
+                        className="text-cta hover:underline font-medium text-sm inline-flex items-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]"
                       >
                         GitHub
                       </a>
@@ -94,7 +94,7 @@ export default function FeaturedProjects() {
                           href={homepage}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-cta hover:underline font-medium text-sm inline-flex items-center gap-1.5"
+                          className="text-cta hover:underline font-medium text-sm inline-flex items-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]"
                         >
                           Démo
                         </a>
@@ -110,14 +110,14 @@ export default function FeaturedProjects() {
           <div className="flex justify-center md:justify-end gap-3 mt-4">
             <button
               onClick={() => scrollRow('left')}
-              className="p-3 rounded-full bg-surface dark:bg-surface/50 border border-black/5 dark:border-white/5 text-secondary hover:text-primary transition-all active:scale-95"
+              className="p-3 rounded-full bg-surface dark:bg-surface/50 border border-black/5 dark:border-white/5 text-secondary hover:text-primary transition-all motion-reduce:transition-none active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]"
               aria-label="Précédent"
             >
               <ChevronLeft size={20} />
             </button>
             <button
               onClick={() => scrollRow('right')}
-              className="p-3 rounded-full bg-surface dark:bg-surface/50 border border-black/5 dark:border-white/5 text-secondary hover:text-primary transition-all active:scale-95"
+              className="p-3 rounded-full bg-surface dark:bg-surface/50 border border-black/5 dark:border-white/5 text-secondary hover:text-primary transition-all motion-reduce:transition-none active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]"
             >
               <ChevronRight size={20} />
             </button>

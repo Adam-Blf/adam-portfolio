@@ -234,16 +234,16 @@ export default function NotFound() {
             >
               <Link
                 href="/"
-                className="btn btn-primary group"
+                className="btn btn-primary group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]"
               >
-                <Home size={16} className="group-hover:scale-110 transition-transform" />
+                <Home size={16} className="group-hover:scale-110 transition-transform motion-reduce:transition-none" />
                 Retour a l&apos;accueil
               </Link>
               <button
                 onClick={() => window.history.back()}
-                className="btn btn-outline group"
+                className="btn btn-outline group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]"
               >
-                <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
+                <ArrowLeft size={16} className="group-hover:-translate-x-1 motion-reduce:group-hover:translate-x-0 transition-transform motion-reduce:transition-none" />
                 Page precedente
               </button>
             </div>

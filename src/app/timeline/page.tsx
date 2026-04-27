@@ -1,8 +1,11 @@
 'use client'
 
-import { useEffect, useState, useMemo, useCallback } from 'react'
+import { useEffect, useState, useMemo } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { motion, useReducedMotion } from 'framer-motion'
+import { BlurText } from '@/components/animations/BlurText'
+import { RevealCard } from '@/components/animations/RevealCard'
 import {
   experiences,
   education,
@@ -16,11 +19,7 @@ import {
   Heart,
   Award,
   ChevronDown,
-  MapPin,
-  Calendar,
   ArrowUp,
-  X,
-  ChevronRight
 } from 'lucide-react'
 import { useI18n } from '@/lib/i18n'
 import ErrorBoundary from '@/components/ErrorBoundary'
@@ -107,6 +106,7 @@ export default function EvolutionPage() {
   const [expandedCard, setExpandedCard] = useState<string | null>(null)
   const [showScrollTop, setShowScrollTop] = useState(false)
   const { t } = useI18n()
+  const reduce = useReducedMotion()
 
   const allEvents = useMemo(() => buildTimeline(), [])
   const filteredEvents = useMemo(() => filter === 'all' ? allEvents : allEvents.filter(e => e.type === filter), [allEvents, filter])
@@ -126,28 +126,49 @@ export default function EvolutionPage() {
 
           {/* Header */}
           <div className="max-w-3xl mb-16">
+            <motion.div
+              initial={reduce ? false : { opacity: 0, y: -8 }}
+              animate={reduce ? false : { opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              className="font-mono text-xs text-[#0a0a0b]/50 dark:text-[#faf7f0]/50 mb-6 flex items-center gap-3"
+            >
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#8faa88] animate-pulse" />
+              PARCOURS · EXPÉRIENCE · FORMATION
+            </motion.div>
+
             <h1 className="text-5xl md:text-6xl font-semibold tracking-tight text-primary mb-6">
-              Parcours.
+              <BlurText text="Parcours." stagger={0.07} delay={0.1} />
             </h1>
-            <p className="text-xl md:text-2xl text-secondary leading-relaxed">
+
+            <motion.p
+              initial={reduce ? false : { opacity: 0, y: 16 }}
+              animate={reduce ? false : { opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              className="text-xl md:text-2xl text-secondary leading-relaxed"
+            >
               Une rétrospective de mon évolution académique et professionnelle,
               marquée par l&apos;exigence et la polyvalence.
-            </p>
+            </motion.p>
           </div>
 
           {/* Filter Row */}
-          <div className="flex flex-wrap gap-2 mb-20 border-b border-black/5 dark:border-white/10 pb-8">
-            {['all', 'experience', 'education', 'volunteering'].map((key) => (
-              <button
+          <motion.div
+            initial={reduce ? false : { opacity: 0, y: 12 }}
+            animate={reduce ? false : { opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
+            className="flex flex-wrap gap-2 mb-20 border-b border-black/5 dark:border-white/10 pb-8"
+          >
+            {(['all', 'experience', 'education', 'volunteering'] as const).map((key) => (
+              <motion.button
                 key={key}
-                onClick={() => setFilter(key as any)}
-                className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${filter === key ? 'bg-primary text-background' : 'text-secondary hover:text-primary'
-                  }`}
+                whileTap={reduce ? undefined : { scale: 0.97 }}
+                onClick={() => setFilter(key)}
+                className={`px-6 py-2 rounded-full text-sm font-medium transition-all motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0] ${filter === key ? 'bg-primary text-background' : 'text-secondary hover:text-primary'}`}
               >
                 {key === 'all' ? 'Tout' : key.charAt(0).toUpperCase() + key.slice(1)}
-              </button>
+              </motion.button>
             ))}
-          </div>
+          </motion.div>
 
           {/* Timeline Grid */}
           <div className="max-w-4xl">
@@ -159,49 +180,50 @@ export default function EvolutionPage() {
                 </div>
 
                 <div className="space-y-6">
-                  {filteredEvents.filter(e => getYear(e.startDate) === year).map(event => {
+                  {filteredEvents.filter(e => getYear(e.startDate) === year).map((event, i) => {
                     const Icon = eventIcons[event.type]
                     const logo = logoMap[event.subtitle]
                     const isExp = expandedCard === event.id
 
                     return (
-                      <div
-                        key={event.id}
-                        className="card p-8 group cursor-pointer"
-                        onClick={() => setExpandedCard(isExp ? null : event.id)}
-                      >
-                        <div className="flex flex-col md:flex-row md:items-start gap-6">
-                          <div className="w-12 h-12 rounded-full bg-background border border-black/5 dark:border-white/10 flex items-center justify-center shrink-0">
-                            {logo ? (
-                              <Image src={logo} alt={event.subtitle} width={24} height={24} className="object-contain" />
-                            ) : (
-                              <Icon className="text-cta" size={24} />
-                            )}
-                          </div>
-                          <div className="flex-1">
-                            <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2 gap-1">
-                              <h3 className="text-xl font-semibold text-primary">{event.title}</h3>
-                              <span className="text-sm font-medium text-secondary">{event.period}</span>
+                      <RevealCard key={event.id} delay={i * 0.08}>
+                        <div
+                          className="card p-8 group cursor-pointer"
+                          onClick={() => setExpandedCard(isExp ? null : event.id)}
+                        >
+                          <div className="flex flex-col md:flex-row md:items-start gap-6">
+                            <div className="w-12 h-12 rounded-full bg-background border border-black/5 dark:border-white/10 flex items-center justify-center shrink-0">
+                              {logo ? (
+                                <Image src={logo} alt={event.subtitle} width={24} height={24} className="object-contain" />
+                              ) : (
+                                <Icon className="text-cta" size={24} />
+                              )}
                             </div>
-                            <p className="text-cta font-medium mb-4">{event.subtitle}</p>
-
-                            {event.description && (
-                              <div className={`overflow-hidden transition-all duration-300 ${isExp ? 'max-h-[500px] opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
-                                <p className="text-secondary leading-relaxed border-t border-black/5 dark:border-white/10 pt-4">
-                                  {event.description}
-                                </p>
+                            <div className="flex-1">
+                              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2 gap-1">
+                                <h3 className="text-xl font-semibold text-primary">{event.title}</h3>
+                                <span className="text-sm font-medium text-secondary">{event.period}</span>
                               </div>
-                            )}
+                              <p className="text-cta font-medium mb-4">{event.subtitle}</p>
 
-                            {event.description && (
-                              <div className="mt-4 flex items-center gap-1 text-xs font-bold uppercase tracking-widest text-secondary group-hover:text-primary transition-colors">
-                                {isExp ? 'Moins d\'infos' : 'Plus d\'infos'}
-                                <ChevronDown size={14} className={`transition-transform ${isExp ? 'rotate-180' : ''}`} />
-                              </div>
-                            )}
+                              {event.description && (
+                                <div className={`overflow-hidden transition-all duration-300 ${isExp ? 'max-h-[500px] opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+                                  <p className="text-secondary leading-relaxed border-t border-black/5 dark:border-white/10 pt-4">
+                                    {event.description}
+                                  </p>
+                                </div>
+                              )}
+
+                              {event.description && (
+                                <div className="mt-4 flex items-center gap-1 text-xs font-bold uppercase tracking-widest text-secondary group-hover:text-primary transition-colors motion-reduce:transition-none">
+                                  {isExp ? 'Moins d\'infos' : 'Plus d\'infos'}
+                                  <ChevronDown size={14} className={`transition-transform ${isExp ? 'rotate-180' : ''}`} />
+                                </div>
+                              )}
+                            </div>
                           </div>
                         </div>
-                      </div>
+                      </RevealCard>
                     )
                   })}
                 </div>
@@ -211,9 +233,11 @@ export default function EvolutionPage() {
 
           {/* Footer CTA */}
           <div className="mt-32 text-center">
-            <Link href="/contact" className="btn-primary">
-              Discutons de votre projet
-            </Link>
+            <motion.div whileTap={reduce ? undefined : { scale: 0.97 }} className="inline-block">
+              <Link href="/contact" className="btn-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]">
+                Discutons de votre projet
+              </Link>
+            </motion.div>
           </div>
 
         </div>
@@ -221,8 +245,8 @@ export default function EvolutionPage() {
 
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className={`fixed bottom-8 right-8 w-12 h-12 rounded-full bg-primary text-background flex items-center justify-center shadow-2xl transition-all ${showScrollTop ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
-          }`}
+        aria-label="Retour en haut"
+        className={`fixed bottom-8 right-8 w-12 h-12 rounded-full bg-primary text-background flex items-center justify-center shadow-2xl transition-all motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0] ${showScrollTop ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}
       >
         <ArrowUp size={20} />
       </button>

@@ -204,15 +204,15 @@ export default function ZenDataHero() {
             <div className="reveal-content opacity-0 flex items-center gap-8 pt-4">
               <Link
                 href="/projects"
-                className="group flex items-center gap-3 text-amber-500 hover:text-amber-400 transition-colors"
+                className="group flex items-center gap-3 text-amber-500 hover:text-amber-400 transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0b]"
               >
                 <span className="text-sm tracking-wide">View Work</span>
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                <ArrowRight size={16} className="group-hover:translate-x-1 motion-reduce:group-hover:translate-x-0 transition-transform motion-reduce:transition-none" />
               </Link>
 
               <Link
                 href="/contact"
-                className="text-stone-500 hover:text-stone-300 text-sm tracking-wide transition-colors"
+                className="text-stone-500 hover:text-stone-300 text-sm tracking-wide transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0b]"
               >
                 Contact
               </Link>

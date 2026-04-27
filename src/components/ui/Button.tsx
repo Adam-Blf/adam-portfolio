@@ -35,7 +35,7 @@ export default function Button({
   const buttonClasses = cn(
     variantClasses[variant],
     sizeClasses[size],
-    'inline-flex items-center justify-center font-semibold rounded-full transition-all duration-200',
+    'inline-flex items-center justify-center font-semibold rounded-full transition-all duration-200 motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]',
     className
   )
 

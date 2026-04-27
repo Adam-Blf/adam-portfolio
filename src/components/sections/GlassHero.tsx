@@ -27,10 +27,10 @@ export default function GlassHero() {
           {t('hero.role')}
         </p>
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-2">
-          <Link href="/projects" className="px-6 py-2 rounded-full bg-[#2563EB] text-white font-semibold shadow-md hover:bg-[#1d4ed8] transition-all duration-150 backdrop-blur-sm">
+          <Link href="/projects" className="px-6 py-2 rounded-full bg-[#2563EB] text-white font-semibold shadow-md hover:bg-[#1d4ed8] transition-all motion-reduce:transition-none duration-150 backdrop-blur-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]">
             {t('hero.exploreProjects')}
           </Link>
-          <Link href="/contact" className="px-6 py-2 rounded-full border border-[#2563EB] text-[#2563EB] font-semibold shadow-sm hover:bg-[#2563EB]/10 transition-all duration-150 backdrop-blur-sm">
+          <Link href="/contact" className="px-6 py-2 rounded-full border border-[#2563EB] text-[#2563EB] font-semibold shadow-sm hover:bg-[#2563EB]/10 transition-all motion-reduce:transition-none duration-150 backdrop-blur-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]">
             {t('hero.getInTouch')} <span className="ml-1 opacity-70">›</span>
           </Link>
         </div>

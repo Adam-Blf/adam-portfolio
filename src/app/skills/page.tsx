@@ -1,7 +1,10 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Github, Code2, Database, Cloud, Brain, Blocks, Server, Award, BarChart3, TrendingUp, ChevronRight } from 'lucide-react'
+import { motion, useReducedMotion } from 'framer-motion'
+import { BlurText } from '@/components/animations/BlurText'
+import { RevealCard } from '@/components/animations/RevealCard'
+import { Github, Code2, Database, Cloud, Brain, Blocks, Server, Award, ChevronRight } from 'lucide-react'
 import { skills as staticSkills, certifications } from '@/lib/data'
 import ErrorBoundary from '@/components/ErrorBoundary'
 import { useI18n } from '@/lib/i18n'
@@ -53,6 +56,7 @@ export default function SkillsPage() {
   const [error, setError] = useState<string | null>(null)
   const [totalRepos, setTotalRepos] = useState(0)
   const { t } = useI18n()
+  const reduce = useReducedMotion()
 
   useEffect(() => {
     const CACHE_KEY = 'github-skills'
@@ -73,8 +77,6 @@ export default function SkillsPage() {
       } catch { }
 
       try {
-        // In a real environment, we'd fetch from an API route or GitHub directly.
-        // For this UI redesign, we assume data is either cached or we provide a clean fallback.
         setLoading(false)
       } catch (err) {
         setError('Impossible de charger les compétences.')
@@ -101,13 +103,29 @@ export default function SkillsPage() {
 
           {/* Header */}
           <div className="max-w-3xl mb-16">
+            <motion.div
+              initial={reduce ? false : { opacity: 0, y: -8 }}
+              animate={reduce ? false : { opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              className="font-mono text-xs text-[#0a0a0b]/50 dark:text-[#faf7f0]/50 mb-6 flex items-center gap-3"
+            >
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#8faa88] animate-pulse" />
+              STACK · COMPÉTENCES · CERTIFICATIONS
+            </motion.div>
+
             <h1 className="text-5xl md:text-6xl font-semibold tracking-tight text-primary mb-6">
-              Expertise Technique.
+              <BlurText text="Expertise Technique." stagger={0.06} delay={0.1} />
             </h1>
-            <p className="text-xl md:text-2xl text-secondary leading-relaxed">
+
+            <motion.p
+              initial={reduce ? false : { opacity: 0, y: 16 }}
+              animate={reduce ? false : { opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              className="text-xl md:text-2xl text-secondary leading-relaxed"
+            >
               Un aperçu de mon stack technologique, analysé dynamiquement à travers mes projets
               et soutenu par des certifications reconnues.
-            </p>
+            </motion.p>
           </div>
 
           {/* Stats Grid */}
@@ -117,17 +135,19 @@ export default function SkillsPage() {
               { label: 'Projets Analysés', value: totalRepos || 24 },
               { label: 'Certifications', value: certifications.length },
               { label: 'Années d\'Exp.', value: '3+' },
-            ].map((stat) => (
-              <div key={stat.label} className="card p-8 text-center flex flex-col justify-center">
-                <p className="text-xs font-bold uppercase tracking-widest text-secondary mb-2">{stat.label}</p>
-                <p className="text-4xl font-semibold text-primary">{stat.value}</p>
-              </div>
+            ].map((stat, i) => (
+              <RevealCard key={stat.label} delay={i * 0.08}>
+                <div className="card p-8 text-center flex flex-col justify-center">
+                  <p className="text-xs font-bold uppercase tracking-widest text-secondary mb-2">{stat.label}</p>
+                  <p className="text-4xl font-semibold text-primary">{stat.value}</p>
+                </div>
+              </RevealCard>
             ))}
           </div>
 
           {/* Categories */}
           <div className="space-y-32">
-            {categories.map((category) => (
+            {categories.map((category, catIdx) => (
               <section key={category.key}>
                 <div className="flex items-center gap-4 mb-12 border-b border-black/5 dark:border-white/10 pb-6">
                   <span className="text-primary">{category.icon}</span>
@@ -135,23 +155,25 @@ export default function SkillsPage() {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8">
-                  {category.skills.map((skill) => {
+                  {category.skills.map((skill, idx) => {
                     const catMax = category.skills[0]?.count || 1
                     const progress = Math.max(10, (skill.count / catMax) * 100)
                     return (
-                      <div key={skill.name} className="group">
-                        <div className="flex justify-between items-baseline mb-2">
-                          <span className="text-lg font-medium text-primary group-hover:text-cta transition-colors">
-                            {skill.name}
-                          </span>
+                      <RevealCard key={skill.name} delay={idx * 0.08}>
+                        <div className="group">
+                          <div className="flex justify-between items-baseline mb-2">
+                            <span className="text-lg font-medium text-primary group-hover:text-cta transition-colors">
+                              {skill.name}
+                            </span>
+                          </div>
+                          <div className="h-1 w-full bg-black/5 dark:bg-white/10 rounded-full overflow-hidden">
+                            <div
+                              className="h-full bg-cta transition-all duration-1000 ease-out"
+                              style={{ width: `${progress}%` }}
+                            />
+                          </div>
                         </div>
-                        <div className="h-1 w-full bg-black/5 dark:bg-white/10 rounded-full overflow-hidden">
-                          <div
-                            className="h-full bg-cta transition-all duration-1000 ease-out"
-                            style={{ width: `${progress}%` }}
-                          />
-                        </div>
-                      </div>
+                      </RevealCard>
                     )
                   })}
                 </div>
@@ -163,21 +185,30 @@ export default function SkillsPage() {
           <section className="mt-32">
             <div className="max-w-3xl mb-16">
               <h2 className="text-4xl font-semibold tracking-tight text-primary mb-6">Certifications.</h2>
-              <p className="text-xl text-secondary">Validations académiques et professionnelles de mes compétences.</p>
+              <motion.p
+                initial={reduce ? false : { opacity: 0, y: 16 }}
+                animate={reduce ? false : { opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                className="text-xl text-secondary"
+              >
+                Validations académiques et professionnelles de mes compétences.
+              </motion.p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {certifications.map((cert) => (
-                <div key={cert.name} className="card p-8 flex items-start gap-6 group hover:scale-[1.01]">
-                  <div className="w-12 h-12 rounded-full bg-background border border-black/5 dark:border-white/10 flex items-center justify-center shrink-0">
-                    <Award className="text-cta" size={24} />
+              {certifications.map((cert, i) => (
+                <RevealCard key={cert.name} delay={i * 0.08}>
+                  <div className="card p-8 flex items-start gap-6 group hover:scale-[1.01]">
+                    <div className="w-12 h-12 rounded-full bg-background border border-black/5 dark:border-white/10 flex items-center justify-center shrink-0">
+                      <Award className="text-cta" size={24} />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-primary mb-1">{cert.name}</h3>
+                      <p className="text-secondary font-medium mb-1">{cert.issuer}</p>
+                      <p className="text-sm text-secondary/60 font-medium">{cert.year}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-primary mb-1">{cert.name}</h3>
-                    <p className="text-secondary font-medium mb-1">{cert.issuer}</p>
-                    <p className="text-sm text-secondary/60 font-medium">{cert.year}</p>
-                  </div>
-                </div>
+                </RevealCard>
               ))}
             </div>
           </section>
@@ -188,12 +219,16 @@ export default function SkillsPage() {
               Prêt à collaborer sur votre prochain projet ?
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact" className="btn-primary !bg-white !text-black hover:!bg-gray-100">
-                Me contacter
-              </a>
-              <a href="https://github.com/Adam-Blf" target="_blank" rel="noopener noreferrer" className="btn-secondary !text-white hover:underline group">
-                Voir mon GitHub <ChevronRight size={20} className="inline ml-1 transition-transform group-hover:translate-x-1" />
-              </a>
+              <motion.div whileTap={reduce ? undefined : { scale: 0.97 }} className="inline-block">
+                <a href="/contact" className="btn-primary !bg-white !text-black hover:!bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0b]">
+                  Me contacter
+                </a>
+              </motion.div>
+              <motion.div whileTap={reduce ? undefined : { scale: 0.97 }} className="inline-block">
+                <a href="https://github.com/Adam-Blf" target="_blank" rel="noopener noreferrer" className="btn-secondary !text-white hover:underline group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0b]">
+                  Voir mon GitHub <ChevronRight size={20} className="inline ml-1 transition-transform motion-reduce:transition-none group-hover:translate-x-1 motion-reduce:group-hover:translate-x-0" />
+                </a>
+              </motion.div>
             </div>
           </div>
 

@@ -360,14 +360,14 @@ export default function DataUniverseHero() {
           <div className="content-reveal opacity-0 flex items-center gap-6">
             <Link
               href="/projects"
-              className="group flex items-center gap-2 px-6 py-3 bg-amber-500 text-black font-semibold text-sm rounded-full hover:bg-amber-400 transition-colors"
+              className="group flex items-center gap-2 px-6 py-3 bg-amber-500 text-black font-semibold text-sm rounded-full hover:bg-amber-400 transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0b]"
             >
               Explore Projects
-              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              <ArrowRight size={16} className="group-hover:translate-x-1 motion-reduce:group-hover:translate-x-0 transition-transform motion-reduce:transition-none" />
             </Link>
             <Link
               href="/contact"
-              className="text-zinc-400 hover:text-amber-500 text-sm transition-colors"
+              className="text-zinc-400 hover:text-amber-500 text-sm transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0b]"
             >
               Get in Touch
             </Link>

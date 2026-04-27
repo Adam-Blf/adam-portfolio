@@ -1,7 +1,10 @@
 'use client'
 
 import { useState, useEffect, useMemo } from 'react'
-import { Github, Star, GitFork, ExternalLink, Search, X, ChevronRight } from 'lucide-react'
+import { Github, ExternalLink, Search } from 'lucide-react'
+import { motion, useReducedMotion } from 'framer-motion'
+import { BlurText } from '@/components/animations/BlurText'
+import { RevealCard } from '@/components/animations/RevealCard'
 import ErrorBoundary from '@/components/ErrorBoundary'
 import { useI18n } from '@/lib/i18n'
 
@@ -25,6 +28,7 @@ export default function ProjectsPage() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null)
   const [searchTerm, setSearchTerm] = useState('')
   const { t } = useI18n()
+  const reduce = useReducedMotion()
 
   useEffect(() => {
     const CACHE_KEY = 'github-projects'
@@ -57,8 +61,6 @@ export default function ProjectsPage() {
         }
       } catch (e) { }
 
-      // Fallback or Direct GitHub fetch logic would go here, 
-      // simplified for this redesign pass to focus on UI.
       setLoading(false)
     }
 
@@ -106,38 +108,61 @@ export default function ProjectsPage() {
 
           {/* Header */}
           <div className="max-w-2xl mb-16">
+            <motion.div
+              initial={reduce ? false : { opacity: 0, y: -8 }}
+              animate={reduce ? false : { opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              className="font-mono text-xs text-[#0a0a0b]/50 mb-6 flex items-center gap-3"
+            >
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#8faa88] animate-pulse" />
+              TRAVAUX · OPEN SOURCE · GITHUB
+            </motion.div>
+
             <h1 className="text-5xl md:text-6xl font-semibold tracking-tight text-primary mb-6">
-              Mes Projets.
+              <BlurText text="Mes Projets." stagger={0.07} delay={0.1} />
             </h1>
-            <p className="text-xl md:text-2xl text-secondary leading-relaxed">
+
+            <motion.p
+              initial={reduce ? false : { opacity: 0, y: 16 }}
+              animate={reduce ? false : { opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
+              className="text-xl md:text-2xl text-secondary leading-relaxed"
+            >
               Une sélection de travaux en Data Engineering, IA et Développement Fullstack,
               directement synchronisée depuis GitHub.
-            </p>
+            </motion.p>
           </div>
 
           {/* Controls Bar */}
-          <div className="flex flex-col md:flex-row gap-6 md:items-center justify-between mb-12 border-b border-black/5 dark:border-white/10 pb-8">
+          <motion.div
+            initial={reduce ? false : { opacity: 0, y: 12 }}
+            animate={reduce ? false : { opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
+            className="flex flex-col md:flex-row gap-6 md:items-center justify-between mb-12 border-b border-black/5 dark:border-white/10 pb-8"
+          >
             <div className="flex flex-wrap gap-2">
-              <button
+              <motion.button
+                whileTap={reduce ? undefined : { scale: 0.97 }}
                 onClick={() => setActiveCategory(null)}
-                className={`px-4 py-1 text-sm font-medium rounded-full transition-all ${activeCategory === null
+                className={`px-4 py-1 text-sm font-medium rounded-full transition-all motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0] ${activeCategory === null
                     ? 'bg-primary text-background'
                     : 'text-secondary hover:text-primary'
                   }`}
               >
                 Tous
-              </button>
+              </motion.button>
               {categories.map((cat) => (
-                <button
+                <motion.button
                   key={cat}
+                  whileTap={reduce ? undefined : { scale: 0.97 }}
                   onClick={() => setActiveCategory(cat)}
-                  className={`px-4 py-1 text-sm font-medium rounded-full transition-all ${activeCategory === cat
+                  className={`px-4 py-1 text-sm font-medium rounded-full transition-all motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0] ${activeCategory === cat
                       ? 'bg-primary text-background'
                       : 'text-secondary hover:text-primary'
                     }`}
                 >
                   {cat}
-                </button>
+                </motion.button>
               ))}
             </div>
 
@@ -151,54 +176,58 @@ export default function ProjectsPage() {
                 className="w-full bg-black/5 dark:bg-white/5 border-none rounded-full py-2 pl-10 pr-4 text-sm focus:ring-2 focus:ring-cta/50 outline-none transition-all"
               />
             </div>
-          </div>
+          </motion.div>
 
           {/* Grid */}
           {allFilteredProjects.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {allFilteredProjects.map((project) => (
-                <div key={project.name} className="card flex flex-col p-8 group">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-semibold text-primary leading-tight group-hover:text-cta transition-colors">
-                      {project.name}
-                    </h3>
-                  </div>
+              {allFilteredProjects.map((project, i) => (
+                <RevealCard key={project.name} delay={i * 0.08}>
+                  <div className="card flex flex-col p-8 group h-full">
+                    <div className="flex justify-between items-start mb-4">
+                      <h3 className="text-2xl font-semibold text-primary leading-tight group-hover:text-cta transition-colors">
+                        {project.name}
+                      </h3>
+                    </div>
 
-                  <p className="text-secondary text-base mb-6 line-clamp-3 leading-relaxed">
-                    {project.desc}
-                  </p>
+                    <p className="text-secondary text-base mb-6 line-clamp-3 leading-relaxed">
+                      {project.desc}
+                    </p>
 
-                  <div className="flex flex-wrap gap-2 mb-8 mt-auto">
-                    {project.tags.slice(0, 3).map(tag => (
-                      <span key={tag} className="text-[11px] font-bold uppercase tracking-wider text-secondary px-2 py-0.5 rounded bg-black/5 dark:bg-white/5">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                    <div className="flex flex-wrap gap-2 mb-8 mt-auto">
+                      {project.tags.slice(0, 3).map(tag => (
+                        <span key={tag} className="text-[11px] font-bold uppercase tracking-wider text-secondary px-2 py-0.5 rounded bg-black/5 dark:bg-white/5">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
 
-                  <div className="flex items-center gap-6 pt-6 border-t border-black/5 dark:border-white/10">
-                    <a
-                      href={project.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-cta hover:underline font-medium inline-flex items-center gap-1.5"
-                    >
-                      <Github size={18} />
-                      Code
-                    </a>
-                    {project.homepage && (
-                      <a
-                        href={project.homepage}
+                    <div className="flex items-center gap-6 pt-6 border-t border-black/5 dark:border-white/10">
+                      <motion.a
+                        whileTap={reduce ? undefined : { scale: 0.97 }}
+                        href={project.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-cta hover:underline font-medium inline-flex items-center gap-1.5"
+                        className="text-cta hover:underline font-medium inline-flex items-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]"
                       >
-                        <ExternalLink size={18} />
-                        Démo
-                      </a>
-                    )}
+                        <Github size={18} />
+                        Code
+                      </motion.a>
+                      {project.homepage && (
+                        <motion.a
+                          whileTap={reduce ? undefined : { scale: 0.97 }}
+                          href={project.homepage}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-cta hover:underline font-medium inline-flex items-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]"
+                        >
+                          <ExternalLink size={18} />
+                          Démo
+                        </motion.a>
+                      )}
+                    </div>
                   </div>
-                </div>
+                </RevealCard>
               ))}
             </div>
           ) : (
@@ -208,18 +237,19 @@ export default function ProjectsPage() {
           )}
 
           {/* GitHub CTA */}
-          <div className="mt-24 text-center">
+          <RevealCard delay={0.1} className="mt-24 text-center">
             <h4 className="text-2xl font-semibold mb-6">Envie d&apos;en voir plus ?</h4>
-            <a
+            <motion.a
+              whileTap={reduce ? undefined : { scale: 0.97 }}
               href="https://github.com/Adam-Blf"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary"
+              className="btn-primary inline-flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6b4c7a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf7f0]"
             >
               <Github size={20} className="mr-2" />
               Accéder à mon GitHub
-            </a>
-          </div>
+            </motion.a>
+          </RevealCard>
         </div>
       </main>
     </ErrorBoundary>
