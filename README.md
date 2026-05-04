@@ -1,5 +1,10 @@
 # Adam Beloucif Portfolio
 
+<!-- adam-badges:start -->
+[![commits](https://img.shields.io/github/commit-activity/t/Adam-Blf/adam-portfolio?color=001329&label=commits&style=flat-square)](https://github.com/Adam-Blf/adam-portfolio/commits) [![visites](https://hits.sh/github.com/Adam-Blf/adam-portfolio.svg?style=flat-square&label=visites&color=001329)](https://hits.sh/github.com/Adam-Blf/adam-portfolio/) [![last commit](https://img.shields.io/github/last-commit/Adam-Blf/adam-portfolio?color=D4A437&style=flat-square&label=dernier%20push)](https://github.com/Adam-Blf/adam-portfolio/commits) [![top language](https://img.shields.io/github/languages/top/Adam-Blf/adam-portfolio?style=flat-square)](https://github.com/Adam-Blf/adam-portfolio) [![license](https://img.shields.io/github/license/Adam-Blf/adam-portfolio?style=flat-square&color=D4A437)](LICENSE)
+<!-- adam-badges:end -->
+
+
 Portfolio personnel moderne construit avec Next.js 14, TypeScript, Tailwind CSS, Three.js et anime.js.
 
 ![Next.js](https://img.shields.io/badge/Next.js-14-000000?style=for-the-badge&logo=next.js&logoColor=white)
