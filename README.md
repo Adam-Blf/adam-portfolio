@@ -25,14 +25,14 @@ Portfolio neo-editorial minimaliste avec:
 
 ```mermaid
 flowchart TB
-    PAGES["app/<br/>pages App Router · frise · projets · competences"]
-    LAYOUT["app/layout.tsx<br/>ThemeProvider · Header · Footer"]
-    APIROUTE["app/api/github<br/>route · cache 30 min"]
+    PAGES["app/<br/>pages App Router - frise - projets - competences"]
+    LAYOUT["app/layout.tsx<br/>ThemeProvider - Header - Footer"]
+    APIROUTE["app/api/github<br/>route - cache 30 min"]
     GH["lib/github.ts<br/>service GitHub API"]
-    GHAPI["GitHub REST API<br/>repos · langages · commits"]
-    THREE["components/three<br/>backgrounds 3D · R3F"]
-    ANIM["lib/animations.ts<br/>anime.js v4 · WAAPI"]
-    VERCEL["Vercel<br/>déploiement · CDN"]
+    GHAPI["GitHub REST API<br/>repos - langages - commits"]
+    THREE["components/three<br/>backgrounds 3D - R3F"]
+    ANIM["lib/animations.ts<br/>anime.js v4 - WAAPI"]
+    VERCEL["Vercel<br/>déploiement - CDN"]
     LAYOUT --> PAGES
     GHAPI --> APIROUTE
     APIROUTE --> GH
