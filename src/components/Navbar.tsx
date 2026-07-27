@@ -1,134 +1,154 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 
-interface NavLink {
-  label: string;
-  href: string;
-}
-
-const navLinks: NavLink[] = [
-  { label: "EXPERTISE", href: "#expertise" },
-  { label: "WORK", href: "#work" },
-  { label: "MANIFESTO", href: "#about" },
-  { label: "INSIGHTS", href: "#insights" },
-];
-
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
+      if (window.scrollY > 40) {
+        setScrolled(true);
       } else {
-        setIsScrolled(false);
+        setScrolled(false);
       }
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <>
-      <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isScrolled
-            ? "backdrop-blur-md bg-[#F5F3EF]/80 border-b border-[#0A0A0A]/10 py-4 shadow-sm"
-            : "bg-transparent py-6"
-        }`}
-      >
-        <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
-          {/* Logo */}
-          <a
-            href="#"
-            className="text-xl md:text-2xl font-black tracking-[0.2em] uppercase text-[#0A0A0A] group flex items-center gap-1"
-          >
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? "bg-[#F5F3EF]/85 backdrop-blur-md border-b border-[#0A0A0A]/10 py-4 shadow-sm"
+          : "bg-transparent py-6"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+        {/* Brand Logo */}
+        <a href="#" className="group flex items-center gap-2">
+          <span className="text-2xl font-black tracking-tighter uppercase text-[#0A0A0A] group-hover:opacity-80 transition-opacity">
             PIXZEN
-            <span className="w-1.5 h-1.5 rounded-full bg-[#0A0A0A] group-hover:scale-150 transition-transform duration-300" />
-          </a>
+          </span>
+          <span className="w-2 h-2 rounded-full bg-[#0A0A0A] group-hover:scale-125 transition-transform" />
+          <span className="hidden sm:inline-block text-[10px] font-mono text-[#8E8E8E] uppercase tracking-widest ml-1 border-l border-[#0A0A0A]/15 pl-2">
+            STUDIO & PORTFOLIO IA
+          </span>
+        </a>
 
-          {/* Desktop Nav Links */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="group relative text-xs font-bold tracking-widest text-[#0A0A0A]/80 hover:text-[#0A0A0A] py-1 transition-colors duration-200"
-              >
-                {link.label}
-                <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-[#0A0A0A] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-              </a>
-            ))}
+        {/* Desktop Navigation Links */}
+        <nav className="hidden lg:flex items-center gap-8">
+          <a
+            href="#demos"
+            className="relative text-xs font-bold uppercase tracking-wider text-[#0A0A0A] hover:text-[#8E8E8E] transition-colors py-1 group"
+          >
+            LAB DEMOS
+            <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-[#0A0A0A] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
+          </a>
+          <a
+            href="#work"
+            className="relative text-xs font-bold uppercase tracking-wider text-[#0A0A0A] hover:text-[#8E8E8E] transition-colors py-1 group"
+          >
+            PROJETS
+            <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-[#0A0A0A] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
+          </a>
+          <a
+            href="#timeline"
+            className="relative text-xs font-bold uppercase tracking-wider text-[#0A0A0A] hover:text-[#8E8E8E] transition-colors py-1 group"
+          >
+            PARCOURS
+            <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-[#0A0A0A] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
+          </a>
+          <a
+            href="#services"
+            className="relative text-xs font-bold uppercase tracking-wider text-[#0A0A0A] hover:text-[#8E8E8E] transition-colors py-1 group"
+          >
+            EXPERTISES
+            <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-[#0A0A0A] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
+          </a>
+          <a
+            href="#about"
+            className="relative text-xs font-bold uppercase tracking-wider text-[#0A0A0A] hover:text-[#8E8E8E] transition-colors py-1 group"
+          >
+            À PROPOS
+            <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-[#0A0A0A] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
+          </a>
+        </nav>
+
+        {/* CTA Contact Button */}
+        <div className="hidden lg:flex items-center gap-4">
+          <a
+            href="#contact"
+            className="group px-6 py-2.5 rounded-full bg-[#0A0A0A] text-[#F5F3EF] text-xs font-bold tracking-widest uppercase hover:bg-[#8E8E8E] transition-all flex items-center gap-2 shadow-md"
+          >
+            START A PROJECT
+            <ArrowUpRight className="w-3.5 h-3.5 group-hover:rotate-45 transition-transform" />
+          </a>
+        </div>
+
+        {/* Mobile Menu Trigger */}
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="lg:hidden p-2 text-[#0A0A0A] hover:opacity-70 transition-opacity"
+          aria-label="Toggle Navigation"
+        >
+          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
+      </div>
+
+      {/* Mobile Menu Modal */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden fixed inset-0 top-[70px] bg-[#F5F3EF] z-40 p-8 flex flex-col justify-between border-t border-[#0A0A0A]/10">
+          <nav className="flex flex-col gap-6">
+            <a
+              href="#demos"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-2xl font-black uppercase text-[#0A0A0A]"
+            >
+              01. LAB DEMOS LIVE
+            </a>
+            <a
+              href="#work"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-2xl font-black uppercase text-[#0A0A0A]"
+            >
+              02. PROJETS & CASE STUDIES
+            </a>
+            <a
+              href="#timeline"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-2xl font-black uppercase text-[#0A0A0A]"
+            >
+              03. PARCOURS & EXPÉRIENCE
+            </a>
+            <a
+              href="#services"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-2xl font-black uppercase text-[#0A0A0A]"
+            >
+              04. EXPERTISES TECH
+            </a>
+            <a
+              href="#about"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-2xl font-black uppercase text-[#0A0A0A]"
+            >
+              05. À PROPOS & VISION
+            </a>
           </nav>
 
-          {/* Action & Mobile Toggle */}
-          <div className="flex items-center gap-4">
-            <a
-              href="#contact"
-              className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#0A0A0A] text-xs font-bold tracking-widest text-[#0A0A0A] hover:bg-[#0A0A0A] hover:text-[#F5F3EF] transition-all duration-300 shadow-xs"
-            >
-              LET'S TALK
-              <ArrowUpRight className="w-3.5 h-3.5" />
-            </a>
-
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 rounded-full border border-[#0A0A0A]/20 text-[#0A0A0A] hover:bg-[#0A0A0A]/5 transition-colors"
-              aria-label="Toggle Menu"
-            >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-        </div>
-      </header>
-
-      {/* Mobile Fullscreen Menu Overlay */}
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: "-100%" }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: "-100%" }}
-            transition={{ duration: 0.5, ease: [0.77, 0, 0.175, 1] }}
-            className="fixed inset-0 z-40 bg-[#F5F3EF] flex flex-col justify-between p-8 pt-28 md:hidden"
+          <a
+            href="#contact"
+            onClick={() => setMobileMenuOpen(false)}
+            className="w-full text-center py-4 rounded-full bg-[#0A0A0A] text-[#F5F3EF] text-sm font-bold tracking-widest uppercase"
           >
-            <div className="flex flex-col gap-6">
-              {navLinks.map((link, idx) => (
-                <motion.a
-                  key={link.label}
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  initial={{ opacity: 0, x: -30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.1 + idx * 0.08, duration: 0.4 }}
-                  className="text-3xl font-black tracking-widest text-[#0A0A0A] hover:text-[#8E8E8E] transition-colors"
-                >
-                  {link.label}
-                </motion.a>
-              ))}
-            </div>
-
-            <div className="pt-8 border-t border-[#0A0A0A]/10 flex flex-col gap-4">
-              <a
-                href="#contact"
-                onClick={() => setMobileMenuOpen(false)}
-                className="w-full text-center py-4 rounded-full bg-[#0A0A0A] text-[#F5F3EF] text-sm font-bold tracking-widest uppercase flex items-center justify-center gap-2"
-              >
-                LET'S TALK
-                <ArrowUpRight className="w-4 h-4" />
-              </a>
-              <p className="text-xs text-[#8E8E8E] text-center tracking-wider">
-                hello@pixzen.ai — Tokyo · London · New York
-              </p>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+            START A PROJECT NOW
+          </a>
+        </div>
+      )}
+    </header>
   );
 }
