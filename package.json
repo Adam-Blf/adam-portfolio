@@ -1,44 +1,45 @@
 {
-  "name": "portfolio-adam",
-  "version": "1.0.0",
-  "description": "Portfolio Adam Beloucif v2026 - Data Engineer & Fullstack Developer",
+  "name": "pixzen-ai-agency",
+  "version": "1.1.0",
+  "description": "PIXZEN - Elite Futuristic AI Agency & Portfolio",
   "scripts": {
-    "dev": "next dev --experimental-https",
-    "dev:http": "next dev",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "keywords": [
+    "pixzen",
+    "ai-agency",
     "portfolio",
-    "next.js",
-    "data-engineer",
-    "fullstack"
+    "nextjs",
+    "gsap",
+    "framer-motion",
+    "lenis",
+    "tailwind"
   ],
-  "author": "Adam Beloucif",
+  "author": "Adam Beloucif <adam.beloucif@efrei.net>",
   "license": "MIT",
   "dependencies": {
-    "@react-three/drei": "^10.0.0",
-    "@react-three/fiber": "^9.0.0",
-    "@types/node": "^25.2.0",
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
-    "animejs": "^4.3.5",
-    "autoprefixer": "^10.4.24",
+    "@gsap/react": "^2.1.1",
+    "@tailwindcss/postcss": "^4.0.9",
     "clsx": "^2.1.1",
-    "critters": "^0.0.23",
-    "framer-motion": "^12.38.0",
-    "lucide-react": "^0.563.0",
-    "next": "^15.5.12",
-    "postcss": "^8.5.6",
+    "framer-motion": "^12.4.7",
+    "gsap": "^3.12.7",
+    "lenis": "^1.1.18",
+    "lucide-react": "^0.475.0",
+    "next": "^15.2.0",
+    "postcss": "^8.5.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "tailwind-merge": "^3.4.0",
-    "tailwindcss": "^3.4.19",
-    "three": "^0.182.0",
-    "typescript": "^5.9.3"
+    "split-type": "^0.3.4",
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss": "^4.0.9"
   },
   "devDependencies": {
-    "@types/three": "^0.182.0"
+    "@types/node": "^22.13.4",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "typescript": "^5.7.3"
   }
 }
