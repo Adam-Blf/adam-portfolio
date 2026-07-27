@@ -1,197 +1,55 @@
-# Adam Beloucif Portfolio
+# PIXZEN — Futuristic AI Agency & Portfolio
 
 <!-- adam-badges:start -->
 [![commits](https://img.shields.io/github/commit-activity/t/Adam-Blf/adam-portfolio?color=001329&label=commits&style=flat-square)](https://github.com/Adam-Blf/adam-portfolio/commits) [![visites](https://hits.sh/github.com/Adam-Blf/adam-portfolio.svg?style=flat-square&label=visites&color=001329)](https://hits.sh/github.com/Adam-Blf/adam-portfolio/) [![last commit](https://img.shields.io/github/last-commit/Adam-Blf/adam-portfolio?color=D4A437&style=flat-square&label=dernier%20push)](https://github.com/Adam-Blf/adam-portfolio/commits) [![top language](https://img.shields.io/github/languages/top/Adam-Blf/adam-portfolio?style=flat-square)](https://github.com/Adam-Blf/adam-portfolio) [![license](https://img.shields.io/github/license/Adam-Blf/adam-portfolio?style=flat-square&color=D4A437)](LICENSE)
 <!-- adam-badges:end -->
 
+PIXZEN is an elite, world-class futuristic AI agency website and digital portfolio engineered for high-performance interactive experiences. Built with Next.js 15, Tailwind CSS v4, GSAP (ScrollTrigger), Framer Motion, and Lenis Smooth Scrolling.
 
-Portfolio personnel moderne construit avec Next.js 14, TypeScript, Tailwind CSS, Three.js et anime.js.
+## Key Features
 
-![Next.js](https://img.shields.io/badge/Next.js-14-000000?style=for-the-badge&logo=next.js&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Three.js](https://img.shields.io/badge/Three.js-r160-000000?style=for-the-badge&logo=three.js&logoColor=white)
+- **Global Lenis Smooth Scrolling**: Buttery-smooth wheel scrolling with `lerp: 0.05`.
+- **Monochrome Editorial Aesthetic**: Warm white `#F5F3EF`, soft gray `#EAE7E1`, deep black `#0A0A0A`, and SVG fractal noise texture overlay.
+- **Interactive Hero Section**: Single-line massive typography with a dynamic cycling typewriter effect, video background mesh, and radial halftone overlay.
+- **Infinite Marquee Animations**: Smooth CSS keyframe marquees for trusted brands and manifesto values.
+- **12-Column Services Grid**: 5/7 desktop split with sticky Framer Motion crossfading media reveal.
+- **Sticky Stacking Case Studies**: Centered deck of project cards with scroll-scaled depth and interactive Framer Motion case study modal overlays.
+- **GSAP ScrollTrigger Manifesto**: Word-by-word text highlight scroll reveal.
+- **Custom Cursor Image Reveal**: Floating article preview thumbnail following mouse coordinates with `gsap.to`.
+- **Magnetic Button Interaction**: Physics-based cursor attraction with `elastic.out` snap-back.
 
-## Apercu
+## Tech Stack
 
-Portfolio neo-editorial minimaliste avec:
-- Donnees GitHub en temps reel (projets, commits, technologies)
-- Animations fluides avec anime.js v4
-- Backgrounds 3D interactifs avec Three.js
-- Theme clair/sombre avec detection systeme
-- Score Lighthouse 100/100
-
-## Architecture
-
-```mermaid
-flowchart TB
-    PAGES["app/<br/>pages App Router - frise - projets - competences"]
-    LAYOUT["app/layout.tsx<br/>ThemeProvider - Header - Footer"]
-    APIROUTE["app/api/github<br/>route - cache 30 min"]
-    GH["lib/github.ts<br/>service GitHub API"]
-    GHAPI["GitHub REST API<br/>repos - langages - commits"]
-    THREE["components/three<br/>backgrounds 3D - R3F"]
-    ANIM["lib/animations.ts<br/>anime.js v4 - WAAPI"]
-    VERCEL["Vercel<br/>déploiement - CDN"]
-    LAYOUT --> PAGES
-    GHAPI --> APIROUTE
-    APIROUTE --> GH
-    GH --> PAGES
-    THREE --> PAGES
-    ANIM --> PAGES
-    PAGES --> VERCEL
-```
-
-## Stack Technique
-
-| Categorie | Technologies |
-|-----------|-------------|
-| **Framework** | Next.js 14 (App Router) |
-| **Langage** | TypeScript |
-| **Styling** | Tailwind CSS, CSS Variables |
-| **3D** | Three.js, React Three Fiber |
-| **Animations** | anime.js v4, WAAPI |
+| Category | Technology |
+|---|---|
+| **Framework** | Next.js 15 (App Router) |
+| **Language** | TypeScript (Strict) |
+| **Styling** | Tailwind CSS v4 |
+| **Animations** | GSAP 3 (ScrollTrigger), Framer Motion |
+| **Smooth Scroll** | Lenis |
 | **Icons** | Lucide React |
-| **Fonts** | Outfit (display), Fira Code (mono) |
+| **Typography** | Satoshi (Fontshare CDN) |
 
-## Pages
-
-| Route | Description |
-|-------|-------------|
-| `/` | Hero + Stats dynamiques |
-| `/frise` | Timeline chronologique (formations, experiences, associations) |
-| `/projets` | Projets GitHub avec filtres et recherche |
-| `/competences` | Technologies detectees depuis GitHub |
-| `/contact` | Formulaire de contact (mailto) |
-
-## Installation
+## Getting Started
 
 ```bash
-# Cloner le repository
-git clone https://github.com/Adam-Blf/portfolio-adam.git
+# Clone the repository
+git clone https://github.com/Adam-Blf/adam-portfolio.git
 
-# Installer les dependances
-cd portfolio-adam
+# Install dependencies
+cd adam-portfolio
 npm install
 
-# Lancer en developpement
+# Run development server
 npm run dev
 
-# Build production
+# Build for production
 npm run build
 ```
 
-## Structure
-
-```
-src/
-├── app/                    # Pages Next.js (App Router)
-│   ├── api/github/         # API route pour cache GitHub
-│   ├── competences/
-│   ├── contact/
-│   ├── frise/
-│   ├── projets/
-│   ├── layout.tsx
-│   ├── page.tsx
-│   └── globals.css         # Design system CSS
-├── components/
-│   ├── layout/             # Header, Footer
-│   ├── sections/           # Hero, Stats, etc.
-│   ├── three/              # Backgrounds 3D
-│   ├── ui/                 # Composants reutilisables
-│   └── providers/          # ThemeProvider
-└── lib/
-    ├── data.ts             # Donnees statiques
-    ├── github.ts           # Service GitHub API
-    ├── utils.ts
-    └── animations.ts
-```
-
-## Design System
-
-### Couleurs
-
-| Variable | Light | Dark |
-|----------|-------|------|
-| `--bg-deep` | #fafafa | #0c0c0c |
-| `--bg-primary` | #ffffff | #121212 |
-| `--text-primary` | #0f0f0f | #fafafa |
-| `--accent` | #FFB000 | #FFB000 |
-
-### Typographie
-
-- **Display**: Outfit, 600-700 weight
-- **Body**: Outfit, 400-500 weight
-- **Code**: Fira Code, monospace
-
-## Performance
-
-- Images optimisees (AVIF, WebP)
-- Code splitting automatique
-- Fonts preconnect
-- CSS optimise
-- Cache GitHub API (30 min)
-- localStorage pour persistance
-
-## SEO
-
-- Metadata dynamique
-- OpenGraph / Twitter Cards
-- Sitemap XML genere
-- robots.txt
-- manifest.json (PWA ready)
-
-## Securite
-
-Headers configures dans `next.config.js`:
-- Strict-Transport-Security
-- X-Content-Type-Options
-- X-Frame-Options
-- Referrer-Policy
-- Permissions-Policy
-
-## Deploiement
-
-Le site est optimise pour deploiement sur:
-- **Vercel** (recommande)
-- Netlify
-- GitHub Pages (avec export static)
-
-```bash
-# Build pour production
-npm run build
-
-# Export statique (optionnel)
-npm run export
-```
-
-## Variables d'environnement
-
-```env
-# Optionnel - pour augmenter les limites de l'API GitHub
-GITHUB_TOKEN=ghp_xxx
-```
-
-## Auteur
+## Author
 
 **Adam Beloucif**
 - Data Engineer & Fullstack Developer
-- M1 Data Engineering & IA @ EFREI Paris
-- [LinkedIn](https://www.linkedin.com/in/adambeloucif/)
-- [GitHub](https://github.com/Adam-Blf)
-- [Email](mailto:adam.beloucif@efrei.net)
-
-## Licence
-
-MIT License - Libre d'utilisation et modification avec attribution.
-
-
-## Star History
-
-<a href="https://www.star-history.com/?repos=Adam-Blf%2Fadam-portfolio&type=date&legend=top-left">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=Adam-Blf/adam-portfolio&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=Adam-Blf/adam-portfolio&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=Adam-Blf/adam-portfolio&type=date&legend=top-left" />
- </picture>
-</a>
+- EFREI Paris / Panthéon-Assas University
+- [Portfolio](https://adam.beloucif.com) · [GitHub](https://github.com/Adam-Blf) · [LinkedIn](https://www.linkedin.com/in/adambeloucif/)
