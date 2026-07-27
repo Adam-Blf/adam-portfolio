@@ -16,37 +16,37 @@ interface Article {
 const articles: Article[] = [
   {
     id: "art-1",
-    category: "RESEARCH & AI",
-    title: "THE ARCHITECTURE OF MULTI-AGENT SWARM ORCHESTRATION IN 2026",
-    date: "JULY 2026",
-    readTime: "6 MIN READ",
+    category: "RECHERCHE & IA",
+    title: "L'ARCHITECTURE DE L'ORCHESTRATION MULTI-AGENTS EN 2026",
+    date: "JUILLET 2026",
+    readTime: "6 MIN DE LECTURE",
     image:
       "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "art-2",
     category: "DESIGN SYSTEMS",
-    title: "WHY MONOCHROME EDITORIAL AESTHETICS DOMINATE LUXURY SAAS",
-    date: "JUNE 2026",
-    readTime: "4 MIN READ",
+    title: "POURQUOI L'ESTHÉTIQUE ÉDITORIALE MONOCHROME DOMINE LES SAAS HAUT DE GAMME",
+    date: "JUIN 2026",
+    readTime: "4 MIN DE LECTURE",
     image:
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "art-3",
-    category: "DATA ENGINEERING",
-    title: "ATIH CLINICAL DATA VALIDATION AT SCALE WITH .NET 8 & PYTHON",
-    date: "MAY 2026",
-    readTime: "8 MIN READ",
+    category: "INGÉNIERIE DE DONNÉES",
+    title: "VALIDATION DE DONNÉES CLINIQUES ATIH À GRANDE ÉCHELLE (.NET 8 & PYTHON)",
+    date: "MAI 2026",
+    readTime: "8 MIN DE LECTURE",
     image:
       "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "art-4",
-    category: "PERFORMANCE",
-    title: "ACHIEVING BUTTERY 60FPS WITH GSAP SCROLLTRIGGER & LENIS IN NEXT.JS 15",
-    date: "APRIL 2026",
-    readTime: "5 MIN READ",
+    category: "PERFORMANCE WEB",
+    title: "OBTENIR DU 60FPS FLUIDE AVEC GSAP SCROLLTRIGGER & LENIS SUR NEXT.JS 15",
+    date: "AVRIL 2026",
+    readTime: "5 MIN DE LECTURE",
     image:
       "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80",
   },
@@ -97,14 +97,14 @@ export default function Insights() {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6 border-b border-[#0A0A0A]/10 pb-8">
         <div>
           <span className="text-xs font-bold tracking-[0.3em] uppercase text-[#8E8E8E] block mb-2">
-            04 / THOUGHT LEADERSHIP
+            05 / PUBLICATIONS & ANALYSES
           </span>
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[#0A0A0A]">
-            INSIGHTS & PUBLICATIONS
+            PUBLICATIONS & ARTICLES
           </h2>
         </div>
         <div className="flex items-center gap-2 text-xs font-mono text-[#8E8E8E]">
-          <BookOpen className="w-4 h-4" /> 4 ARTICLES PUBLISHED
+          <BookOpen className="w-4 h-4" /> 4 ARTICLES PUBLIÉS
         </div>
       </div>
 

@@ -13,7 +13,7 @@ interface TimelineItem {
 
 const timelineData: TimelineItem[] = [
   {
-    year: "2025 — PRESENT",
+    year: "2025 — PRÉSENT",
     role: "INGÉNIEUR PMSI & DATA ENGINEER DIM PSY",
     organization: "Fondation Vallée / GHT Sud Paris",
     type: "EXPERIENCE",
@@ -79,7 +79,7 @@ export default function ExperienceTimeline() {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6 border-b border-[#0A0A0A]/10 pb-8">
         <div>
           <span className="text-xs font-bold tracking-[0.3em] uppercase text-[#8E8E8E] block mb-2">
-            CAREER & FORMATION
+            03 / EXPÉRIENCES & FORMATIONS
           </span>
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[#0A0A0A]">
             PARCOURS & ENGAGEMENTS

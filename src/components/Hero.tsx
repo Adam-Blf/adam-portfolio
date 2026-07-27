@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import { ChevronDown, Sparkles } from "lucide-react";
 
 const phrases: string[] = [
-  "Building Tomorrow",
-  "Shaping Futures",
-  "Driving Growth",
+  "Bâtir Demain",
+  "Façonner l'Avenir",
+  "Impulser la Croissance",
 ];
 
 export default function Hero() {
@@ -63,11 +63,11 @@ export default function Hero() {
         <div className="flex items-center gap-2 px-3 py-1 rounded-full border border-[#0A0A0A]/20 bg-[#F5F3EF]/60 backdrop-blur-xs">
           <Sparkles className="w-3.5 h-3.5 text-[#0A0A0A]" />
           <span className="text-[11px] font-bold tracking-[0.25em] uppercase text-[#0A0A0A]">
-            INTELLIGENCE STUDIO — EST. 2026
+            STUDIO D'INTELLIGENCE & PORTFOLIO — ÉST. 2026
           </span>
         </div>
         <div className="text-xs font-mono tracking-wider text-[#8E8E8E] uppercase">
-          TOKYO · LONDON · NEW YORK
+          PARIS · CHEVILLY · TOKYO
         </div>
       </div>
 
@@ -75,12 +75,12 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto w-full my-auto py-12 flex flex-col items-center text-center">
         <div className="mb-4">
           <span className="text-xs md:text-sm font-bold tracking-[0.3em] uppercase text-[#8E8E8E] block mb-2">
-            PIONEERING ARTIFICIAL INTELLIGENCE
+            INTELLIGENCE ARTIFICIELLE & DATA ENGINEERING
           </span>
         </div>
 
         <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-[108px] font-black uppercase tracking-tight leading-[0.95] text-[#0A0A0A] max-w-6xl">
-          WE ARE <span className="underline decoration-[#0A0A0A]/20 decoration-2 underline-offset-8">PIXZEN</span>
+          NOUS SOMMES <span className="underline decoration-[#0A0A0A]/20 decoration-2 underline-offset-8">PIXZEN</span>
         </h1>
 
         {/* Dynamic Typing Effect Row */}
@@ -92,17 +92,17 @@ export default function Hero() {
         </div>
 
         <p className="mt-8 max-w-xl text-sm md:text-base text-[#8E8E8E] font-medium leading-relaxed tracking-wide">
-          Architecting state-of-the-art neural systems, strategic brand design, and autonomous digital ecosystems for market leaders.
+          Conception de systèmes neuraux de pointe, ingénierie de données hospitalières et écosystèmes numériques autonomes pour les leaders du marché.
         </p>
       </div>
 
       {/* Hero Bottom Bouncing Chevron */}
       <div className="relative z-10 max-w-7xl mx-auto w-full flex flex-col items-center justify-center pt-6 border-t border-[#0A0A0A]/10">
         <a
-          href="#expertise"
+          href="#demos"
           className="group flex flex-col items-center gap-2 text-xs font-bold tracking-[0.25em] text-[#8E8E8E] hover:text-[#0A0A0A] transition-colors"
         >
-          <span>SCROLL TO EXPLORE</span>
+          <span>DÉCOUVRIR L'UNIVERS</span>
           <div className="w-8 h-8 rounded-full border border-[#0A0A0A]/20 flex items-center justify-center group-hover:border-[#0A0A0A] transition-colors">
             <ChevronDown className="w-4 h-4 text-[#0A0A0A] animate-bounce" />
           </div>

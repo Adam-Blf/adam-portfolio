@@ -18,14 +18,14 @@ const services: Service[] = [
   {
     id: "ai-agents",
     num: "01",
-    title: "Autonomous AI Agents",
-    category: "SYSTEM ARCHITECTURE",
+    title: "Agents IA Autonomes",
+    category: "ARCHITECTURE SYSTÈME",
     description:
-      "Engineering self-healing, multi-agent frameworks, custom LLM pipelines, and cognitive workflows designed for complex enterprise automation.",
+      "Conception de frameworks multi-agents auto-réparateurs, de pipelines LLM sur-mesure et de flux de travail cognitifs conçus pour l'automatisation d'entreprise.",
     highlights: [
-      "Multi-Agent Swarm Orchestration",
-      "RAG & Vector Knowledge Graphs",
-      "Sub-100ms Inference Pipelines",
+      "Orchestration d'Essaims Multi-Agents",
+      "RAG & Graphes de Connaissances Vectoriels",
+      "Pipelines d'Inférence Inférieurs à 100ms",
     ],
     image:
       "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
@@ -33,14 +33,14 @@ const services: Service[] = [
   {
     id: "brand-strategy",
     num: "02",
-    title: "Futuristic Brand Strategy",
-    category: "IDENTITY & DESIGN",
+    title: "Stratégie de Marque Futuriste",
+    category: "IDENTITÉ & DESIGN",
     description:
-      "Crafting high-contrast monochrome design languages, typography systems, and identity systems that command absolute market presence.",
+      "Création de langages visuels monochromes à haut contraste, de systèmes typographiques et d'identités imposant une présence absolue sur le marché.",
     highlights: [
-      "Editorial Design Systems",
-      "Generative Brand Assets",
-      "Motion & Sonic Guidelines",
+      "Systèmes de Design Éditoriaux",
+      "Actifs de Marque Génératifs IA",
+      "Chartes Mouvement & Directives Visuelles",
     ],
     image:
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
@@ -48,14 +48,14 @@ const services: Service[] = [
   {
     id: "web-experience",
     num: "03",
-    title: "High-Performance Web Apps",
-    category: "FRONTEND ENGINEERING",
+    title: "Apps Web Haute Performance",
+    category: "INGÉNIERIE FRONTEND",
     description:
-      "Building buttery-smooth Next.js 15 applications with GSAP ScrollTrigger, WebGL graphics, and Lenis smooth scrolling with 100/100 Lighthouse performance.",
+      "Développement d'applications Next.js 15 d'une fluidité parfaite avec animations GSAP ScrollTrigger, graphiques WebGL et défilement fluide Lenis à 100/100 Lighthouse.",
     highlights: [
       "Next.js 15 App Router & Server Actions",
-      "GSAP & WebGL Interactive Canvas",
-      "Accessibility & WCAG AA Compliance",
+      "Canvas Interactif GSAP & WebGL",
+      "Accessibilité & Conformité WCAG AA",
     ],
     image:
       "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80",
@@ -63,14 +63,14 @@ const services: Service[] = [
   {
     id: "data-engineering",
     num: "04",
-    title: "Predictive Data Pipelines",
+    title: "Pipelines Data Prédictifs",
     category: "DATA ENGINEERING",
     description:
-      "Constructing resilient Medallion data lakes, real-time streaming architectures, and predictive machine learning models.",
+      "Construction de Data Lakes Médaillon résilients, d'architectures de streaming en temps réel et de modèles de machine learning prédictifs.",
     highlights: [
-      "Spark & Polars Batch ETL",
-      "Snowflake & BigQuery Lakehouses",
-      "MLOps & Model Monitoring",
+      "ETL Batch Apache Spark & Polars",
+      "Lakehouses Snowflake & BigQuery",
+      "MLOps & Surveillance des Modèles",
     ],
     image:
       "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
@@ -86,14 +86,14 @@ export default function Services() {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6 border-b border-[#0A0A0A]/10 pb-8">
         <div>
           <span className="text-xs font-bold tracking-[0.3em] uppercase text-[#8E8E8E] block mb-2">
-            01 / OUR CAPABILITIES
+            01 / NOS CAPACITÉS
           </span>
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[#0A0A0A]">
-            OUR EXPERTISE
+            NOS EXPERTISES
           </h2>
         </div>
         <p className="max-w-md text-sm text-[#8E8E8E] leading-relaxed font-medium">
-          We combine cutting-edge artificial intelligence with luxury editorial aesthetics to build transformative products.
+          Nous combinons l'intelligence artificielle de pointe avec une esthétique éditoriale de luxe pour créer des produits transformateurs.
         </p>
       </div>
 
@@ -175,7 +175,7 @@ export default function Services() {
                   {/* Feature Highlights List */}
                   <div className="flex flex-col gap-2.5 pt-4 border-t border-[#0A0A0A]/10">
                     <span className="text-[11px] font-bold tracking-widest text-[#8E8E8E] uppercase mb-1">
-                      DELIVERABLES & CAPABILITIES
+                      LIVRABLES & CAPACITÉS CLÉS
                     </span>
                     {activeService.highlights.map((highlight, idx) => (
                       <div key={idx} className="flex items-center gap-3 text-xs md:text-sm font-bold text-[#0A0A0A]">

@@ -32,9 +32,9 @@ export const projects: Project[] = [
     description:
       "Architecture distribuée .NET 8 et Python pour la Fondation Vallée (GHT Sud Paris). Traitement à très basse latence des données PMSI pédopsychiatriques, anonymisation stricte, calculs d'indicateurs de séjour et validation automatisée des formats ATIH.",
     metrics: [
-      { label: "Formats ATIH", value: "23 Supported" },
+      { label: "Formats ATIH", value: "23 Formats" },
       { label: "Latence Parsing", value: "< 150ms" },
-      { label: "Tests Unitaires", value: "34 xUnit Pass" },
+      { label: "Tests Unitaires", value: "34 Tests OK" },
     ],
     tags: [".NET 8", "Python", "PMSI / ATIH", "FICHSUP-PSY", "xUnit"],
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
@@ -56,7 +56,7 @@ export const projects: Project[] = [
       "Plateforme web réactive construite avec Next.js App Router, Supabase et Firebase. Permet la gestion intelligente des gardes, le respect des contraintes horaires hospitalières, l'export PDF/ICS et la synchronisation en temps réel.",
     metrics: [
       { label: "Synchro Temps Réel", value: "Supabase Realtime" },
-      { label: "Temps Déploiement", value: "Vercel PWA" },
+      { label: "Déploiement", value: "Vercel PWA" },
       { label: "Disponibilité", value: "99.99%" },
     ],
     tags: ["Next.js 15", "TypeScript", "Supabase", "Firebase", "Tailwind CSS"],
@@ -78,8 +78,8 @@ export const projects: Project[] = [
     description:
       "Jeu festif PWA haute performance déployé sur blackout.beloucif.com. Génération dynamique de cartes, mécaniques de votes en direct, modes de jeu personnalisés, animations micro-interactives et mode offline PWA.",
     metrics: [
-      { label: "Utilisateurs Actifs", value: "1,200+ Live" },
-      { label: "PWA Offline", value: "Service Worker" },
+      { label: "Utilisateurs Actifs", value: "1 200+ Actifs" },
+      { label: "Mode Hors Ligne", value: "Service Worker" },
       { label: "Score UX", value: "100/100 Lighthouse" },
     ],
     tags: ["Next.js 15", "PWA", "Framer Motion", "Tailwind CSS", "Vercel"],
@@ -101,9 +101,9 @@ export const projects: Project[] = [
     description:
       "Projet majeur Master Data Engineering EFREI. Ingestion streaming via Apache Kafka, transformations distribuées Apache Spark, stockage Delta Lake et requêtage analytique BigQuery.",
     metrics: [
-      { label: "Volume Streamed", value: "100k msg/sec" },
-      { label: "Couches Data", value: "Bronze -> Gold" },
-      { label: "Engine", value: "PySpark & Delta" },
+      { label: "Volume Streaming", value: "100k msg/sec" },
+      { label: "Architecture Data", value: "Bronze → Gold" },
+      { label: "Moteur Data", value: "PySpark & Delta" },
     ],
     tags: ["Apache Spark", "Apache Kafka", "Delta Lake", "Python", "BigQuery"],
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
@@ -124,8 +124,8 @@ export const projects: Project[] = [
       "Modèle de Computer Vision basé sur MediaPipe et Python OpenCV. Tracking des points clés des mains en temps réel, classification par réseau de neurones et support multilingue.",
     metrics: [
       { label: "Précision Modèle", value: "96.8%" },
-      { label: "Langues Supportées", value: "7 Sign Languages" },
-      { label: "FPS Inférence", value: "60 FPS Video" },
+      { label: "Langues des Signes", value: "7 Langues" },
+      { label: "FPS Inférence", value: "60 FPS Temps Réel" },
     ],
     tags: ["Computer Vision", "MediaPipe", "Python", "OpenCV", "TensorFlow"],
     image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80",
@@ -146,8 +146,8 @@ export const projects: Project[] = [
       "Algorithme Minimax optimisé avec élagage Alpha-Beta et évaluation positionnelle auto-apprenante. Interface Web canvas interactive.",
     metrics: [
       { label: "Profondeur Minimax", value: "6-8 Plies" },
-      { label: "Temps/Coup", value: "< 200ms" },
-      { label: "Architecture", value: "Pure JS / WebWorker" },
+      { label: "Temps / Coup", value: "< 200ms" },
+      { label: "Architecture Execution", value: "Pure JS / WebWorker" },
     ],
     tags: ["JavaScript", "Alpha-Beta", "WebWorkers", "Canvas API"],
     image: "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&w=1200&q=80",
@@ -169,7 +169,7 @@ export default function FeaturedWork() {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-6 border-b border-[#0A0A0A]/10 pb-8">
         <div>
           <span className="text-xs font-bold tracking-[0.3em] uppercase text-[#8E8E8E] block mb-2">
-            02 / SELECTED WORK
+            02 / PROJETS SÉLECTIONNÉS
           </span>
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[#0A0A0A]">
             PROJETS RELEVANTS & CASE STUDIES
@@ -200,7 +200,7 @@ export default function FeaturedWork() {
               </div>
               {project.liveUrl && (
                 <div className="absolute top-6 right-6 px-3 py-1.5 rounded-full bg-[#10B981] text-[#F5F3EF] text-[10px] font-black uppercase tracking-wider flex items-center gap-1">
-                  <Activity className="w-3 h-3" /> LIVE ONLINE
+                  <Activity className="w-3 h-3" /> EN DIRECT
                 </div>
               )}
             </div>
@@ -266,7 +266,7 @@ export default function FeaturedWork() {
               </button>
 
               <span className="text-xs font-mono font-bold text-[#8E8E8E] uppercase tracking-widest block mb-2">
-                PROJECT CASE STUDY // {selectedProject.number}
+                ÉTUDE DE CAS DU PROJET // {selectedProject.number}
               </span>
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight text-[#0A0A0A] mb-4">
                 {selectedProject.title}

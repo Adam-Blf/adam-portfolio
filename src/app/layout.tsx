@@ -3,19 +3,20 @@ import "./globals.css";
 import LenisProvider from "@/components/LenisProvider";
 
 export const metadata: Metadata = {
-  title: "PIXZEN — Adam Beloucif | Data Engineer & Fullstack AI Studio",
+  title: "Adam Beloucif — Data Engineer & Développeur Fullstack IA | PIXZEN",
   description:
-    "PIXZEN is an elite futuristic AI agency & portfolio by Adam Beloucif — Data Engineer at GHT Sud Paris (Fondation Vallée), EFREI Paris & Université Panthéon-Assas.",
+    "Portfolio officiel d'Adam Beloucif — Data Engineer au GHT Sud Paris (Fondation Vallée), étudiant en Mastère Data Engineering & IA à l'EFREI Paris x Université Panthéon-Assas.",
   keywords: [
-    "PIXZEN",
     "Adam Beloucif",
+    "PIXZEN",
     "Data Engineer",
-    "Fullstack Developer",
-    "AI Agency",
+    "Développeur Fullstack",
+    "Agence IA",
     "PMSI ATIH",
     "Sovereign OS DIM",
     "Next.js 15",
     "EFREI",
+    "Panthéon Assas",
     "Paris",
   ],
   authors: [{ name: "Adam Beloucif", url: "https://adam.beloucif.com" }],
@@ -25,10 +26,10 @@ export const metadata: Metadata = {
     apple: "/favicon.svg",
   },
   openGraph: {
-    title: "PIXZEN — Adam Beloucif | Data Engineer & Fullstack AI Studio",
-    description: "Elite futuristic AI agency & personal portfolio of Adam Beloucif.",
+    title: "Adam Beloucif — Data Engineer & Développeur Fullstack IA | PIXZEN",
+    description: "Portfolio officiel d'Adam Beloucif · Data Engineering, IA Médicale & Fullstack TS.",
     url: "https://adam.beloucif.com",
-    siteName: "PIXZEN Studio",
+    siteName: "Adam Beloucif Portfolio",
     locale: "fr_FR",
     type: "website",
   },

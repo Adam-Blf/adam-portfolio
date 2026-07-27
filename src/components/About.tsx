@@ -8,16 +8,16 @@ import { Sparkles, ShieldCheck } from "lucide-react";
 gsap.registerPlugin(ScrollTrigger);
 
 const manifestoText =
-  "AT PIXZEN, WE BELIEVE THAT ARTIFICIAL INTELLIGENCE IS NOT JUST A TOOL, BUT AN ARCHITECTURAL PARADIGM SHIFT. WE CRAFT WORLD-CLASS AUTONOMOUS AGENTS, HIGH-PERFORMANCE NEURAL PIPELINES, AND LUXURY MONOCHROME DIGITAL EXPERIENCES THAT REDEFINE INDUSTRY STANDARDS.";
+  "L'INTELLIGENCE ARTIFICIELLE N'EST PAS SEULEMENT UN OUTIL, C'EST UN CHANGEMENT DE PARADIGME ARCHITECTURAL. NOUS CONCEVONS DES AGENTS AUTONOMES D'EXCELLENCE, DES PIPELINES NEURAUX À HAUTE PERFORMANCE ET DES EXPÉRIENCES NUMÉRIQUES MONOCHROMES HAUT DE GAMME QUI REDÉFINISENT LES STANDARDS.";
 
 const marqueeItems = [
-  "ARTIFICIAL INTELLIGENCE",
-  "BRAND STRATEGY",
-  "SYSTEM ARCHITECTURE",
-  "AUTONOMOUS AGENTS",
-  "NEURAL NETWORKS",
-  "FULLSTACK ENGINEERING",
-  "MEDALLION DATA LAKES",
+  "INTELLIGENCE ARTIFICIELLE",
+  "STRATÉGIE & ARCHITECTURE",
+  "INGÉNIERIE DATA & IA",
+  "AGENTS AUTONOMES",
+  "RÉSEAUX DE NEURONES",
+  "DÉVELOPPEMENT FULLSTACK",
+  "DATA LAKES MÉDAILLON",
 ];
 
 export default function About() {
@@ -60,7 +60,7 @@ export default function About() {
         <div className="flex items-center gap-2 mb-8">
           <Sparkles className="w-4 h-4 text-[#0A0A0A]" />
           <span className="text-xs font-bold tracking-[0.3em] uppercase text-[#8E8E8E]">
-            03 / MANIFESTO & VISION
+            04 / MANIFESTE & VISION
           </span>
         </div>
 
@@ -79,24 +79,24 @@ export default function About() {
         {/* Core Pillars Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 pt-12 border-t border-[#0A0A0A]/10">
           <div className="flex flex-col gap-2">
-            <span className="text-xs font-mono font-bold text-[#8E8E8E]">01 // PURPOSE</span>
-            <h4 className="text-lg font-black uppercase text-[#0A0A0A]">ENGINEERING PRECISION</h4>
+            <span className="text-xs font-mono font-bold text-[#8E8E8E]">01 // OBJECTIF</span>
+            <h4 className="text-lg font-black uppercase text-[#0A0A0A]">PRÉCISION DE L'INGÉNIERIE</h4>
             <p className="text-xs md:text-sm text-[#8E8E8E] leading-relaxed font-medium">
-              Sub-second response times, 100% strict type safety, and zero technical debt.
+              Temps de réponse sub-seconde, sécurité de typage strict et maîtrise de la dette technique.
             </p>
           </div>
           <div className="flex flex-col gap-2">
-            <span className="text-xs font-mono font-bold text-[#8E8E8E]">02 // AESTHETICS</span>
-            <h4 className="text-lg font-black uppercase text-[#0A0A0A]">MONOCHROME LUXURY</h4>
+            <span className="text-xs font-mono font-bold text-[#8E8E8E]">02 // ESTHÉTIQUE</span>
+            <h4 className="text-lg font-black uppercase text-[#0A0A0A]">LUXE MONOCHROME</h4>
             <p className="text-xs md:text-sm text-[#8E8E8E] leading-relaxed font-medium">
-              High-contrast typography, tactile micro-interactions, and timeless editorial styling.
+              Typographie à fort contraste, micro-interactions tactiles et style éditorial intemporel.
             </p>
           </div>
           <div className="flex flex-col gap-2">
-            <span className="text-xs font-mono font-bold text-[#8E8E8E]">03 // RELIABILITY</span>
-            <h4 className="text-lg font-black uppercase text-[#0A0A0A]">AUTONOMOUS SCALABILITY</h4>
+            <span className="text-xs font-mono font-bold text-[#8E8E8E]">03 // FIABILITÉ</span>
+            <h4 className="text-lg font-black uppercase text-[#0A0A0A]">SCALABILITÉ AUTONOME</h4>
             <p className="text-xs md:text-sm text-[#8E8E8E] leading-relaxed font-medium">
-              Multi-agent systems designed to operate self-sufficiently at massive scale.
+              Systèmes multi-agents conçus pour opérer en totale autonomie à grande échelle.
             </p>
           </div>
         </div>

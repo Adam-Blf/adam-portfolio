@@ -18,11 +18,11 @@ import {
 
 // --- DEMO 1: BLACKOUT PARTY GAME ---
 const blackoutCards = [
-  { id: 1, title: "TRUTH OR DARE NEURAL", text: "Point at the person most likely to deploy code directly to production without testing. Take 2 sips if pointed at!", category: "CHALLENGE" },
-  { id: 2, title: "SYNAPTIC SPEED", text: "Name 3 Machine Learning algorithms in 5 seconds. If you fail, drink 3 sips!", category: "SPEED" },
-  { id: 3, title: "BUG HUNT", text: "The last person to touch their nose must tell an embarrassing coding or work story!", category: "REFLEX" },
-  { id: 4, title: "VOTE SWARM", text: "Everyone votes: Who is the most organized person in the room? Winner creates a new rule!", category: "VOTE" },
-  { id: 5, title: "QUANTUM CHUG", text: "Choose a drink buddy. Whenever you sip for the next 3 rounds, they must sip too!", category: "PAIR" },
+  { id: 1, title: "DÉFI NEURAL OU VÉRITÉ", text: "Pointez la personne la plus susceptible de pusher en prod sans tester. Prenez 2 gorgées si on vous pointe !", category: "CHALLENGE" },
+  { id: 2, title: "VITESSE SYNAPTIQUE", text: "Citez 3 algorithmes de Machine Learning en 5 secondes. En cas d'échec, buvez 3 gorgées !", category: "VITESSE" },
+  { id: 3, title: "CHASSE AUX BUGS", text: "La dernière personne à se toucher le nez doit raconter une anecdote embarrassante sur son code ou son travail !", category: "RÉFLEXE" },
+  { id: 4, title: "VOTE DE L'AGENT", text: "Tout le monde vote : Qui est la personne la plus ordonnée du groupe ? Le gagnant crée une nouvelle règle !", category: "VOTE" },
+  { id: 5, title: "BINÔME QUANTIQUE", text: "Choisissez un binôme. À chaque fois que vous buvez durant les 3 prochains tours, votre binôme doit boire aussi !", category: "BINÔME" },
 ];
 
 function BlackoutDemo() {
@@ -41,15 +41,15 @@ function BlackoutDemo() {
       <div className="flex items-center justify-between">
         <div>
           <h4 className="text-xl font-black uppercase tracking-tight text-[#0A0A0A]">
-            BLACKOUT APÉRO SIMULATOR
+            SIMULATEUR BLACKOUT APÉRO
           </h4>
           <p className="text-xs text-[#8E8E8E] font-medium">
-            Live interactive party game engine (Available at blackout.beloucif.com)
+            Moteur interactif de jeu d'ambiance en direct (Disponible sur blackout.beloucif.com)
           </p>
         </div>
         <div className="flex items-center gap-3">
           <span className="text-xs font-mono font-bold text-[#0A0A0A] bg-[#0A0A0A]/5 px-3 py-1 rounded-full border border-[#0A0A0A]/10">
-            CARDS DRAWN: {score}
+            CARTES TIRÉES : {score}
           </span>
           <a
             href="https://blackout.beloucif.com"
@@ -57,7 +57,7 @@ function BlackoutDemo() {
             rel="noopener noreferrer"
             className="text-xs font-bold text-[#0A0A0A] underline hover:text-[#8E8E8E]"
           >
-            Launch Full PWA ↗
+            Lancer l'Application PWA ↗
           </a>
         </div>
       </div>
@@ -68,7 +68,7 @@ function BlackoutDemo() {
           <span className="text-[10px] font-bold tracking-widest uppercase bg-[#F5F3EF]/10 px-3 py-1 rounded-full text-[#F5F3EF]">
             {currentCard.category}
           </span>
-          <span className="text-xs font-mono text-[#8E8E8E]">CARD #{currentCard.id} / 5</span>
+          <span className="text-xs font-mono text-[#8E8E8E]">CARTE N°{currentCard.id} / 5</span>
         </div>
 
         <div className="z-10 my-auto">
@@ -81,12 +81,12 @@ function BlackoutDemo() {
         </div>
 
         <div className="flex justify-between items-center z-10 pt-4 border-t border-[#F5F3EF]/10">
-          <span className="text-xs text-[#8E8E8E] font-mono">STATUS: ACTIVE GAME SESSION</span>
+          <span className="text-xs text-[#8E8E8E] font-mono">STATUT : SESSION DE JEU ACTIVE</span>
           <button
             onClick={drawCard}
             className="px-6 py-2.5 rounded-full bg-[#F5F3EF] text-[#0A0A0A] text-xs font-black tracking-widest uppercase hover:bg-[#EAE7E1] transition-all flex items-center gap-2 shadow-md hover:scale-105"
           >
-            <Dices className="w-4 h-4" /> DRAW NEXT CARD
+            <Dices className="w-4 h-4" /> TIRER UNE NOUVELLE CARTE
           </button>
         </div>
       </div>
@@ -97,17 +97,17 @@ function BlackoutDemo() {
 // --- DEMO 2: SOVEREIGN OS DIM ATIH VALIDATOR ---
 const sampleAtihSnippets = [
   {
-    name: "RPSA Sample (Pédopsychiatrie)",
+    name: "Échantillon RPSA (Pédopsychiatrie)",
     code: "RPSA;750100012;2026;001294;F;20120415;20260301;F90.0;Z65.8;12;OK",
-    status: "VALID",
+    status: "VALIDE",
     format: "ATIH RPSA v2026",
     errors: 0,
-    fichsup: "FICHSUP-PSY Cleared",
+    fichsup: "FICHSUP-PSY Conforme",
   },
   {
-    name: "RPSB Sample (Hospitalisation de jour)",
+    name: "Échantillon RPSB (Hospitalisation de jour)",
     code: "RPSB;750100012;2026;008471;M;20150920;20260302;F84.0;;01;ERR_MISSING_DIAG",
-    status: "INVALID",
+    status: "INVALIDE",
     format: "ATIH RPSB v2026",
     errors: 1,
     fichsup: "Diagnostic associé manquant",
@@ -126,12 +126,12 @@ function SovereignValidatorDemo() {
       setIsAnalyzing(false);
       const isErr = customInput.includes("ERR") || customInput.length < 20;
       setResult({
-        name: "Custom Inspection Payload",
+        name: "Charge Personnalisée",
         code: customInput,
-        status: isErr ? "INVALID" : "VALID",
+        status: isErr ? "INVALIDE" : "VALIDE",
         format: "ATIH Standard Parser v2026",
         errors: isErr ? 2 : 0,
-        fichsup: isErr ? "Format syntax error on column 8" : "FICHSUP-PSY Compliance Verified",
+        fichsup: isErr ? "Erreur de syntaxe colonne 8" : "Conformité FICHSUP-PSY Vérifiée",
       });
     }, 400);
   };
@@ -141,10 +141,10 @@ function SovereignValidatorDemo() {
       <div className="flex items-center justify-between">
         <div>
           <h4 className="text-xl font-black uppercase tracking-tight text-[#0A0A0A]">
-            SOVEREIGN OS DIM — ATIH CLINICAL VALIDATOR
+            SOVEREIGN OS DIM — VALIDATEUR CLINIQUE ATIH
           </h4>
           <p className="text-xs text-[#8E8E8E] font-medium">
-            Sub-250ms PMSI Data Engine (.NET 8 & Python architecture at GHT Sud Paris)
+            Moteur de données PMSI &lt; 250ms (Architecture .NET 8 & Python au GHT Sud Paris)
           </p>
         </div>
         <div className="flex items-center gap-2">
@@ -162,7 +162,7 @@ function SovereignValidatorDemo() {
                   : "bg-transparent text-[#0A0A0A] border-[#0A0A0A]/20"
               }`}
             >
-              Preset {idx + 1}
+              Exemple {idx + 1}
             </button>
           ))}
         </div>
@@ -172,7 +172,7 @@ function SovereignValidatorDemo() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         <div className="lg:col-span-7 flex flex-col gap-3">
           <label className="text-xs font-mono font-bold text-[#8E8E8E] uppercase">
-            INPUT ATIH / PMSI STREAM PAYLOAD
+            DONNÉES BRUTES ATIH / PMSI
           </label>
           <textarea
             value={customInput}
@@ -190,7 +190,7 @@ function SovereignValidatorDemo() {
             ) : (
               <FileCode2 className="w-4 h-4 text-[#F5F3EF]" />
             )}
-            {isAnalyzing ? "RUNNING ATIH PARSER..." : "EXECUTE VALIDATION ENGINE"}
+            {isAnalyzing ? "ANALYSE ATIH EN COURS..." : "LANCER LE MOTEUR DE VALIDATION"}
           </button>
         </div>
 
@@ -198,16 +198,16 @@ function SovereignValidatorDemo() {
         <div className="lg:col-span-5 rounded-xl bg-[#EAE7E1] border border-[#0A0A0A]/15 p-5 flex flex-col justify-between">
           <div>
             <span className="text-[10px] font-mono font-bold text-[#8E8E8E] uppercase block mb-3">
-              VALIDATION REPORT
+              RAPPORT DE VALIDATION
             </span>
             <div className="flex items-center gap-3 mb-4">
-              {result.status === "VALID" ? (
+              {result.status === "VALIDE" ? (
                 <div className="px-3 py-1 rounded-full bg-[#10B981]/10 text-[#10B981] border border-[#10B981]/30 text-xs font-black flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4" /> ATIH PASSED
+                  <CheckCircle2 className="w-4 h-4" /> FORMAT ATIH VALIDE
                 </div>
               ) : (
                 <div className="px-3 py-1 rounded-full bg-[#E11D48]/10 text-[#E11D48] border border-[#E11D48]/30 text-xs font-black flex items-center gap-1.5">
-                  <AlertCircle className="w-4 h-4" /> FORMAT ERROR
+                  <AlertCircle className="w-4 h-4" /> ERREUR DE FORMAT
                 </div>
               )}
               <span className="text-xs font-mono text-[#0A0A0A] font-bold">
@@ -217,22 +217,22 @@ function SovereignValidatorDemo() {
 
             <div className="flex flex-col gap-2 text-xs font-medium text-[#0A0A0A]">
               <div className="flex justify-between border-b border-[#0A0A0A]/10 pb-1.5">
-                <span className="text-[#8E8E8E]">Parsing Latency:</span>
+                <span className="text-[#8E8E8E]">Latence de Parsing :</span>
                 <span className="font-mono font-bold">&lt; 145ms</span>
               </div>
               <div className="flex justify-between border-b border-[#0A0A0A]/10 pb-1.5">
-                <span className="text-[#8E8E8E]">Error Count:</span>
-                <span className="font-mono font-bold">{result.errors} Issues</span>
+                <span className="text-[#8E8E8E]">Nombre d'Erreurs :</span>
+                <span className="font-mono font-bold">{result.errors} Anom.</span>
               </div>
               <div className="flex justify-between pb-1.5">
-                <span className="text-[#8E8E8E]">FICHSUP Diagnostic:</span>
+                <span className="text-[#8E8E8E]">Diagnostic FICHSUP :</span>
                 <span className="font-mono font-bold">{result.fichsup}</span>
               </div>
             </div>
           </div>
 
           <p className="text-[11px] text-[#8E8E8E] font-mono mt-4 pt-3 border-t border-[#0A0A0A]/10">
-            Validated against ATIH 2026 Pedopsychiatrie standard ruleset.
+            Validé selon le référentiel officiel ATIH 2026 Pédopsychiatrie.
           </p>
         </div>
       </div>
@@ -242,17 +242,17 @@ function SovereignValidatorDemo() {
 
 // --- DEMO 3: PGVPLANING SHIFT SCHEDULER ---
 const initialNurses = [
-  { name: "Nurse Sarah M.", shift: "MORNING", unit: "Pédopsychiatrie A" },
-  { name: "Nurse Thomas L.", shift: "EVENING", unit: "Hospitalisation Jour" },
-  { name: "Nurse Julie B.", shift: "NIGHT", unit: "Urgences PSY" },
-  { name: "Nurse Marc K.", shift: "OFF", unit: "Consultations Externe" },
+  { name: "Infirmière Sarah M.", shift: "MATIN", unit: "Pédopsychiatrie A" },
+  { name: "Infirmier Thomas L.", shift: "SOIR", unit: "Hospitalisation Jour" },
+  { name: "Infirmière Julie B.", shift: "NUIT", unit: "Urgences PSY" },
+  { name: "Infirmier Marc K.", shift: "REPOS", unit: "Consultations Externe" },
 ];
 
 function PGVPlaningDemo() {
   const [nurses, setNurses] = useState(initialNurses);
 
   const toggleShift = (index: number) => {
-    const shifts = ["MORNING", "EVENING", "NIGHT", "OFF"];
+    const shifts = ["MATIN", "SOIR", "NUIT", "REPOS"];
     setNurses((prev) =>
       prev.map((n, i) => {
         if (i === index) {
@@ -266,11 +266,11 @@ function PGVPlaningDemo() {
 
   const getShiftBadgeClass = (shift: string) => {
     switch (shift) {
-      case "MORNING":
+      case "MATIN":
         return "bg-[#0A0A0A] text-[#F5F3EF]";
-      case "EVENING":
+      case "SOIR":
         return "bg-[#8E8E8E] text-[#F5F3EF]";
-      case "NIGHT":
+      case "NUIT":
         return "bg-[#0A0A0A]/80 text-[#F5F3EF]";
       default:
         return "bg-[#0A0A0A]/10 text-[#0A0A0A]";
@@ -282,10 +282,10 @@ function PGVPlaningDemo() {
       <div className="flex items-center justify-between">
         <div>
           <h4 className="text-xl font-black uppercase tracking-tight text-[#0A0A0A]">
-            PGVPLANING — HEALTHCARE ROSTER ENGINE
+            PGVPLANING — PLANIFICATEUR DE SOINS HOSPITALIERS
           </h4>
           <p className="text-xs text-[#8E8E8E] font-medium">
-            Intelligent shifts & roster planner (Live at planning.beloucif.com)
+            Planificateur intelligent des gardes (En direct sur planning.beloucif.com)
           </p>
         </div>
         <a
@@ -294,7 +294,7 @@ function PGVPlaningDemo() {
           rel="noopener noreferrer"
           className="text-xs font-bold text-[#0A0A0A] underline hover:text-[#8E8E8E]"
         >
-          Launch Live App ↗
+          Accéder à l'App ↗
         </a>
       </div>
 
@@ -311,7 +311,7 @@ function PGVPlaningDemo() {
                 nurse.shift
               )}`}
             >
-              {nurse.shift} (CLICK TO ROTATE)
+              {nurse.shift} (CHANGER)
             </button>
           </div>
         ))}
@@ -321,11 +321,11 @@ function PGVPlaningDemo() {
 }
 
 // --- DEMO 4: FRIDGE AI RECIPE PREDICTOR ---
-const availableIngredients = ["Eggs", "Salmon", "Avocado", "Tomatoes", "Rice", "Cheese", "Spinach"];
+const availableIngredients = ["Œufs", "Saumon", "Avocat", "Tomates", "Riz", "Fromage", "Épinards"];
 
 function RecipeAIDemo() {
-  const [selected, setSelected] = useState<string[]>(["Eggs", "Avocado"]);
-  const [recipe, setRecipe] = useState("Avocado Egg Bowl with Cherry Tomatoes");
+  const [selected, setSelected] = useState<string[]>(["Œufs", "Avocat"]);
+  const [recipe, setRecipe] = useState("Bol Avocat-Œuf Poché & Tomates Cerises");
 
   const toggleIngredient = (item: string) => {
     const updated = selected.includes(item)
@@ -333,12 +333,12 @@ function RecipeAIDemo() {
       : [...selected, item];
     setSelected(updated);
 
-    if (updated.includes("Salmon")) {
-      setRecipe("Pan-Seared Salmon over Rice & Avocado Salad");
-    } else if (updated.includes("Cheese")) {
-      setRecipe("Creamy Cheese Omelette with Fresh Tomatoes");
+    if (updated.includes("Saumon")) {
+      setRecipe("Pavé de Saumon poêlé sur lit de Riz & Salade d'Avocat");
+    } else if (updated.includes("Fromage")) {
+      setRecipe("Omelette Fondante au Fromage & Tomates Fraîches");
     } else {
-      setRecipe("Avocado Egg Bowl with Cherry Tomatoes");
+      setRecipe("Bol Avocat-Œuf Poché & Tomates Cerises");
     }
   };
 
@@ -346,10 +346,10 @@ function RecipeAIDemo() {
     <div className="flex flex-col gap-6">
       <div>
         <h4 className="text-xl font-black uppercase tracking-tight text-[#0A0A0A]">
-          RECIPE RECO FRIGO — AI INGREDIENT PREDICTOR
+          RECIPE RECO FRIGO — PRÉDICTIONS D'INGRÉDIENTS IA
         </h4>
         <p className="text-xs text-[#8E8E8E] font-medium">
-          LSTM & NLP Sentence-Transformers recipe recommendation engine
+          Moteur de recommandation de recettes par LSTM & NLP Sentence-Transformers
         </p>
       </div>
 
@@ -374,11 +374,11 @@ function RecipeAIDemo() {
 
       <div className="p-6 rounded-2xl bg-[#0A0A0A] text-[#F5F3EF] flex flex-col gap-2">
         <span className="text-[10px] font-mono font-bold text-[#8E8E8E] uppercase">
-          AI RECOMMENDATION MATCH (98.4% CONFIDENCE)
+          RECOMMANDATION IA (CONFIANCE 98.4%)
         </span>
         <h5 className="text-lg font-black text-[#F5F3EF]">{recipe}</h5>
         <p className="text-xs text-[#8E8E8E]">
-          Selected Ingredients: {selected.join(", ") || "None"}
+          Ingrédients Sélectionnés : {selected.join(", ") || "Aucun"}
         </p>
       </div>
     </div>
@@ -394,14 +394,14 @@ export default function InteractiveDemos() {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6 border-b border-[#0A0A0A]/10 pb-8">
         <div>
           <span className="text-xs font-bold tracking-[0.3em] uppercase text-[#8E8E8E] block mb-2">
-            INTERACTIVE LAB // LIVE DEMOS
+            LABORATOIRE INTERACTIF // DÉMOS EN DIRECT
           </span>
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[#0A0A0A]">
-            TEST REAL PROJECTS LIVE
+            TESTEZ NOS PROJETS EN DIRECT
           </h2>
         </div>
         <p className="max-w-md text-sm text-[#8E8E8E] leading-relaxed font-medium">
-          Interact directly with live working simulators of our deployed applications right inside your browser.
+          Interagissez directement avec des simulateurs fonctionnels de nos applications déployées, au cœur de votre navigateur.
         </p>
       </div>
 
@@ -415,7 +415,7 @@ export default function InteractiveDemos() {
               : "bg-[#EAE7E1] text-[#0A0A0A] hover:bg-[#0A0A0A]/10"
           }`}
         >
-          🎮 BLACKOUT GAME
+          🎮 JEU BLACKOUT
         </button>
         <button
           onClick={() => setActiveTab("sovereign")}
@@ -425,7 +425,7 @@ export default function InteractiveDemos() {
               : "bg-[#EAE7E1] text-[#0A0A0A] hover:bg-[#0A0A0A]/10"
           }`}
         >
-          🏥 SOVEREIGN ATIH VALIDATOR
+          🏥 VALIDATEUR ATIH
         </button>
         <button
           onClick={() => setActiveTab("pgv")}
@@ -435,7 +435,7 @@ export default function InteractiveDemos() {
               : "bg-[#EAE7E1] text-[#0A0A0A] hover:bg-[#0A0A0A]/10"
           }`}
         >
-          📅 PGVPLANING ROSTER
+          📅 PLANNING PGV
         </button>
         <button
           onClick={() => setActiveTab("recipe")}
@@ -445,7 +445,7 @@ export default function InteractiveDemos() {
               : "bg-[#EAE7E1] text-[#0A0A0A] hover:bg-[#0A0A0A]/10"
           }`}
         >
-          🍳 FRIDGE RECIPE AI
+          🍳 RECETTES FRIGO IA
         </button>
       </div>
 

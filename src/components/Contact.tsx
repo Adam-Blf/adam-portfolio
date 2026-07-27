@@ -63,17 +63,17 @@ export default function Contact() {
         <div className="flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full border border-[#F5F3EF]/20 bg-[#F5F3EF]/5 backdrop-blur-xs">
           <Mail className="w-3.5 h-3.5 text-[#F5F3EF]" />
           <span className="text-xs font-bold tracking-[0.25em] uppercase text-[#F5F3EF]">
-            INITIATE COLLABORATION
+            INITIER UNE COLLABORATION
           </span>
         </div>
 
         {/* Massive Centered Headline */}
         <h2 className="text-4xl sm:text-6xl md:text-8xl lg:text-[104px] font-black uppercase tracking-tight leading-[0.95] max-w-6xl mb-8 mix-blend-difference text-[#F5F3EF]">
-          LET'S BUILD THE FUTURE.
+          BÂTISSONS L'AVENIR ENSEMBLE.
         </h2>
 
         <p className="max-w-2xl text-sm md:text-lg text-[#8E8E8E] font-medium leading-relaxed mb-12">
-          Have a revolutionary project, custom neural agent requirement, or high-end web experience in mind? Connect with PIXZEN today.
+          Vous avez un projet ambitieux, un besoin d'agent autonome sur mesure ou d'architecture Data/IA ? Contactez-moi dès aujourd'hui.
         </p>
 
         {/* Form & Magnetic Button Area */}
@@ -84,7 +84,7 @@ export default function Contact() {
               required
               value={emailInput}
               onChange={(e) => setEmailInput(e.target.value)}
-              placeholder="Enter your email address..."
+              placeholder="Entrez votre adresse email..."
               className="w-full px-6 py-4 rounded-full bg-[#F5F3EF]/10 border border-[#F5F3EF]/20 text-[#F5F3EF] placeholder-[#8E8E8E] text-sm focus:outline-none focus:border-[#F5F3EF] transition-colors"
             />
 
@@ -102,11 +102,11 @@ export default function Contact() {
                 {formSubmitted ? (
                   <>
                     <CheckCircle className="w-4 h-4 text-[#0A0A0A]" />
-                    SENT!
+                    ENVOYÉ !
                   </>
                 ) : (
                   <>
-                    START A PROJECT
+                    LANCER UN PROJET
                     <ArrowUpRight className="w-4 h-4 text-[#0A0A0A]" />
                   </>
                 )}
@@ -116,12 +116,12 @@ export default function Contact() {
 
           {/* Direct Email Link */}
           <div className="pt-4 flex flex-col sm:flex-row items-center gap-6 text-xs font-mono text-[#8E8E8E]">
-            <span>DIRECT INQUIRIES:</span>
+            <span>CONTACT DIRECT :</span>
             <a
-              href="mailto:hello@pixzen.ai"
+              href="mailto:adam.beloucif@efrei.net"
               className="text-[#F5F3EF] underline decoration-[#F5F3EF]/30 hover:decoration-[#F5F3EF] font-bold tracking-widest transition-colors"
             >
-              hello@pixzen.ai
+              adam.beloucif@efrei.net
             </a>
             <span className="hidden sm:inline">·</span>
             <a

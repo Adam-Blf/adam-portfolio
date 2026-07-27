@@ -36,9 +36,9 @@ export default function TrustedBrands() {
     <section className="relative py-12 w-full overflow-hidden bg-[#EAE7E1]/50 border-b border-[#0A0A0A]/10">
       <div className="max-w-7xl mx-auto px-6 md:px-12 mb-6 flex justify-between items-center">
         <span className="text-[11px] font-bold tracking-[0.3em] uppercase text-[#8E8E8E]">
-          TRUSTED BY GLOBAL INNOVATORS & ENTERPRISES
+          FAIT CONFIANCE PAR DES INNOVATEURS & ENTREPRISES GLOBALES
         </span>
-        <span className="text-[11px] font-mono text-[#8E8E8E]">10+ INDUSTRY PARTNERS</span>
+        <span className="text-[11px] font-mono text-[#8E8E8E]">10+ PARTENAIRES INDUSTRIELS</span>
       </div>
 
       {/* Marquee Wrapper with Gradient Fades */}
