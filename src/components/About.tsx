@@ -8,16 +8,16 @@ import { Sparkles, ShieldCheck } from "lucide-react";
 gsap.registerPlugin(ScrollTrigger);
 
 const manifestoText =
-  "L'INTELLIGENCE ARTIFICIELLE N'EST PAS SEULEMENT UN OUTIL, C'EST UN CHANGEMENT DE PARADIGME ARCHITECTURAL. NOUS CONCEVONS DES AGENTS AUTONOMES D'EXCELLENCE, DES PIPELINES NEURAUX À HAUTE PERFORMANCE ET DES EXPÉRIENCES NUMÉRIQUES MONOCHROMES HAUT DE GAMME QUI REDÉFINISENT LES STANDARDS.";
+  "UNE DONNÉE HOSPITALIÈRE MAL MODÉLISÉE, C'EST UN SERVICE QUI PILOTE À L'AVEUGLE. JE PASSE MES JOURNÉES À RENDRE CES DONNÉES FIABLES, LISIBLES ET ACTIONNABLES POUR LES ÉQUIPES SOIGNANTES ET LES DIRECTIONS. LE RESTE DU TEMPS, JE CONSTRUIS DES PRODUITS WEB QUI TIENNENT EN PRODUCTION.";
 
 const marqueeItems = [
-  "INTELLIGENCE ARTIFICIELLE",
-  "STRATÉGIE & ARCHITECTURE",
-  "INGÉNIERIE DATA & IA",
-  "AGENTS AUTONOMES",
-  "RÉSEAUX DE NEURONES",
-  "DÉVELOPPEMENT FULLSTACK",
-  "DATA LAKES MÉDAILLON",
+  "DATA ENGINEERING",
+  "PMSI & DIM",
+  "ORACLE, SQL ET PL/SQL",
+  "PIPELINES ETL ET ELT",
+  "IA APPLIQUÉE",
+  "FULLSTACK TYPESCRIPT",
+  "RGPD & DONNÉES DE SANTÉ",
 ];
 
 export default function About() {
@@ -79,24 +79,27 @@ export default function About() {
         {/* Core Pillars Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 pt-12 border-t border-[#0A0A0A]/10">
           <div className="flex flex-col gap-2">
-            <span className="text-xs font-mono font-bold text-[#8E8E8E]">01 // OBJECTIF</span>
-            <h4 className="text-lg font-black uppercase text-[#0A0A0A]">PRÉCISION DE L'INGÉNIERIE</h4>
+            <span className="text-xs font-mono font-bold text-[#8E8E8E]">01 // MÉTHODE</span>
+            <h4 className="text-lg font-black uppercase text-[#0A0A0A]">LA DONNÉE D&apos;ABORD</h4>
             <p className="text-xs md:text-sm text-[#8E8E8E] leading-relaxed font-medium">
-              Temps de réponse sub-seconde, sécurité de typage strict et maîtrise de la dette technique.
+              Modèle de données propre, invariants posés en base, contrôles qualité
+              automatisés. Le reste en découle.
             </p>
           </div>
           <div className="flex flex-col gap-2">
-            <span className="text-xs font-mono font-bold text-[#8E8E8E]">02 // ESTHÉTIQUE</span>
-            <h4 className="text-lg font-black uppercase text-[#0A0A0A]">LUXE MONOCHROME</h4>
+            <span className="text-xs font-mono font-bold text-[#8E8E8E]">02 // TERRAIN</span>
+            <h4 className="text-lg font-black uppercase text-[#0A0A0A]">HÔPITAL PUBLIC</h4>
             <p className="text-xs md:text-sm text-[#8E8E8E] leading-relaxed font-medium">
-              Typographie à fort contraste, micro-interactions tactiles et style éditorial intemporel.
+              Deux ans en GHT de psychiatrie, à Armentières puis à Villejuif. Je connais
+              les contraintes réelles du secteur, RGPD et secret médical compris.
             </p>
           </div>
           <div className="flex flex-col gap-2">
-            <span className="text-xs font-mono font-bold text-[#8E8E8E]">03 // FIABILITÉ</span>
-            <h4 className="text-lg font-black uppercase text-[#0A0A0A]">SCALABILITÉ AUTONOME</h4>
+            <span className="text-xs font-mono font-bold text-[#8E8E8E]">03 // LIVRAISON</span>
+            <h4 className="text-lg font-black uppercase text-[#0A0A0A]">MIS EN PRODUCTION</h4>
             <p className="text-xs md:text-sm text-[#8E8E8E] leading-relaxed font-medium">
-              Systèmes multi-agents conçus pour opérer en totale autonomie à grande échelle.
+              Les projets listés ici tournent vraiment, avec des utilisateurs. Rien
+              n&apos;est resté au stade de la maquette.
             </p>
           </div>
         </div>

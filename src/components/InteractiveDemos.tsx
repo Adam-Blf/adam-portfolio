@@ -141,7 +141,7 @@ function SovereignValidatorDemo() {
       <div className="flex items-center justify-between">
         <div>
           <h4 className="text-xl font-black uppercase tracking-tight text-[#0A0A0A]">
-            SOVEREIGN OS DIM — VALIDATEUR CLINIQUE ATIH
+            SOVEREIGN OS DIM - VALIDATEUR CLINIQUE ATIH
           </h4>
           <p className="text-xs text-[#8E8E8E] font-medium">
             Moteur de données PMSI &lt; 250ms (Architecture .NET 8 & Python au GHT Sud Paris)
@@ -282,7 +282,7 @@ function PGVPlaningDemo() {
       <div className="flex items-center justify-between">
         <div>
           <h4 className="text-xl font-black uppercase tracking-tight text-[#0A0A0A]">
-            PGVPLANING — PLANIFICATEUR DE SOINS HOSPITALIERS
+            PGVPLANING - PLANIFICATEUR DE SOINS HOSPITALIERS
           </h4>
           <p className="text-xs text-[#8E8E8E] font-medium">
             Planificateur intelligent des gardes (En direct sur planning.beloucif.com)
@@ -346,7 +346,7 @@ function RecipeAIDemo() {
     <div className="flex flex-col gap-6">
       <div>
         <h4 className="text-xl font-black uppercase tracking-tight text-[#0A0A0A]">
-          RECIPE RECO FRIGO — PRÉDICTIONS D'INGRÉDIENTS IA
+          RECIPE RECO FRIGO - PRÉDICTIONS D'INGRÉDIENTS IA
         </h4>
         <p className="text-xs text-[#8E8E8E] font-medium">
           Moteur de recommandation de recettes par LSTM & NLP Sentence-Transformers

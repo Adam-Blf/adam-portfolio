@@ -3,10 +3,12 @@
 import { useState, useEffect } from "react";
 import { ChevronDown, Sparkles } from "lucide-react";
 
+// Roles reels, pas des slogans : ce sont les trois casquettes que porte Adam
+// aujourd'hui (alternance DIM, 404 Monkey, mastere EFREI).
 const phrases: string[] = [
-  "Bâtir Demain",
-  "Façonner l'Avenir",
-  "Impulser la Croissance",
+  "Data Engineer",
+  "Développeur Fullstack",
+  "Fondateur de 404 Monkey",
 ];
 
 export default function Hero() {
@@ -63,11 +65,11 @@ export default function Hero() {
         <div className="flex items-center gap-2 px-3 py-1 rounded-full border border-[#0A0A0A]/20 bg-[#F5F3EF]/60 backdrop-blur-xs">
           <Sparkles className="w-3.5 h-3.5 text-[#0A0A0A]" />
           <span className="text-[11px] font-bold tracking-[0.25em] uppercase text-[#0A0A0A]">
-            STUDIO D'INTELLIGENCE & PORTFOLIO — ÉST. 2026
+            DISPONIBLE EN ALTERNANCE - SEPT. 2026
           </span>
         </div>
         <div className="text-xs font-mono tracking-wider text-[#8E8E8E] uppercase">
-          PARIS · CHEVILLY · TOKYO
+          ÎLE-DE-FRANCE, CHEVILLY-LARUE (94)
         </div>
       </div>
 
@@ -75,24 +77,37 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto w-full my-auto py-12 flex flex-col items-center text-center">
         <div className="mb-4">
           <span className="text-xs md:text-sm font-bold tracking-[0.3em] uppercase text-[#8E8E8E] block mb-2">
-            INTELLIGENCE ARTIFICIELLE & DATA ENGINEERING
+            DATA ENGINEERING, IA APPLIQUÉE & FULLSTACK TYPESCRIPT
           </span>
         </div>
 
         <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-[108px] font-black uppercase tracking-tight leading-[0.95] text-[#0A0A0A] max-w-6xl">
-          NOUS SOMMES <span className="underline decoration-[#0A0A0A]/20 decoration-2 underline-offset-8">PIXZEN</span>
+          TRANSFORMER LA DONNÉE
+          <br />
+          EN{" "}
+          <span className="underline decoration-[#0A0A0A]/20 decoration-2 underline-offset-8">
+            DÉCISION
+          </span>
         </h1>
 
         {/* Dynamic Typing Effect Row */}
-        <div className="mt-6 md:mt-8 flex items-center justify-center min-h-[48px] md:min-h-[72px]">
-          <span className="text-xl sm:text-3xl md:text-5xl font-extrabold tracking-widest text-[#0A0A0A]/90 uppercase">
-            {currentText}
+        <div className="mt-6 md:mt-8 flex flex-wrap items-center justify-center gap-x-3 min-h-[48px] md:min-h-[72px]">
+          <span className="text-xl sm:text-3xl md:text-5xl font-extrabold tracking-widest text-[#8E8E8E] uppercase">
+            ADAM BELOUCIF,
           </span>
-          <span className="w-1 md:w-1.5 h-6 md:h-10 bg-[#0A0A0A] ml-2 animate-pulse" />
+          <span className="flex items-center">
+            <span className="text-xl sm:text-3xl md:text-5xl font-extrabold tracking-widest text-[#0A0A0A] uppercase">
+              {currentText}
+            </span>
+            <span className="w-1 md:w-1.5 h-6 md:h-10 bg-[#0A0A0A] ml-2 animate-pulse" />
+          </span>
         </div>
 
-        <p className="mt-8 max-w-xl text-sm md:text-base text-[#8E8E8E] font-medium leading-relaxed tracking-wide">
-          Conception de systèmes neuraux de pointe, ingénierie de données hospitalières et écosystèmes numériques autonomes pour les leaders du marché.
+        <p className="mt-8 max-w-2xl text-sm md:text-base text-[#8E8E8E] font-medium leading-relaxed tracking-wide">
+          Ingénieur data au DIM du GHT Psy Sud Paris, je conçois les pipelines Oracle
+          et PL/SQL, les tableaux de bord PMSI et les modèles prédictifs qui pilotent
+          l&apos;activité hospitalière. En parallèle, je construis des produits web et
+          mobiles chez 404 Monkey.
         </p>
       </div>
 

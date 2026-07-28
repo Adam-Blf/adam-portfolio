@@ -13,7 +13,7 @@ interface TimelineItem {
 
 const timelineData: TimelineItem[] = [
   {
-    year: "2025 — PRÉSENT",
+    year: "2025 - PRÉSENT",
     role: "INGÉNIEUR PMSI & DATA ENGINEER DIM PSY",
     organization: "Fondation Vallée / GHT Sud Paris",
     type: "EXPERIENCE",
@@ -22,7 +22,7 @@ const timelineData: TimelineItem[] = [
     tags: ["Python", ".NET 8", "PMSI / ATIH", "Data Engineering", "Pédopsychiatrie"],
   },
   {
-    year: "2025 — 2027",
+    year: "2025 - 2027",
     role: "MASTÈRE DATA ENGINEERING & IA (M1)",
     organization: "EFREI Paris x Université Paris-Panthéon-Assas",
     type: "EDUCATION",
@@ -31,7 +31,7 @@ const timelineData: TimelineItem[] = [
     tags: ["Data Lake", "Spark", "LLM Fine-Tuning", "BigQuery", "Azure"],
   },
   {
-    year: "2024 — 2025",
+    year: "2024 - 2025",
     role: "VICE-PRÉSIDENT BDE ISIT (2 MANDATS)",
     organization: "ISIT Paris",
     type: "LEADERSHIP",
@@ -40,7 +40,7 @@ const timelineData: TimelineItem[] = [
     tags: ["Leadership", "Management", "Direction Design", "Communication"],
   },
   {
-    year: "2022 — 2025",
+    year: "2022 - 2025",
     role: "BACHELOR ICT & INTERNATIONAL COMMUNICATION",
     organization: "EFREI Paris x ISIT (Double Diplôme)",
     type: "EDUCATION",
@@ -49,7 +49,7 @@ const timelineData: TimelineItem[] = [
     tags: ["Fullstack TS", "Python", "UX/UI", "Multilingue FR/EN/ES"],
   },
   {
-    year: "2020 — 2021",
+    year: "2020 - 2021",
     role: "PRÉPARATION MILITAIRE MARINE (PMM KIEFFER)",
     organization: "Marine Nationale",
     type: "MILITARY",
