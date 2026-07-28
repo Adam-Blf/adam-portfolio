@@ -12,9 +12,10 @@ export default function ProjetsPage() {
 
   const categories = [
     "TOUS",
-    "Hospitalier & Data Engineering",
+    "Data Engineering & Big Data",
+    "Data Science & Machine Learning",
+    "Hospitalier & Santé",
     "Applications Web & PWA",
-    "IA, Vision & Algo",
     "Utilitaires & Jeux",
   ];
 
@@ -32,7 +33,7 @@ export default function ProjetsPage() {
         <div className="border-b border-[#0A0A0A]/10 pb-12 mb-12">
           <div className="flex items-center gap-3 mb-4">
             <span className="text-xs font-mono font-bold uppercase tracking-[0.25em] text-[#8E8E8E]">
-              CATALOGUE OFFICIEL · ADAM-BLF
+              CATALOGUE OFFICIEL - ADAM-BLF
             </span>
             <span className="w-1.5 h-1.5 rounded-full bg-[#0A0A0A]" />
             <span className="text-xs font-mono text-[#8E8E8E]">
@@ -162,7 +163,7 @@ export default function ProjetsPage() {
             <div className="p-6 border-b border-[#0A0A0A]/10 flex items-center justify-between bg-[#F5F3EF] sticky top-0 z-10">
               <div>
                 <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#8E8E8E]">
-                  ÉTUDE DE CAS · {activeModalProject.category}
+                  ÉTUDE DE CAS - {activeModalProject.category}
                 </span>
                 <h3 className="text-2xl font-black uppercase tracking-tight text-[#0A0A0A]">
                   {activeModalProject.title}

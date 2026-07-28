@@ -3,21 +3,23 @@ import "./globals.css";
 import LenisProvider from "@/components/LenisProvider";
 
 export const metadata: Metadata = {
-  title: "Adam Beloucif — Data Engineer & Développeur Fullstack IA | PIXZEN",
+  metadataBase: new URL("https://adam.beloucif.com"),
+  title: "Adam Beloucif - Data Engineer & Développeur Fullstack",
   description:
-    "Portfolio officiel d'Adam Beloucif — Data Engineer au GHT Sud Paris (Fondation Vallée), étudiant en Mastère Data Engineering & IA à l'EFREI Paris x Université Panthéon-Assas.",
+    "Transformer la donnée en décision. Adam Beloucif, Data Engineer au DIM du GHT Psy Sud Paris, fondateur de 404 Monkey, étudiant en Mastère Data Engineering & IA à l'EFREI Paris x Université Panthéon-Assas.",
   keywords: [
     "Adam Beloucif",
-    "PIXZEN",
     "Data Engineer",
     "Développeur Fullstack",
-    "Agence IA",
-    "PMSI ATIH",
-    "Sovereign OS DIM",
-    "Next.js 15",
+    "PMSI",
+    "DIM",
+    "Oracle PL/SQL",
+    "Next.js",
+    "404 Monkey",
     "EFREI",
     "Panthéon Assas",
-    "Paris",
+    "alternance Data Engineer",
+    "Île-de-France",
   ],
   authors: [{ name: "Adam Beloucif", url: "https://adam.beloucif.com" }],
   icons: {
@@ -26,12 +28,18 @@ export const metadata: Metadata = {
     apple: "/favicon.svg",
   },
   openGraph: {
-    title: "Adam Beloucif — Data Engineer & Développeur Fullstack IA | PIXZEN",
-    description: "Portfolio officiel d'Adam Beloucif · Data Engineering, IA Médicale & Fullstack TS.",
+    title: "Adam Beloucif - Data Engineer & Développeur Fullstack",
+    description:
+      "Transformer la donnée en décision. Data Engineering hospitalier, pipelines Oracle et PL/SQL, produits web Next.js.",
     url: "https://adam.beloucif.com",
-    siteName: "Adam Beloucif Portfolio",
+    siteName: "Adam Beloucif",
     locale: "fr_FR",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Adam Beloucif - Data Engineer & Développeur Fullstack",
+    description: "Transformer la donnée en décision.",
   },
 };
 

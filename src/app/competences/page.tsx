@@ -30,7 +30,7 @@ export default function CompetencesPage() {
         <div className="border-b border-[#0A0A0A]/10 pb-12 mb-16">
           <div className="flex items-center gap-3 mb-4">
             <span className="text-xs font-mono font-bold uppercase tracking-[0.25em] text-[#8E8E8E]">
-              STACK TECHNIQUE & COMPETENCES · ADAM BELOUCIF
+              STACK TECHNIQUE & COMPETENCES - ADAM BELOUCIF
             </span>
             <span className="w-1.5 h-1.5 rounded-full bg-[#0A0A0A]" />
             <span className="text-xs font-mono text-[#8E8E8E]">
@@ -108,7 +108,7 @@ export default function CompetencesPage() {
           <div className="flex items-center gap-3 mb-4">
             <Terminal className="w-5 h-5 text-[#F5F3EF]" />
             <span className="text-xs font-mono font-bold uppercase tracking-[0.25em] text-[#8E8E8E]">
-              STANDARDS DE DÉVELOPPEMENT · CLAUDE & GIT
+              STANDARDS DE DÉVELOPPEMENT - CLAUDE & GIT
             </span>
           </div>
           <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tight text-[#F5F3EF] mb-8">

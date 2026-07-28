@@ -1,7 +1,7 @@
 {
-  "name": "pixzen-ai-agency",
-  "version": "1.2.0",
-  "description": "PIXZEN - Elite Futuristic AI Agency & Portfolio",
+  "name": "adam-portfolio",
+  "version": "2.0.0",
+  "description": "Portfolio personnel d'Adam Beloucif - Data Engineer & Developpeur Fullstack",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,9 +9,8 @@
     "lint": "next lint"
   },
   "keywords": [
-    "pixzen",
-    "ai-agency",
     "portfolio",
+    "adam-beloucif",
     "nextjs",
     "gsap",
     "framer-motion",

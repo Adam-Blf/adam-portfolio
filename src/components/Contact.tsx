@@ -37,9 +37,19 @@ export default function Contact() {
     });
   };
 
+  // Pas de backend ni de collecte : on ouvre le client mail du visiteur avec un
+  // brouillon pre-rempli. Un formulaire qui affiche "envoye" sans rien envoyer
+  // ferait perdre de vrais messages.
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!emailInput) return;
+
+    const subject = encodeURIComponent("Prise de contact via adam.beloucif.com");
+    const body = encodeURIComponent(
+      `Bonjour Adam,\n\n\n\n-- \nAdresse de reponse : ${emailInput}`
+    );
+    window.location.href = `mailto:adam.beloucif@efrei.net?subject=${subject}&body=${body}`;
+
     setFormSubmitted(true);
     setTimeout(() => {
       setFormSubmitted(false);
@@ -63,17 +73,19 @@ export default function Contact() {
         <div className="flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full border border-[#F5F3EF]/20 bg-[#F5F3EF]/5 backdrop-blur-xs">
           <Mail className="w-3.5 h-3.5 text-[#F5F3EF]" />
           <span className="text-xs font-bold tracking-[0.25em] uppercase text-[#F5F3EF]">
-            INITIER UNE COLLABORATION
+            ALTERNANCE M2, SEPT. 2026
           </span>
         </div>
 
         {/* Massive Centered Headline */}
         <h2 className="text-4xl sm:text-6xl md:text-8xl lg:text-[104px] font-black uppercase tracking-tight leading-[0.95] max-w-6xl mb-8 mix-blend-difference text-[#F5F3EF]">
-          BÂTISSONS L'AVENIR ENSEMBLE.
+          PARLONS-EN.
         </h2>
 
         <p className="max-w-2xl text-sm md:text-lg text-[#8E8E8E] font-medium leading-relaxed mb-12">
-          Vous avez un projet ambitieux, un besoin d'agent autonome sur mesure ou d'architecture Data/IA ? Contactez-moi dès aujourd'hui.
+          Je cherche une alternance de Data Engineer en Île-de-France pour septembre 2026,
+          au rythme de deux semaines en entreprise pour une semaine à l&apos;école. Ouvert
+          aussi aux missions freelance via 404 Monkey.
         </p>
 
         {/* Form & Magnetic Button Area */}
@@ -84,7 +96,8 @@ export default function Contact() {
               required
               value={emailInput}
               onChange={(e) => setEmailInput(e.target.value)}
-              placeholder="Entrez votre adresse email..."
+              placeholder="Votre adresse email..."
+              aria-label="Votre adresse email"
               className="w-full px-6 py-4 rounded-full bg-[#F5F3EF]/10 border border-[#F5F3EF]/20 text-[#F5F3EF] placeholder-[#8E8E8E] text-sm focus:outline-none focus:border-[#F5F3EF] transition-colors"
             />
 
@@ -102,11 +115,11 @@ export default function Contact() {
                 {formSubmitted ? (
                   <>
                     <CheckCircle className="w-4 h-4 text-[#0A0A0A]" />
-                    ENVOYÉ !
+                    BROUILLON OUVERT
                   </>
                 ) : (
                   <>
-                    LANCER UN PROJET
+                    M&apos;ÉCRIRE
                     <ArrowUpRight className="w-4 h-4 text-[#0A0A0A]" />
                   </>
                 )}
@@ -123,7 +136,7 @@ export default function Contact() {
             >
               adam.beloucif@efrei.net
             </a>
-            <span className="hidden sm:inline">·</span>
+            <span className="hidden sm:inline">-</span>
             <a
               href="tel:+33786466834"
               className="text-[#F5F3EF] hover:text-[#8E8E8E] transition-colors"

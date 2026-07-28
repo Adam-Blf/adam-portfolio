@@ -14,66 +14,68 @@ interface Service {
   image: string;
 }
 
+// Domaines reellement pratiques, adosses a l'alternance DIM, a 404 Monkey et au
+// mastere EFREI. Pas de promesse d'agence : ce sont des competences exercees.
 const services: Service[] = [
   {
-    id: "ai-agents",
-    num: "01",
-    title: "Agents IA Autonomes",
-    category: "ARCHITECTURE SYSTÈME",
-    description:
-      "Conception de frameworks multi-agents auto-réparateurs, de pipelines LLM sur-mesure et de flux de travail cognitifs conçus pour l'automatisation d'entreprise.",
-    highlights: [
-      "Orchestration d'Essaims Multi-Agents",
-      "RAG & Graphes de Connaissances Vectoriels",
-      "Pipelines d'Inférence Inférieurs à 100ms",
-    ],
-    image:
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
-    id: "brand-strategy",
-    num: "02",
-    title: "Stratégie de Marque Futuriste",
-    category: "IDENTITÉ & DESIGN",
-    description:
-      "Création de langages visuels monochromes à haut contraste, de systèmes typographiques et d'identités imposant une présence absolue sur le marché.",
-    highlights: [
-      "Systèmes de Design Éditoriaux",
-      "Actifs de Marque Génératifs IA",
-      "Chartes Mouvement & Directives Visuelles",
-    ],
-    image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
-    id: "web-experience",
-    num: "03",
-    title: "Apps Web Haute Performance",
-    category: "INGÉNIERIE FRONTEND",
-    description:
-      "Développement d'applications Next.js 15 d'une fluidité parfaite avec animations GSAP ScrollTrigger, graphiques WebGL et défilement fluide Lenis à 100/100 Lighthouse.",
-    highlights: [
-      "Next.js 15 App Router & Server Actions",
-      "Canvas Interactif GSAP & WebGL",
-      "Accessibilité & Conformité WCAG AA",
-    ],
-    image:
-      "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
     id: "data-engineering",
-    num: "04",
-    title: "Pipelines Data Prédictifs",
-    category: "DATA ENGINEERING",
+    num: "01",
+    title: "Data Engineering hospitalier",
+    category: "INFOCENTRE & PIPELINES",
     description:
-      "Construction de Data Lakes Médaillon résilients, d'architectures de streaming en temps réel et de modèles de machine learning prédictifs.",
+      "Modélisation et développement de la base Oracle de l'infocentre du GHT Psy Sud Paris, pipelines ETL et ELT en SQL et PL/SQL, industrialisation Docker et CI/CD.",
     highlights: [
-      "ETL Batch Apache Spark & Polars",
-      "Lakehouses Snowflake & BigQuery",
-      "MLOps & Surveillance des Modèles",
+      "Base Oracle de l'infocentre, performance et optimisation",
+      "Pipelines ETL et ELT en SQL et PL/SQL",
+      "Monitoring qualité des données et conformité RGPD",
     ],
     image:
       "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    id: "bi-pmsi",
+    num: "02",
+    title: "BI et pilotage PMSI",
+    category: "ANALYSE & DÉCISIONNEL",
+    description:
+      "Exploitation des données SIH, DxCare et CPage pour le suivi de l'activité stratégique, médico-économique et de recherche, avec des tableaux de bord utilisés par les directions et les équipes cliniques.",
+    highlights: [
+      "Tableaux de bord Business Objects, PMSI-Pilot et BIQuery",
+      "Rapports d'activité et indicateurs médico-économiques",
+      "Études spécifiques à la demande des services cliniques",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    id: "ia-appliquee",
+    num: "03",
+    title: "IA appliquée et modèles prédictifs",
+    category: "PYTHON & MACHINE LEARNING",
+    description:
+      "Modèles Python et machine learning pour anticiper les pics d'admission, détecter les anomalies de données et outiller la décision, du prototype au déploiement.",
+    highlights: [
+      "Prévision des pics d'admission hospitaliers",
+      "Détection d'anomalies et contrôle qualité des données",
+      "NLP, RAG et fine-tuning de modèles de langage",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    id: "produits-web",
+    num: "04",
+    title: "Produits web et mobiles",
+    category: "FULLSTACK TYPESCRIPT",
+    description:
+      "Conception et mise en production d'applications Next.js et React Native chez 404 Monkey, de la base de données au déploiement, paiement Stripe inclus.",
+    highlights: [
+      "Next.js, React Native, TypeScript strict",
+      "Supabase, RLS et authentification",
+      "Paiement Stripe et facturation en production",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80",
   },
 ];
 
@@ -86,14 +88,15 @@ export default function Services() {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6 border-b border-[#0A0A0A]/10 pb-8">
         <div>
           <span className="text-xs font-bold tracking-[0.3em] uppercase text-[#8E8E8E] block mb-2">
-            01 / NOS CAPACITÉS
+            01 / CE QUE JE FAIS
           </span>
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[#0A0A0A]">
-            NOS EXPERTISES
+            MES EXPERTISES
           </h2>
         </div>
         <p className="max-w-md text-sm text-[#8E8E8E] leading-relaxed font-medium">
-          Nous combinons l'intelligence artificielle de pointe avec une esthétique éditoriale de luxe pour créer des produits transformateurs.
+          Quatre domaines que je pratique au quotidien, entre l&apos;infocentre d&apos;un
+          groupement hospitalier public et les produits web que je mets en production.
         </p>
       </div>
 

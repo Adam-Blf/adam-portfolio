@@ -36,7 +36,7 @@ export default function ParcoursPage() {
         <div className="border-b border-[#0A0A0A]/10 pb-12 mb-16">
           <div className="flex items-center gap-3 mb-4">
             <span className="text-xs font-mono font-bold uppercase tracking-[0.25em] text-[#8E8E8E]">
-              PARCOURS & EXPÉRIENCE · ADAM BELOUCIF
+              PARCOURS & EXPÉRIENCE - ADAM BELOUCIF
             </span>
             <span className="w-1.5 h-1.5 rounded-full bg-[#0A0A0A]" />
             <span className="text-xs font-mono text-[#8E8E8E]">
@@ -80,7 +80,7 @@ export default function ParcoursPage() {
                         {item.role}
                       </h3>
                       <p className="text-xs font-mono font-bold text-[#8E8E8E] uppercase mt-1">
-                        {item.organization} · {item.location}
+                        {item.organization} - {item.location}
                       </p>
                     </div>
                     <div className="text-right">
@@ -183,7 +183,7 @@ export default function ParcoursPage() {
                     {t.author}
                   </span>
                   <span className="text-xs font-mono text-[#8E8E8E] block mt-0.5">
-                    {t.role} · {t.org}
+                    {t.role} - {t.org}
                   </span>
                 </div>
               </div>

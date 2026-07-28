@@ -40,7 +40,7 @@ export default function Footer() {
           <a href="/cv" className="text-xs hover:text-[#F5F3EF] transition-colors">
             05 / CV Recruteur (Print / PDF)
           </a>
-          <a href="/contact" className="text-xs hover:text-[#F5F3EF] transition-colors">
+          <a href="/#contact" className="text-xs hover:text-[#F5F3EF] transition-colors">
             06 / Contact & Rendez-vous
           </a>
         </div>
@@ -82,13 +82,13 @@ export default function Footer() {
             LOCALISATIONS
           </span>
           <p className="text-xs leading-relaxed">
-            PARIS / CHEVILLY · Fondation Vallée (GHT Sud Paris)
+            PARIS / CHEVILLY - Fondation Vallée (GHT Sud Paris)
           </p>
           <p className="text-xs leading-relaxed">
-            VILLEJUIF · EFREI Paris x Panthéon-Assas
+            VILLEJUIF - EFREI Paris x Panthéon-Assas
           </p>
           <p className="text-xs leading-relaxed">
-            PROJETS · blackout / planning / absencia
+            PROJETS - blackout / planning / absencia
           </p>
         </div>
       </div>

@@ -2,162 +2,10 @@
 
 import { useState, useRef } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
-import { ArrowUpRight, ExternalLink, Github, Sparkles, X, Activity } from "lucide-react";
+import { ArrowUpRight, ExternalLink, Github, X, Activity, CheckCircle2 } from "lucide-react";
+import { projectsData, Project } from "@/data/projectsData";
 
-export interface Project {
-  id: string;
-  number: string;
-  title: string;
-  category: string;
-  year: string;
-  summary: string;
-  description: string;
-  metrics: { label: string; value: string }[];
-  tags: string[];
-  image: string;
-  gallery: string[];
-  liveUrl?: string;
-  githubUrl?: string;
-  accent: string;
-}
-
-export const projects: Project[] = [
-  {
-    id: "sovereign-os",
-    number: "01",
-    title: "SOVEREIGN OS DIM",
-    category: "DATA ENGINEERING & HOSPITALIER",
-    year: "2026",
-    summary: "Moteur PMSI hospitalier d'analyse et de conformité des 23 formats ATIH / FICHSUP-PSY.",
-    description:
-      "Architecture distribuée .NET 8 et Python pour la Fondation Vallée (GHT Sud Paris). Traitement à très basse latence des données PMSI pédopsychiatriques, anonymisation stricte, calculs d'indicateurs de séjour et validation automatisée des formats ATIH.",
-    metrics: [
-      { label: "Formats ATIH", value: "23 Formats" },
-      { label: "Latence Parsing", value: "< 150ms" },
-      { label: "Tests Unitaires", value: "34 Tests OK" },
-    ],
-    tags: [".NET 8", "Python", "PMSI / ATIH", "FICHSUP-PSY", "xUnit"],
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80",
-    ],
-    githubUrl: "https://github.com/Adam-Blf/sovereign_os_dim",
-    accent: "#0A0A0A",
-  },
-  {
-    id: "pgvplaning",
-    number: "02",
-    title: "PGVPLANING",
-    category: "HEALTHCARE ROSTER PWA",
-    year: "2026",
-    summary: "Plateforme de gestion et planification des plannings soignants en milieu hospitalier.",
-    description:
-      "Plateforme web réactive construite avec Next.js App Router, Supabase et Firebase. Permet la gestion intelligente des gardes, le respect des contraintes horaires hospitalières, l'export PDF/ICS et la synchronisation en temps réel.",
-    metrics: [
-      { label: "Synchro Temps Réel", value: "Supabase Realtime" },
-      { label: "Déploiement", value: "Vercel PWA" },
-      { label: "Disponibilité", value: "99.99%" },
-    ],
-    tags: ["Next.js 15", "TypeScript", "Supabase", "Firebase", "Tailwind CSS"],
-    image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=1200&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80",
-    ],
-    liveUrl: "https://planning.beloucif.com",
-    githubUrl: "https://github.com/Adam-Blf/pgvplaning",
-    accent: "#0A0A0A",
-  },
-  {
-    id: "blackout-apero",
-    number: "03",
-    title: "BLACKOUT APÉRO",
-    category: "SOCIAL GAMING PWA",
-    year: "2026",
-    summary: "Application web PWA de jeu d'ambiance festif multijoueur avec défis interactifs.",
-    description:
-      "Jeu festif PWA haute performance déployé sur blackout.beloucif.com. Génération dynamique de cartes, mécaniques de votes en direct, modes de jeu personnalisés, animations micro-interactives et mode offline PWA.",
-    metrics: [
-      { label: "Utilisateurs Actifs", value: "1 200+ Actifs" },
-      { label: "Mode Hors Ligne", value: "Service Worker" },
-      { label: "Score UX", value: "100/100 Lighthouse" },
-    ],
-    tags: ["Next.js 15", "PWA", "Framer Motion", "Tailwind CSS", "Vercel"],
-    image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80",
-    ],
-    liveUrl: "https://blackout.beloucif.com",
-    githubUrl: "https://github.com/Adam-Blf/black-out",
-    accent: "#0A0A0A",
-  },
-  {
-    id: "medallion-lake",
-    number: "04",
-    title: "MÉDAILLON DATA LAKE",
-    category: "BIG DATA ENGINE",
-    year: "2025",
-    summary: "Pipeline de données Big Data Médaillon (Bronze, Silver, Gold) avec Apache Spark & Kafka.",
-    description:
-      "Projet majeur Master Data Engineering EFREI. Ingestion streaming via Apache Kafka, transformations distribuées Apache Spark, stockage Delta Lake et requêtage analytique BigQuery.",
-    metrics: [
-      { label: "Volume Streaming", value: "100k msg/sec" },
-      { label: "Architecture Data", value: "Bronze → Gold" },
-      { label: "Moteur Data", value: "PySpark & Delta" },
-    ],
-    tags: ["Apache Spark", "Apache Kafka", "Delta Lake", "Python", "BigQuery"],
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-    ],
-    githubUrl: "https://github.com/Adam-Blf/projet-dataeng-m1",
-    accent: "#0A0A0A",
-  },
-  {
-    id: "sign-language",
-    number: "05",
-    title: "LANGUE DES SIGNES CV",
-    category: "COMPUTER VISION & AI",
-    year: "2025",
-    summary: "Système de reconnaissance de la langue des signes en temps réel avec MediaPipe (7 langues).",
-    description:
-      "Modèle de Computer Vision basé sur MediaPipe et Python OpenCV. Tracking des points clés des mains en temps réel, classification par réseau de neurones et support multilingue.",
-    metrics: [
-      { label: "Précision Modèle", value: "96.8%" },
-      { label: "Langues des Signes", value: "7 Langues" },
-      { label: "FPS Inférence", value: "60 FPS Temps Réel" },
-    ],
-    tags: ["Computer Vision", "MediaPipe", "Python", "OpenCV", "TensorFlow"],
-    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
-    ],
-    githubUrl: "https://github.com/Adam-Blf/Langue-des-signes",
-    accent: "#0A0A0A",
-  },
-  {
-    id: "chess-ai",
-    number: "06",
-    title: "CHESS AI SELF-LEARNING",
-    category: "REINFORCEMENT LEARNING",
-    year: "2025",
-    summary: "Moteur de jeu d'échecs autonome auto-apprenant fonctionnant directement dans le navigateur.",
-    description:
-      "Algorithme Minimax optimisé avec élagage Alpha-Beta et évaluation positionnelle auto-apprenante. Interface Web canvas interactive.",
-    metrics: [
-      { label: "Profondeur Minimax", value: "6-8 Plies" },
-      { label: "Temps / Coup", value: "< 200ms" },
-      { label: "Architecture Execution", value: "Pure JS / WebWorker" },
-    ],
-    tags: ["JavaScript", "Alpha-Beta", "WebWorkers", "Canvas API"],
-    image: "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&w=1200&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1586165368502-1bad197a6461?auto=format&fit=crop&w=800&q=80",
-    ],
-    githubUrl: "https://github.com/Adam-Blf/ChessAI-SelfLearning-Web",
-    accent: "#0A0A0A",
-  },
-];
+const featuredProjects = projectsData.filter((project) => project.featured);
 
 export default function FeaturedWork() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -182,7 +30,7 @@ export default function FeaturedWork() {
 
       {/* Grid of Projects */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-        {projects.map((project) => (
+        {featuredProjects.map((project) => (
           <div
             key={project.id}
             onClick={() => setSelectedProject(project)}
@@ -196,7 +44,7 @@ export default function FeaturedWork() {
                 className="w-full h-full object-cover filter contrast-105 group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute top-6 left-6 px-4 py-1.5 rounded-full bg-[#0A0A0A]/80 backdrop-blur-md text-[#F5F3EF] text-xs font-mono font-bold">
-                {project.number} // {project.year}
+                PROJET N{"°"}{project.number}
               </div>
               {project.liveUrl && (
                 <div className="absolute top-6 right-6 px-3 py-1.5 rounded-full bg-[#10B981] text-[#F5F3EF] text-[10px] font-black uppercase tracking-wider flex items-center gap-1">
@@ -275,12 +123,12 @@ export default function FeaturedWork() {
                 {selectedProject.description}
               </p>
 
-              {/* Metrics Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 p-6 rounded-2xl bg-[#EAE7E1] border border-[#0A0A0A]/10">
-                {selectedProject.metrics.map((m, i) => (
-                  <div key={i} className="flex flex-col">
-                    <span className="text-[10px] font-mono text-[#8E8E8E] uppercase">{m.label}</span>
-                    <span className="text-xl md:text-2xl font-black text-[#0A0A0A]">{m.value}</span>
+              {/* Highlights */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 p-6 rounded-2xl bg-[#EAE7E1] border border-[#0A0A0A]/10">
+                {selectedProject.highlights.map((h, i) => (
+                  <div key={i} className="flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#0A0A0A] shrink-0 mt-0.5" />
+                    <span className="text-xs font-medium text-[#0A0A0A]">{h}</span>
                   </div>
                 ))}
               </div>

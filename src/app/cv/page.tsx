@@ -21,7 +21,7 @@ export default function CvPage() {
         <div className="print:hidden border-b border-[#0A0A0A]/10 pb-8 mb-8 flex flex-wrap items-center justify-between gap-4">
           <div>
             <span className="text-xs font-mono font-bold uppercase tracking-[0.25em] text-[#8E8E8E]">
-              FORMAT SYNTHÉTIQUE RECRUTEUR · ADAM BELOUCIF
+              FORMAT SYNTHÉTIQUE RECRUTEUR - ADAM BELOUCIF
             </span>
             <h1 className="text-3xl font-black uppercase tracking-tight text-[#0A0A0A] mt-1">
               Curriculum Vitae Officiel
@@ -97,10 +97,10 @@ export default function CvPage() {
                   <h3 className="text-base font-bold uppercase text-[#0A0A0A]">
                     Ingénieur PMSI / Data Engineer DIM PSY
                   </h3>
-                  <span className="text-xs font-mono font-bold text-[#8E8E8E]">SEPT 2025 — PRÉSENT</span>
+                  <span className="text-xs font-mono font-bold text-[#8E8E8E]">SEPT 2025 - PRÉSENT</span>
                 </div>
                 <p className="text-xs font-mono text-[#8E8E8E] font-bold">
-                  Fondation Vallée / GHT Sud Paris · Chevilly-Larue (94)
+                  Fondation Vallée / GHT Sud Paris - Chevilly-Larue (94)
                 </p>
                 <ul className="mt-3 text-xs text-[#0A0A0A]/80 space-y-1.5 list-disc list-inside">
                   <li>Conception & déploiement de <strong>Sovereign OS DIM</strong> (.NET 8 & Python) pour le parsing sub-seconde de 23 formats ATIH.</li>
@@ -124,7 +124,7 @@ export default function CvPage() {
                     Mastère Data Engineering & IA (M1 / M2)
                   </span>
                   <span className="font-mono text-[#8E8E8E] block">
-                    EFREI Paris x Université Panthéon-Assas · 2025 — 2027
+                    EFREI Paris x Université Panthéon-Assas - 2025 - 2027
                   </span>
                   <p className="text-[#0A0A0A]/70 mt-1">
                     Architectures Data Lake Médaillon (Spark, Kafka, Hive), RAG & LLMs. RNCP 40875.
@@ -135,7 +135,7 @@ export default function CvPage() {
                     Bachelor International Communication & Tech
                   </span>
                   <span className="font-mono text-[#8E8E8E] block">
-                    EFREI Paris x ISIT (Double Diplôme) · 2022 — 2025
+                    EFREI Paris x ISIT (Double Diplôme) - 2022 - 2025
                   </span>
                   <p className="text-[#0A0A0A]/70 mt-1">
                     Développement web fullstack, Computer Vision, réseaux. RNCP 35541.
@@ -162,7 +162,7 @@ export default function CvPage() {
                     Préparation Militaire Marine (PMM Kieffer)
                   </span>
                   <span className="font-mono text-[#8E8E8E] block">
-                    Marine Nationale · Diplôme Mention Assez Bien (2020 — 2021)
+                    Marine Nationale - Diplôme Mention Assez Bien (2020 - 2021)
                   </span>
                 </div>
                 <div>

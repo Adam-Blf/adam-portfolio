@@ -87,7 +87,7 @@ export default function Navbar() {
         {/* CTA Contact Button */}
         <div className="hidden lg:flex items-center gap-4">
           <Link
-            href="/contact"
+            href="/#contact"
             className="group px-6 py-2.5 rounded-full bg-[#0A0A0A] text-[#F5F3EF] text-xs font-bold tracking-widest uppercase hover:bg-[#8E8E8E] transition-all flex items-center gap-2 shadow-md"
           >
             ME CONTACTER
@@ -126,7 +126,7 @@ export default function Navbar() {
             </a>
           </nav>
 
-          <a href="/contact" onClick={() => setMobileMenuOpen(false)} className="px-8 py-4 rounded-full bg-[#0A0A0A] text-[#F5F3EF] text-sm font-bold tracking-widest uppercase hover:bg-[#8E8E8E] transition-all">
+          <a href="/#contact" onClick={() => setMobileMenuOpen(false)} className="px-8 py-4 rounded-full bg-[#0A0A0A] text-[#F5F3EF] text-sm font-bold tracking-widest uppercase hover:bg-[#8E8E8E] transition-all">
             ME CONTACTER
           </a>
         </div>
