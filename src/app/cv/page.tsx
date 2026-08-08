@@ -2,7 +2,7 @@
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Printer, Download, Mail, Phone, MapPin, Globe, Github, Linkedin, ExternalLink } from "lucide-react";
+import { Printer, Mail, Phone, MapPin, Globe, Github, Linkedin, ExternalLink } from "lucide-react";
 
 export default function CvPage() {
   const handlePrint = () => {
@@ -62,12 +62,13 @@ export default function CvPage() {
                   adam.beloucif@efrei.net
                 </a>
               </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5" />
-                <a href="mailto:adam.beloucif@psysudparis.fr" className="hover:underline">
-                  adam.beloucif@psysudparis.fr
-                </a>
-              </div>
+              {/*
+                L'adresse employeur (psysudparis.fr) a ete retiree le 2026-08-08.
+                Une boite professionnelle d'etablissement public n'a pas a etre
+                publiee sur un site personnel : elle expose l'employeur au spam et
+                melange correspondance de service et candidature personnelle.
+                Le contact public est l'adresse academique.
+              */}
               <div className="flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5" />
                 <span>+33 7 86 46 68 34</span>
