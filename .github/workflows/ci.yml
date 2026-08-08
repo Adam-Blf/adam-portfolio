@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  guards:
+    name: Gardes de non-regression
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      # Les gardes tournent AVANT l'installation : elles ne dependent d'aucun
+      # paquet, et un contenu mensonger doit faire echouer la CI meme si le
+      # build casse pour une autre raison.
+      - name: Contenu mensonger
+        run: node tools/check_no_fake_content.mjs
+
+      - name: Typographie
+        run: node tools/check_typography.mjs
+
+      - name: Coherence des routes, du sitemap et du robots
+        run: node tools/check_routes.mjs
+
+  build:
+    name: Typecheck et build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Typecheck
+        run: npx tsc --noEmit
+
+      - name: Build
+        run: npm run build
