@@ -1,45 +1,19 @@
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from "next";
+import { PUBLIC_ROUTES, absoluteUrl } from "@/lib/routes";
 
+/**
+ * Genere depuis `src/lib/routes.ts`, jamais ecrit a la main. La version
+ * precedente listait cinq routes inexistantes et omettait les quatre reelles.
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://adam.beloucif.com'
-  const lastModified = new Date('2026-02-09')
+  // Date de build plutot qu'une constante figee : l'ancien sitemap annoncait
+  // encore le 2026-02-09 six mois plus tard.
+  const lastModified = new Date();
 
-  return [
-    {
-      url: baseUrl,
-      lastModified,
-      changeFrequency: 'weekly',
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/projects`,
-      lastModified,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/skills`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/timeline`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/formation`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-  ]
+  return PUBLIC_ROUTES.map((route) => ({
+    url: absoluteUrl(route.path),
+    lastModified,
+    changeFrequency: route.changeFrequency,
+    priority: route.priority,
+  }));
 }

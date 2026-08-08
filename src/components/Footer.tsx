@@ -1,8 +1,12 @@
 "use client";
 
 import { ArrowUp } from "lucide-react";
+import { projectsData } from "@/data/projectsData";
 
 export default function Footer() {
+  // Compte calcule, jamais ecrit en dur : le footer annoncait 12 projets alors
+  // que le catalogue en contient 32, et le README parlait d'une trentaine.
+  const projectCount = projectsData.length;
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -29,7 +33,7 @@ export default function Footer() {
             01 / Accueil & Bio
           </a>
           <a href="/projets" className="text-xs hover:text-[#F5F3EF] transition-colors">
-            02 / Projets & Réalisations (12)
+            02 / Projets & Réalisations ({projectCount})
           </a>
           <a href="/parcours" className="text-xs hover:text-[#F5F3EF] transition-colors">
             03 / Parcours & Formations
@@ -95,7 +99,17 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="max-w-7xl mx-auto pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono">
-        <span>© {new Date().getFullYear()} ADAM BELOUCIF. TOUS DROITS RÉSERVÉS.</span>
+        <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-center sm:text-left">
+          <span>© {new Date().getFullYear()} ADAM BELOUCIF. TOUS DROITS RÉSERVÉS.</span>
+          <span className="flex items-center gap-4">
+            <a href="/mentions-legales" className="hover:text-[#F5F3EF] transition-colors">
+              MENTIONS LÉGALES
+            </a>
+            <a href="/confidentialite" className="hover:text-[#F5F3EF] transition-colors">
+              CONFIDENTIALITÉ
+            </a>
+          </span>
+        </div>
 
         <button
           onClick={scrollToTop}
