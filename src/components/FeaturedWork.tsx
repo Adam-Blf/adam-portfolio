@@ -24,7 +24,7 @@ export default function FeaturedWork() {
           </h2>
         </div>
         <p className="max-w-md text-sm text-[#8E8E8E] leading-relaxed font-medium">
-          Découvrez nos réalisations phares en Data Engineering, IA Médicale, Applications PWA et Computer Vision.
+          Une sélection de mes projets en Data Engineering, IA médicale, applications PWA et Computer Vision.
         </p>
       </div>
 

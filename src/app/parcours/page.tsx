@@ -3,30 +3,9 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { timelineData } from "@/data/timelineData";
-import { Award, Briefcase, GraduationCap, Users, ShieldCheck, Download, Mail, CheckCircle } from "lucide-react";
+import { Award, Briefcase, GraduationCap, Users, ShieldCheck, CheckCircle } from "lucide-react";
 
 export default function ParcoursPage() {
-  const testimonials = [
-    {
-      quote: "Adam fait preuve d'une autonomie exceptionnelle, d'une grande rigueur dans le traitement des données de santé complexes et d'une capacité remarquable à transformer des besoins métier en outils décisionnels performants.",
-      author: "Tuteur de Stage & Alternance",
-      role: "Responsable DIM PSY",
-      org: "Fondation Vallée / GHT Sud Paris",
-    },
-    {
-      quote: "Leader naturel au sein de l'école, Adam a su piloter la vie étudiante de 700 élèves avec sang-froid, esprit d'initiative et une excellente vision stratégique.",
-      author: "Conseil de Direction",
-      role: "Administration BDE ISIT",
-      org: "ISIT x Université Panthéon-Assas",
-    },
-    {
-      quote: "Une double compétence rare : une vraie sensibilité UX/UI pour concevoir des produits modernes, doublée d'une maîtrise technique irréprochable sur l'infrastructure.",
-      author: "Client & Collaborateur Freelance",
-      role: "Fondateur Startup Digital",
-      org: "Projets Indépendants",
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-[#F5F3EF] text-[#0A0A0A]">
       <Navbar />
@@ -163,33 +142,15 @@ export default function ParcoursPage() {
           </div>
         </section>
 
-        {/* Testimonials */}
-        <section className="mb-16">
-          <h2 className="text-xs font-mono font-bold uppercase tracking-[0.25em] text-[#8E8E8E] mb-12">
-            RECOMMANDATIONS & RETOURS TERRAIN
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((t, i) => (
-              <div
-                key={i}
-                className="bg-[#F5F3EF] border border-[#0A0A0A]/15 rounded-3xl p-8 flex flex-col justify-between hover:border-[#0A0A0A] hover:shadow-lg transition-all"
-              >
-                <p className="text-xs md:text-sm text-[#0A0A0A]/80 italic leading-relaxed mb-6 font-medium">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-                <div className="pt-4 border-t border-[#0A0A0A]/10">
-                  <span className="text-sm font-black uppercase text-[#0A0A0A] block">
-                    {t.author}
-                  </span>
-                  <span className="text-xs font-mono text-[#8E8E8E] block mt-0.5">
-                    {t.role} - {t.org}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
+        {/*
+          Bloc "Recommandations" retire le 2026-08-08. Il contenait trois citations
+          inventees, attribuees nommement a la Fondation Vallee / GHT Sud Paris, a
+          l'ISIT et a un client. Une citation pretee a une organisation reelle sans
+          son accord ecrit est une allegation fausse sur les qualites du
+          professionnel (article L121-2 du code de la consommation). Ne reintroduire
+          une recommandation que si elle existe par ecrit, avec l'accord de son
+          auteur et une source verifiable.
+        */}
       </main>
 
       <Footer />
