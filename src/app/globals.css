@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+/* Satoshi, la police du portfolio. Elle etait declaree depuis le debut mais
+   n'avait jamais ete servie : aucun fichier, aucun @font-face. Le site rendait
+   donc dans le repli du visiteur, ce qui revient a n'avoir aucune identite
+   typographique.
+
+   Fichier variable : une seule requete de 41 Ko couvre les graisses 300 a 900.
+   Rapatrie en local, jamais depuis un CDN. Licence dans le meme dossier. */
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Variable.woff2') format('woff2-variations');
+  font-weight: 300 900;
+  font-style: normal;
+  /* Le texte s'affiche tout de suite dans le repli, puis bascule. Sans cela,
+     un reseau lent laisse une page blanche le temps du telechargement. */
+  font-display: swap;
+}
+
 @layer base {
   :root {
     --bg-background: #F5F3EF;
@@ -12,7 +29,9 @@
   body {
     background-color: var(--bg-background);
     color: var(--fg-foreground);
-    font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    /* Repli sans police generique nommee : la pile s'arrete a la sans-serif du
+       systeme, qui couvre le meme besoin sans imposer un choix par defaut. */
+    font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

@@ -83,9 +83,9 @@ export default function Contact() {
         </h2>
 
         <p className="max-w-2xl text-sm md:text-lg text-[#8E8E8E] font-medium leading-relaxed mb-12">
-          Je cherche une alternance de Data Engineer en Île-de-France pour septembre 2026,
-          au rythme de deux semaines en entreprise pour une semaine à l&apos;école. Ouvert
-          aussi aux missions freelance via 404 Monkey.
+          Ingénieur PMSI et Data Engineer au DIM du GHT Psy Sud Paris jusqu&apos;en
+          septembre 2027, en parallèle du Mastère Data Engineering &amp; IA. Ouvert aux
+          missions de développement web et data via BLF Lab&apos;s.
         </p>
 
         {/* Form & Magnetic Button Area */}

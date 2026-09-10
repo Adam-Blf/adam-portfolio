@@ -4,11 +4,11 @@ import { useState, useEffect } from "react";
 import { ChevronDown, Sparkles } from "lucide-react";
 
 // Roles reels, pas des slogans : ce sont les trois casquettes que porte Adam
-// aujourd'hui (alternance DIM, 404 Monkey, mastere EFREI).
+// aujourd'hui (alternance DIM, micro-entreprise BLF Lab's, mastere EFREI).
 const phrases: string[] = [
   "Data Engineer",
   "Développeur Fullstack",
-  "Fondateur de 404 Monkey",
+  "Fondateur de BLF Lab's",
 ];
 
 export default function Hero() {
@@ -107,7 +107,7 @@ export default function Hero() {
           Ingénieur data au DIM du GHT Psy Sud Paris, je conçois les pipelines Oracle
           et PL/SQL, les tableaux de bord PMSI et les modèles prédictifs qui pilotent
           l&apos;activité hospitalière. En parallèle, je construis des produits web et
-          mobiles chez 404 Monkey.
+          mobiles au sein de BLF Lab&apos;s, ma micro-entreprise.
         </p>
       </div>
 

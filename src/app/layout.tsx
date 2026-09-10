@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://adam.beloucif.com"),
   title: "Adam Beloucif - Data Engineer & Développeur Fullstack",
   description:
-    "Transformer la donnée en décision. Adam Beloucif, Data Engineer au DIM du GHT Psy Sud Paris, fondateur de 404 Monkey, étudiant en Mastère Data Engineering & IA à l'EFREI Paris x Université Panthéon-Assas.",
+    "Transformer la donnée en décision. Adam Beloucif, Data Engineer au DIM du GHT Psy Sud Paris, fondateur de la micro-entreprise BLF Lab's, étudiant en Mastère Data Engineering & IA à l'EFREI Paris x Université Panthéon-Assas.",
   keywords: [
     "Adam Beloucif",
     "Data Engineer",
@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     "DIM",
     "Oracle PL/SQL",
     "Next.js",
+    "BLF Lab's",
     "404 Monkey",
     "EFREI",
     "Panthéon Assas",

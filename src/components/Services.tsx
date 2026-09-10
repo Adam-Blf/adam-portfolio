@@ -14,7 +14,7 @@ interface Service {
   image: string;
 }
 
-// Domaines reellement pratiques, adosses a l'alternance DIM, a 404 Monkey et au
+// Domaines reellement pratiques, adosses a l'alternance DIM, a BLF Lab's et au
 // mastere EFREI. Pas de promesse d'agence : ce sont des competences exercees.
 const services: Service[] = [
   {
@@ -68,7 +68,7 @@ const services: Service[] = [
     title: "Produits web et mobiles",
     category: "FULLSTACK TYPESCRIPT",
     description:
-      "Conception et mise en production d'applications Next.js et React Native chez 404 Monkey, de la base de données au déploiement, paiement Stripe inclus.",
+      "Conception et mise en production d'applications Next.js et React Native au sein de BLF Lab's, de la base de données au déploiement, paiement Stripe inclus.",
     highlights: [
       "Next.js, React Native, TypeScript strict",
       "Supabase, RLS et authentification",
