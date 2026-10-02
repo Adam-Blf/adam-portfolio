@@ -36,6 +36,16 @@ flowchart TD
     Components --> Anim
     Pages --> Vercel
     Vercel --> Domain
+
+    classDef c0 fill:#2563eb,stroke:#1e3a8a,stroke-width:2px,color:#ffffff
+    classDef c1 fill:#7c3aed,stroke:#4c1d95,stroke-width:2px,color:#ffffff
+    classDef c2 fill:#0891b2,stroke:#164e63,stroke-width:2px,color:#ffffff
+    class UI c0
+    class Pages,Components,Data,Anim c1
+    class Vercel,Domain c2
+    style Client fill:#2563eb14,stroke:#1e3a8a,stroke-width:1px,stroke-dasharray:4 3
+    style App fill:#7c3aed14,stroke:#4c1d95,stroke-width:1px,stroke-dasharray:4 3
+    style Deploy fill:#0891b214,stroke:#164e63,stroke-width:1px,stroke-dasharray:4 3
 ```
 
 Le site est un catalogue statique (pas de base de données) : la source unique des projets est `src/data/projectsData.ts`, consommée à la fois par la page d'accueil (section projets sélectionnés) et par `/projets` (catalogue filtrable complet).
