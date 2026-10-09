@@ -1,0 +1,226 @@
+{
+  "a11y": {
+    "skip": "Saltar al contenido",
+    "menuOpen": "Abrir el menú",
+    "menuClose": "Cerrar el menú",
+    "mainNav": "Navegación principal",
+    "scroll": "Desplazamiento",
+    "lang": "Idioma",
+    "theme": "Cambiar de tema"
+  },
+  "nav": { "home": "Inicio", "about": "Trayectoria", "projects": "Proyectos", "notes": "Notas", "contact": "Contacto", "cv": "CV" },
+  "site": { "role": "Data Engineer e IA" },
+  "foot": { "line": "París, Île-de-France / 2026 / Adam Beloucif", "label": "Información legal", "legal": "Aviso legal", "privacy": "Privacidad" },
+  "journal": { "since": "Desde {date}" },
+  "kinds": {
+    "hospital": "Hospitalario, anonimizado",
+    "school": "Escuela, datos e IA",
+    "studio": "BLF Lab's, producto",
+    "client": "Sitio de cliente",
+    "personal": "Proyecto personal"
+  },
+  "filters": {
+    "label": "Filtrar por categoría",
+    "all": "Todo",
+    "hospital": "Hospitalario",
+    "school": "Escuela",
+    "studio": "BLF Lab's",
+    "client": "Clientes",
+    "personal": "Personal"
+  },
+  "form": {
+    "name": "Nombre",
+    "email": "Correo",
+    "message": "Mensaje",
+    "trap": "No rellenar este campo",
+    "notice": "Tu mensaje solo sirve para responderte. Detalles en la",
+    "noticeLink": "política de privacidad.",
+    "submit": "Recibir una respuesta por correo",
+    "sending": "Enviando",
+    "sent": "Mensaje recibido. Recibirás la respuesta en la dirección indicada.",
+    "error": "El mensaje no ha salido. Escríbeme directamente por correo.",
+    "invalid": "Revisa el nombre, el correo y un mensaje de al menos 10 caracteres."
+  },
+  "contactLinks": {
+    "mailLabel": "Escribir a",
+    "linkedin": "Conversar en LinkedIn",
+    "github": "Leer mi código en GitHub",
+    "cv": "Tener mi CV en una página"
+  },
+  "projectsList": {
+    "colRef": "Ref.",
+    "colProject": "Proyecto",
+    "colKind": "Categoría",
+    "colMetric": "Indicador",
+    "ctaResults": "Ver los resultados de {title}",
+    "ctaBuild": "Ver cómo construí {title}",
+    "stack": "Tecnologías"
+  },
+  "home": {
+    "hero": {
+      "title": "Identidad",
+      "lead": "Ingeniero PMSI en alternancia en el departamento de información médica de un grupo hospitalario de psiquiatría. Máster en Data Engineering & IA, EFREI x Université Paris-Panthéon-Assas.",
+      "ctaProjects": "Ver lo que construyo con datos",
+      "ctaCv": "Leer mi CV en una página",
+      "signal": "Trazo ligado al desplazamiento"
+    },
+    "proofs": {
+      "title": "Cifras verificables",
+      "urban": { "label": "fuentes de datos abiertos integradas", "cta": "Ver cómo uní estas fuentes" },
+      "vigie": { "label": "ataques repetidos sobre Vigie, 0 % de fuga", "cta": "Ver cómo Vigie resiste a los ataques" },
+      "station": { "label": "formatos ATIH controlados por una herramienta 100 % local", "cta": "Ver cómo controlo estos formatos" },
+      "bde": { "label": "estudiantes representados, 40 nacionalidades", "cta": "Ver lo que dirigí en el BDE" }
+    },
+    "projects": { "title": "Proyectos seleccionados", "all": "Ver todos mis proyectos, por categoría" },
+    "log": { "title": "Registro de trayectoria", "more": "Leer mi trayectoria al detalle" },
+    "studio": {
+      "title": "Estudio",
+      "text": "Mi estudio: sitios web, aplicaciones web y móviles, herramientas de datos. El código, el dominio y los accesos se entregan a nombre del cliente.",
+      "cta": "Ver lo que BLF Lab's entrega a sus clientes"
+    },
+    "notes": {
+      "title": "Notas de campo",
+      "emptyTitle": "Las primeras notas están en camino.",
+      "emptyText": "Solo publico lecciones sacadas de proyectos reales, revisadas antes de salir en línea.",
+      "cta": "Leer las notas de campo"
+    },
+    "contact": {
+      "title": "Contacto",
+      "heading": "Hablemos de datos.",
+      "text": "Una pregunta sobre un proyecto, una idea que probar, una conversación sobre datos en el hospital: escríbeme, respondo por correo.",
+      "offTitle": "Fuera de la pantalla",
+      "offText": "Rugby, hockey, clases de baile voluntarias cada fin de semana y hard techno bajo el nombre de Belou."
+    }
+  },
+  "about": {
+    "title": "Trayectoria",
+    "photoAlt": "Retrato de Adam Beloucif, sonriendo, con camisa blanca y chaleco azul marino",
+    "bio": [
+      "Soy ingeniero PMSI en alternancia en el departamento de información médica de un grupo hospitalario de psiquiatría, y estudiante del Máster en Data Engineering & IA en EFREI.",
+      "Mi día a día: datos de salud reglamentarios, paneles para el control de gestión, pipelines en SQL, PL/SQL, PHP y Python. Aparte, construyo proyectos de la escuela y productos para mi estudio, BLF Lab's.",
+      "Mi perfil es mixto, entre comunicación y técnica, y lo aprovecho: sé explicar un dato a alguien que no es del mundo de los datos."
+    ],
+    "facts": { "place": "Lugar", "languages": "Idiomas", "languagesValue": "Francés (lengua materna), inglés y español fluidos" },
+    "journal": "Registro de trayectoria",
+    "stack": {
+      "title": "Competencias, con pruebas",
+      "lead": "Sin niveles ni indicadores: cada competencia remite al proyecto que la demuestra.",
+      "alternance": "Alternancia PMSI",
+      "families": {
+        "data": "Ingeniería de datos",
+        "quality": "Calidad y gobernanza",
+        "bi": "BI y PMSI",
+        "ai": "Ciencia de datos e IA",
+        "mlops": "MLOps",
+        "web": "Web, producto y API"
+      }
+    },
+    "engagement": {
+      "title": "Compromiso y fuera de la pantalla",
+      "heading": "Compromiso",
+      "items": [
+        { "title": "Vicepresidente del BDE ISIT", "text": "Dos mandatos sucesivos, de febrero de 2024 a septiembre de 2025, para 700 estudiantes de 40 nacionalidades y 9 lenguas de trabajo." },
+        { "title": "Clases de baile voluntarias", "text": "Cada fin de semana: pedagogía y constancia." },
+        { "title": "Preparación Militar Marina Kieffer", "text": "2020-2021, Marina Nacional, diploma con mención Assez Bien." }
+      ]
+    },
+    "offscreen": {
+      "heading": "Fuera de la pantalla",
+      "items": [
+        { "title": "Rugby y hockey", "text": "Dos deportes que me apasionan." },
+        { "title": "Hard techno", "text": "Bajo el nombre de Belou, entre 150 y 170 BPM." }
+      ]
+    },
+    "ctaProjects": "Ver lo que han producido estas competencias"
+  },
+  "project": {
+    "sheet": "Ficha del proyecto",
+    "back": "Volver a los proyectos",
+    "role": "Papel",
+    "kind": "Categoría",
+    "period": "Periodo",
+    "status": "Estado",
+    "statuses": { "live": "En línea", "wip": "En curso" },
+    "stack": "Tecnologías",
+    "ctaDemo": "Probar este proyecto en línea",
+    "ctaCode": "Leer el código de este proyecto",
+    "results": "Resultados",
+    "detail": "El proyecto al detalle",
+    "limits": "Límites, escritos con claridad",
+    "next": "Y después",
+    "nextLead": "Una pregunta sobre este proyecto o sobre otro: respondo por correo.",
+    "ctaDiscuss": "Recibir respuesta a mis preguntas sobre este proyecto",
+    "ctaOthers": "Comparar con mis otros proyectos"
+  },
+  "projectsPage": {
+    "title": "Proyectos",
+    "heading": "Lo que he construido",
+    "lead": "Cada proyecto tiene su ficha: el problema, lo que hice, las cifras y los límites cuando los hay."
+  },
+  "notesPage": {
+    "title": "Notas",
+    "heading": "Notas de campo",
+    "lead": "Lecciones sacadas de proyectos reales, escritas a posteriori y revisadas antes de publicarse.",
+    "emptyTitle": "Las primeras notas están en camino.",
+    "emptyText": "Todavía no hay ninguna nota publicada. Prefiero una página vacía a un artículo falso.",
+    "emptyCta": "Ver mis proyectos mientras llegan las primeras notas",
+    "back": "Volver a las notas",
+    "noteLabel": "Nota"
+  },
+  "cv": {
+    "title": "CV",
+    "lead": "Una página, formato Harvard: formación primero, en blanco y negro. El botón abre el cuadro de impresión, donde «Guardar como PDF» genera el archivo.",
+    "print": "Guardar mi CV en PDF",
+    "education": "Formación",
+    "experience": "Experiencia",
+    "leadership": "Compromiso",
+    "projects": "Proyectos",
+    "skills": "Competencias",
+    "skillFamilies": { "data": "Datos", "quality": "Calidad", "bi": "BI y PMSI", "ai": "Ciencia de datos e IA", "mlops": "MLOps", "web": "Web y API" },
+    "languagesLabel": "Idiomas",
+    "languages": "francés (lengua materna), inglés y español fluidos",
+    "interestsLabel": "Intereses",
+    "interests": "rugby, hockey, baile, hard techno",
+    "labelled": "{label}:",
+    "engagement": [{ "title": "Clases de baile voluntarias", "where": "", "when": "cada fin de semana", "sub": "" }]
+  },
+  "legal": {
+    "title": "Aviso legal",
+    "description": "Editor, alojamiento y propiedad intelectual del sitio adam.beloucif.com.",
+    "heading": "Aviso legal",
+    "updated": "Última actualización: 9 de octubre de 2026.",
+    "intro": "Este sitio es un portafolio personal. No tiene finalidad comercial propia.",
+    "sections": [
+      { "h": "Editor del sitio", "p": ["Adam Beloucif, persona física.", "Contacto: adam.beloucif@efrei.net.", "Director de la publicación: Adam Beloucif."] },
+      { "h": "Alojamiento", "p": ["Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, Estados Unidos.", "Teléfono: +1 559 288 7060.", "Sitio: vercel.com."] },
+      { "h": "Propiedad intelectual", "p": ["Los textos y las maquetaciones de este sitio son propiedad de su autor. Los logotipos de LinkedIn y GitHub pertenecen a sus titulares y solo designan sus servicios. Las tipografías Funnel Display, Funnel Sans y B612 Mono se distribuyen bajo licencia SIL Open Font License."] },
+      { "h": "Responsabilidad", "p": ["La información de este sitio es orientativa. Los enlaces a sitios de terceros no comprometen a su editor ni a mí respecto a su contenido."] },
+      { "h": "Datos personales", "p": ["El tratamiento de los datos enviados mediante el formulario de contacto se describe en la política de privacidad."] }
+    ]
+  },
+  "privacy": {
+    "title": "Privacidad",
+    "description": "Datos recogidos por el formulario de contacto, plazo de conservación y derechos.",
+    "heading": "Política de privacidad",
+    "updated": "Última actualización: 9 de octubre de 2026.",
+    "intro": "Este sitio no instala ninguna cookie de seguimiento, no usa ninguna herramienta de análisis de audiencia y no carga ningún recurso de un sitio de terceros. El único tratamiento de datos personales es el del formulario de contacto.",
+    "sections": [
+      { "h": "Responsable del tratamiento", "p": ["Adam Beloucif, localizable en adam.beloucif@efrei.net."] },
+      { "h": "Datos recogidos y finalidad", "p": ["El formulario recoge tu nombre, tu correo y tu mensaje. Estos datos sirven únicamente para responderte."] },
+      { "h": "Base jurídica", "p": ["Mi interés legítimo en responder a quienes me escriben (artículo 6, apartado 1, letra f del RGPD)."] },
+      { "h": "Plazo de conservación", "p": ["Los mensajes se conservan doce meses después del último intercambio y luego se eliminan."] },
+      { "h": "Destinatarios y encargados", "p": ["Resend, que transmite el mensaje por correo, y Vercel, que aloja el sitio. Estos proveedores pueden tratar datos fuera de la Unión Europea, con cláusulas contractuales tipo."] },
+      { "h": "Almacenamiento local en tu navegador", "p": ["La elección del tema claro u oscuro se guarda en tu navegador (clave ab-theme). No contiene ningún dato personal, no sale de tu dispositivo y sirve solo para la visualización."] },
+      { "h": "Tus derechos", "p": ["Puedes solicitar el acceso, la rectificación o la supresión de tus datos, oponerte a su tratamiento o pedir su limitación, escribiendo a adam.beloucif@efrei.net.", "También puedes reclamar ante la CNIL (cnil.fr) si consideras que no se respetan tus derechos."] }
+    ]
+  },
+  "notFound": { "title": "Página no encontrada", "heading": "Esta página no existe.", "text": "Puede que el enlace sea antiguo o esté mal copiado.", "cta": "Volver al inicio" },
+  "meta": {
+    "home": { "title": "Adam Beloucif, Data Engineer e IA", "description": "Adam Beloucif, Data Engineer e IA. Pipelines de datos, PMSI, MLOps: proyectos, resultados medidos y trayectoria." },
+    "about": { "title": "Trayectoria", "description": "Trayectoria de Adam Beloucif: formación, experiencias, compromiso asociativo y competencias demostradas con proyectos." },
+    "projects": { "title": "Proyectos", "description": "Proyectos de datos, IA y web de Adam Beloucif, con sus cifras y sus límites." },
+    "notes": { "title": "Notas", "description": "Notas de campo de Adam Beloucif sobre datos, calidad y herramientas." },
+    "contact": { "title": "Contacto", "description": "Escribir a Adam Beloucif: correo, LinkedIn, GitHub o formulario." },
+    "cv": { "title": "CV", "description": "CV de Adam Beloucif en una página, formato Harvard, para guardar en PDF." }
+  }
+}

@@ -1,0 +1,100 @@
+/* Contact et formulaire */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.2rem,3vw,2.5rem)}
+@media (max-width:980px){.contact-grid{grid-template-columns:1fr}}
+.contact-grid h3,.page-head h1{font-size:clamp(2.2rem,5vw,4rem);margin-bottom:.8rem}
+.links{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.2rem 0}
+.off{color:var(--muted);max-width:30rem;font-size:.95rem}
+.off b{display:block;font:700 .72rem var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--amber-ink);margin-bottom:.25rem}
+form{display:grid;gap:.9rem}
+.field{display:grid;gap:.35rem}
+.field span{font:.8rem var(--f-mono);color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.field input,.field textarea{width:100%;padding:.8rem .9rem;border:1.5px solid var(--edge);background:var(--bg);border-radius:var(--r);color:var(--ink)}
+.field textarea{min-height:8rem;resize:vertical}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.notice{font-size:.85rem;color:var(--muted);max-width:34rem}
+.notice a{color:var(--amber-ink)}
+.form-status{margin:0;min-height:1.5rem;font-size:.95rem}
+.form-status.sent{color:var(--ink)}
+.form-status.error,.form-status.invalid{color:var(--err)}
+.form-status:focus{outline:none}
+
+/* En-tete de page interne */
+.page-head p.lead{margin-top:.4rem}
+.crumb{display:inline-flex;gap:.4rem;align-items:center;font:.78rem var(--f-mono);color:var(--amber-ink);text-decoration:none;margin-bottom:1rem}
+.crumb:hover{text-decoration:underline}
+
+/* A propos */
+.about-grid{display:grid;grid-template-columns:minmax(0,16rem) minmax(0,1fr);gap:clamp(1.2rem,3vw,2.5rem);align-items:start}
+@media (max-width:760px){.about-grid{grid-template-columns:1fr}}
+.portrait{border:1px solid var(--edge);padding:.5rem;background:var(--bg);max-width:16rem}
+.portrait img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+.portrait figcaption{font:.7rem var(--f-mono);color:var(--muted);margin-top:.4rem;letter-spacing:.06em}
+.bio{display:grid;gap:.9rem;max-width:44rem}
+.bio h1{font-size:clamp(2.4rem,5.4vw,4.4rem)}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:.35rem 1.2rem;margin-top:.4rem;font-size:.95rem}
+.facts dt{font:.74rem var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-top:.15rem}
+.skills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.4rem 2rem}
+@media (max-width:900px){.skills{grid-template-columns:1fr}}
+.skills h3{font-size:1.1rem;margin-bottom:.5rem}
+.skills li{display:grid;grid-template-columns:minmax(7rem,10rem) 1fr;gap:.2rem .8rem;padding:.4rem 0;border-top:1px dashed var(--line);font-size:.92rem}
+.skills li b{font:700 .8rem var(--f-mono)}
+.skills .proofs{color:var(--muted)}
+.skills .proofs a{color:var(--amber-ink)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.4vw,2rem)}
+@media (max-width:900px){.cols{grid-template-columns:1fr}}
+.cols h3{font-size:1.2rem;margin-bottom:.6rem}
+.cols p,.cols li{color:var(--muted);font-size:.97rem}
+.cols li{padding:.45rem 0;border-top:1px dashed var(--line)}
+.cols li b{color:var(--ink)}
+
+/* Etude de cas */
+.case-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:1.4rem 0}
+.case-meta div{background:var(--panel);padding:.8rem 1rem}
+.case-meta dt{font:.7rem var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.2rem}
+.case-meta dd{font-size:.95rem}
+.results{display:grid;gap:.6rem;max-width:46rem}
+.results li{display:grid;grid-template-columns:1.2rem 1fr;gap:.6rem;font-size:1.05rem}
+.results li::before{content:"";width:.5rem;height:.5rem;margin-top:.55rem;background:var(--amber)}
+.limits li{color:var(--muted);padding:.4rem 0;border-top:1px dashed var(--line);max-width:46rem}
+.prose{max-width:46rem;display:grid;gap:1rem}
+.prose h2{font-size:1.5rem;margin-top:.8rem}
+.prose p,.prose li{color:var(--ink)}
+.prose ul{list-style:disc;padding-left:1.2rem;display:grid;gap:.3rem}
+.prose a{color:var(--amber-ink)}
+.prose strong{font-weight:700}
+
+/* Filtre des projets */
+.filters{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.2rem}
+.filters button{font:600 .8rem var(--f-mono);padding:.5rem .8rem;min-height:2.5rem;border:1px solid var(--edge);background:transparent;border-radius:var(--r);cursor:pointer;color:var(--muted)}
+.filters button[aria-pressed="true"]{color:var(--btn-ink);background:var(--btn-bg);border-color:var(--btn-bg)}
+.filterable[data-filter="hospital"] .prow:not([data-kind="hospital"]),
+.filterable[data-filter="school"] .prow:not([data-kind="school"]),
+.filterable[data-filter="studio"] .prow:not([data-kind="studio"]),
+.filterable[data-filter="client"] .prow:not([data-kind="client"]),
+.filterable[data-filter="personal"] .prow:not([data-kind="personal"]){display:none}
+
+/* Pages juridiques */
+.legal{max-width:46rem;display:grid;gap:1.2rem}
+.legal h2{font-size:1.3rem}
+.legal p,.legal li{color:var(--ink)}
+.legal ul{list-style:disc;padding-left:1.2rem;display:grid;gap:.3rem}
+.legal a{color:var(--amber-ink)}
+.legal .upd{font:.78rem var(--f-mono);color:var(--muted)}
+
+/* 404 */
+.nf{min-height:50vh;display:grid;align-content:center;gap:1rem}
+.nf .code{font:700 clamp(4rem,12vw,9rem) var(--f-mono);color:var(--amber-ink);line-height:1}
+
+/* CV, vue ecran */
+.cv-bar{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center;justify-content:space-between}
+.cv-bar p{color:var(--muted);max-width:34rem;font-size:.95rem}
+.cv-sheet{background:#fff;color:#000;max-width:50rem;margin-inline:auto;padding:2.2rem 2.4rem;font-family:Georgia,"Times New Roman",serif;font-size:.92rem;line-height:1.35;border:1px solid var(--edge);width:100%}
+.cv-sheet h1{font:700 1.7rem Georgia,"Times New Roman",serif;letter-spacing:0;text-align:center;margin:0}
+.cv-sheet .contact{text-align:center;margin:.2rem 0 .8rem}
+.cv-sheet a{color:#000;text-decoration:none}
+.cv-sheet h2{font:700 .95rem Georgia,"Times New Roman",serif;letter-spacing:.04em;text-transform:uppercase;border-bottom:1px solid #000;margin:.7rem 0 .35rem;padding-bottom:.1rem}
+.cv-sheet .row{display:grid;grid-template-columns:1fr auto;gap:.2rem 1rem}
+.cv-sheet .row b{font-weight:700}
+.cv-sheet .row .when{text-align:right;white-space:nowrap}
+.cv-sheet .sub{grid-column:1/-1;margin:0 0 .25rem}
+.cv-sheet p{margin:.1rem 0}
