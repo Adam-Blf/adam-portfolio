@@ -107,3 +107,9 @@ lerna-debug.log*
 
 certificates
 .env*.local
+
+# Synchro vault
+.sync/
+*.tsbuildinfo
+.lighthouse/
+.impeccable/

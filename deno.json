@@ -1,0 +1,9 @@
+{
+  "tasks": {
+    "sync:dry": "deno run --allow-read=C:/Users/adamb/Documents/Obsidian/Claude,C:/Users/adamb/.claude/SESSIONS.md,content,tools,scripts,.sync --allow-write=.sync --allow-run=git,gh,node,gitleaks --deny-env --deny-net scripts/sync/main.ts",
+    "sync:apply": "deno run --allow-read=C:/Users/adamb/Documents/Obsidian/Claude,C:/Users/adamb/.claude/SESSIONS.md,content,tools,scripts,.sync --allow-write=content,.sync --allow-run=git,gh,node,gitleaks --deny-env --deny-net scripts/sync/main.ts --apply",
+    "sync:fixture": "deno run --allow-read=scripts,tools,content,.sync --allow-write=.sync --deny-run --deny-env --deny-net scripts/sync/main.ts --vault=scripts/sync/fixtures/vault --sessions=scripts/sync/fixtures/SESSIONS.md"
+  },
+  "lint": { "include": ["scripts/"] },
+  "fmt": { "lineWidth": 140 }
+}
