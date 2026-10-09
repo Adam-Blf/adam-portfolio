@@ -108,7 +108,7 @@ export default function CompetencesPage() {
           <div className="flex items-center gap-3 mb-4">
             <Terminal className="w-5 h-5 text-[#F5F3EF]" />
             <span className="text-xs font-mono font-bold uppercase tracking-[0.25em] text-[#8E8E8E]">
-              STANDARDS DE DÉVELOPPEMENT - CLAUDE & GIT
+              STANDARDS DE DÉVELOPPEMENT - INGÉNIERIE & GIT
             </span>
           </div>
           <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tight text-[#F5F3EF] mb-8">

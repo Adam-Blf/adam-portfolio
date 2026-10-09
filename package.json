@@ -1,6 +1,6 @@
 {
   "name": "adam-portfolio",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Portfolio personnel d'Adam Beloucif - Data Engineer & Developpeur Fullstack",
   "scripts": {
     "dev": "next dev -p 3100",

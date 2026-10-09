@@ -51,10 +51,6 @@ export default function MentionsLegalesPage() {
                 </a>
               </dd>
             </div>
-            <div className="flex flex-wrap gap-x-2">
-              <dt className="font-bold">Téléphone :</dt>
-              <dd>{EDITOR.phone}</dd>
-            </div>
           </dl>
           {!EDITOR.isProfessional && (
             <p className="text-xs text-[#0A0A0A]/70 mt-5 leading-relaxed border-l-2 border-[#0A0A0A]/15 pl-4">

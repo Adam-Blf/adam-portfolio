@@ -73,7 +73,7 @@ export default function Contact() {
         <div className="flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full border border-[#F5F3EF]/20 bg-[#F5F3EF]/5 backdrop-blur-xs">
           <Mail className="w-3.5 h-3.5 text-[#F5F3EF]" />
           <span className="text-xs font-bold tracking-[0.25em] uppercase text-[#F5F3EF]">
-            ALTERNANCE M2, SEPT. 2026
+            CONTACT
           </span>
         </div>
 
@@ -135,13 +135,6 @@ export default function Contact() {
               className="text-[#F5F3EF] underline decoration-[#F5F3EF]/30 hover:decoration-[#F5F3EF] font-bold tracking-widest transition-colors"
             >
               adam.beloucif@efrei.net
-            </a>
-            <span className="hidden sm:inline">-</span>
-            <a
-              href="tel:+33786466834"
-              className="text-[#F5F3EF] hover:text-[#8E8E8E] transition-colors"
-            >
-              +33 7 86 46 68 34
             </a>
           </div>
         </div>

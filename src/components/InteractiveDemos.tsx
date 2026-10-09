@@ -44,7 +44,7 @@ function BlackoutDemo() {
             SIMULATEUR BLACKOUT APÉRO
           </h4>
           <p className="text-xs text-[#8E8E8E] font-medium">
-            Moteur interactif de jeu d'ambiance en direct (Disponible sur blackout.beloucif.com)
+            Moteur interactif de jeu d'ambiance en direct (Accessible sur blackout.beloucif.com)
           </p>
         </div>
         <div className="flex items-center gap-3">
@@ -349,7 +349,7 @@ function RecipeAIDemo() {
           RECIPE RECO FRIGO - PRÉDICTIONS D'INGRÉDIENTS IA
         </h4>
         <p className="text-xs text-[#8E8E8E] font-medium">
-          Moteur de recommandation de recettes par LSTM & NLP Sentence-Transformers
+          Moteur de recommandation de recettes par LSTM & NLP et embeddings sémantiques
         </p>
       </div>
 
