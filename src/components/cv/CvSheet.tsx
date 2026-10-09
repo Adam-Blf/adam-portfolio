@@ -6,24 +6,8 @@ import type { Locale, TimelineEntry } from "@/lib/schemas/content";
 type Row = { title: string; where: string; when: string; sub?: string };
 
 /** CV public, format Harvard : formation en tete, serif, une page, noir et blanc, dates a droite. */
-export async function CvSheet({ locale }: { locale: Locale }) {
-  const t = await getTranslations({ locale, namespace: "cv" });
-  const jt = await getTranslations({ locale, namespace: "journal" });
-  const since = (d: string) => jt("since", { date: d });
-  const desc = (list: TimelineEntry[]) => [...list].sort((a, b) => b.start.localeCompare(a.start));
-  const toRow = (e: TimelineEntry): Row => {
-    const x = timelineText(e, locale);
-    return { title: x.role, where: e.org, when: formatPeriod(e, locale, since), sub: x.summary };
-  };
-  const all = loadTimeline().filter((e) => e.cv);
-  const education = desc(all.filter((e) => e.kind === "education" || e.kind === "service")).map(toRow);
-  const work = desc(all.filter((e) => e.kind === "work")).map(toRow);
-  const leadership = desc(all.filter((e) => e.kind === "leadership")).map(toRow);
-  const extra = t.raw("engagement") as Row[];
-  const featured = loadProjects(locale).filter((p) => ["vigie", "urban-data-explorer", "station-pmsi", "404-monkey"].includes(p.meta.slug));
-  const labels = t.raw("skillFamilies") as Record<string, string>;
-
-  const Section = ({ title, rows }: { title: string; rows: Row[] }) => (
+function Section({ title, rows }: { title: string; rows: Row[] }) {
+  return (
     <section>
       <h2>{title}</h2>
       {rows.map((r) => (
@@ -38,6 +22,27 @@ export async function CvSheet({ locale }: { locale: Locale }) {
       ))}
     </section>
   );
+}
+
+export async function CvSheet({ locale }: { locale: Locale }) {
+  const t = await getTranslations({ locale, namespace: "cv" });
+  const jt = await getTranslations({ locale, namespace: "journal" });
+  const since = (d: string) => jt("since", { date: d });
+  const desc = (list: TimelineEntry[]) => [...list].sort((a, b) => b.start.localeCompare(a.start));
+  const toRow = (e: TimelineEntry): Row => {
+    const x = timelineText(e, locale);
+    // L'organisme n'est repete que s'il n'apparait ni dans l'intitule ni dans le detail.
+    const norm = (v: string) => v.toLowerCase();
+    const known = norm(x.role).includes(norm(e.org)) || norm(x.summary).includes(norm(e.org));
+    return { title: x.role, where: known ? "" : e.org, when: formatPeriod(e, locale, since), sub: x.summary };
+  };
+  const all = loadTimeline().filter((e) => e.cv);
+  const education = desc(all.filter((e) => e.kind === "education" || e.kind === "service")).map(toRow);
+  const work = desc(all.filter((e) => e.kind === "work")).map(toRow);
+  const leadership = desc(all.filter((e) => e.kind === "leadership")).map(toRow);
+  const extra = t.raw("engagement") as Row[];
+  const featured = loadProjects(locale).filter((p) => ["vigie", "urban-data-explorer", "station-pmsi", "404-monkey"].includes(p.meta.slug));
+  const labels = t.raw("skillFamilies") as Record<string, string>;
 
   return (
     <article className="cv-sheet" lang={locale} aria-label={t("title")}>

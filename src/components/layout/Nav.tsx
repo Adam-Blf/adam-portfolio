@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useBrowserPath } from "@/lib/useBrowserPath";
 
 export type NavItem = { href: string; label: string; root?: boolean };
 
@@ -12,8 +12,7 @@ function isActive(current: string, item: NavItem): boolean {
 
 /** Navigation du rail. La page courante est reperee apres l'hydratation (le rail est partage par toutes les pages). */
 export function Nav({ items, label }: { items: NavItem[]; label: string }) {
-  const [path, setPath] = useState<string | null>(null);
-  useEffect(() => setPath(window.location.pathname), []);
+  const path = useBrowserPath();
   return (
     <nav className="chap" aria-label={label}>
       {items.map((item, i) => (

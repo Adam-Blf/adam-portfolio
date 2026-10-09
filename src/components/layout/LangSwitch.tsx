@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useBrowserPath } from "@/lib/useBrowserPath";
 import { switchPath, type RouteTable } from "@/lib/langswitch";
 
 const NAMES: Record<string, string> = { fr: "Français", en: "English", es: "Español" };
@@ -12,8 +12,7 @@ type Props = { label: string; locale: string; locales: string[]; table: RouteTab
  * ils pointent vers la meme page dans l'autre langue.
  */
 export function LangSwitch({ label, locale, locales, table, defaultLocale }: Props) {
-  const [path, setPath] = useState<string | null>(null);
-  useEffect(() => setPath(window.location.pathname), []);
+  const path = useBrowserPath();
   return (
     <div className="lang" role="group" aria-label={label}>
       {locales.map((l) => (

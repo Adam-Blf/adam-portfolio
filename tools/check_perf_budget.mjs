@@ -4,7 +4,7 @@
  * Mesure le JS initial (balises script de la page, gzip), le chunk GSAP differe, le CSS, les polices et les images.
  * Les budgets de temps (LCP, CLS, TBT) se prouvent avec Lighthouse, pas ici.
  */
-import { existsSync, readdirSync, statSync } from "node:fs";
+import { existsSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { gzipSync } from "node:zlib";
 import { readFileSync } from "node:fs";

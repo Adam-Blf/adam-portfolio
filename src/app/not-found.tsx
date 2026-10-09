@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "@/styles/fonts.css";
 import "@/styles/tokens.css";
 import "@/styles/base.css";
@@ -11,7 +12,7 @@ export default function RootNotFound() {
           <h1>404</h1>
           <p>Page introuvable. Page not found.</p>
           <p>
-            <a href="/">Adam Beloucif</a>
+            <Link href="/">Adam Beloucif</Link>
           </p>
         </main>
       </body>

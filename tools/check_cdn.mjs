@@ -7,7 +7,7 @@
  *  - JS : noms d'hotes de CDN connus ;
  *  - next.config.ts : aucun remotePatterns.
  */
-import { existsSync, readdirSync } from "node:fs";
+import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { read, rel, runCli, walk } from "./lib/rules.mjs";
 
