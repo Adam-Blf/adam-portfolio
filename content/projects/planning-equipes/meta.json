@@ -1,0 +1,38 @@
+{
+  "slug": "planning-equipes",
+  "kind": "hospital",
+  "status": "live",
+  "period": {
+    "start": null,
+    "end": null
+  },
+  "stack": [
+    "Next.js",
+    "PWA",
+    "Firebase",
+    "Supabase",
+    "next-intl"
+  ],
+  "links": {
+    "repo": null,
+    "demo": null
+  },
+  "coAuthors": [],
+  "featured": false,
+  "order": 8,
+  "visibility": {
+    "publish": true,
+    "anonymized": true,
+    "approvals": {
+      "employer": null,
+      "client": null,
+      "coAuthors": []
+    },
+    "reviewedBy": null,
+    "reviewedOn": null
+  },
+  "provenance": {
+    "vaultId": "vault:dabd4238b0",
+    "checkedOn": "2026-10-09"
+  }
+}

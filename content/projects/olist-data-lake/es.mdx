@@ -1,0 +1,20 @@
+---
+title: "Data lake medallón Olist"
+tagline: "Del flujo en bruto al agregado, sobre un conjunto de datos de comercio electrónico."
+role: "Proyecto final de data engineering del primer curso del máster"
+summary: "Arquitectura Bronce, Plata, Oro sobre el conjunto de comercio electrónico Olist: streaming Kafka, transformación PySpark, agregación Hive."
+results:
+  - { metric: null, text: "Tres capas: Bronce, Plata y Oro" }
+  - { metric: null, text: "Streaming Kafka, transformación PySpark, agregación Hive" }
+limits: []
+status: published
+reviewedOn: null
+---
+
+## El problema
+
+Construir, sobre un conjunto de datos de comercio electrónico realista, una cadena que parte de datos en bruto y termina en agregados listos para el análisis.
+
+## Lo que construí
+
+Una arquitectura medallón: los datos en bruto llegan en streaming por Kafka, PySpark los limpia y los estructura, Hive guarda los agregados de la capa Oro. La pila incluye además Hadoop, FastAPI y Streamlit.

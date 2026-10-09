@@ -1,0 +1,20 @@
+---
+title: "Data Lake médaillon Olist"
+tagline: "Du flux brut à l'agrégat, sur un jeu de données e-commerce."
+role: "Projet final de data engineering du M1"
+summary: "Architecture Bronze, Silver, Gold sur le jeu e-commerce Olist : streaming Kafka, transformation PySpark, agrégation Hive."
+results:
+  - { metric: null, text: "Trois couches : Bronze, Silver et Gold" }
+  - { metric: null, text: "Streaming Kafka, transformation PySpark, agrégation Hive" }
+limits: []
+status: published
+reviewedOn: null
+---
+
+## Le problème
+
+Construire, sur un jeu de données e-commerce réaliste, une chaîne qui part de données brutes et finit en agrégats prêts pour l'analyse.
+
+## Ce que j'ai construit
+
+Une architecture médaillon : les données brutes arrivent en streaming par Kafka, PySpark les nettoie et les structure, Hive porte les agrégats de la couche Gold. La pile comprend aussi Hadoop, FastAPI et Streamlit.

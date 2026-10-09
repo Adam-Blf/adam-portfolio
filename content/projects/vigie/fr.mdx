@@ -1,0 +1,24 @@
+---
+title: "Vigie"
+tagline: "Un copilote de conformité qui cite l'article exact et sait dire qu'il ne sait pas."
+role: "Conception et évaluation, en binôme avec Emilien Morice"
+summary: "Copilote RAG de conformité bancaire : cite l'article exact, dit quand les textes ne répondent pas, bloque les injections."
+results:
+  - { metric: "attacks_replayed", text: "360 attaques rejouées, 0 % de fuite" }
+  - { metric: null, text: "Barrière coupée volontairement : 48,9 % de fuite, la preuve qu'elle travaille" }
+  - { metric: null, text: "Lighthouse mobile : 98, 100 et 100" }
+limits:
+  - "Rappel@5 de 0,638 pour 0,80 visé."
+  - "Latence p95 de 820 ms pour 500 ms visées."
+  - "Déploiement canary non rejoué avec du trafic réel ; Kubernetes et tests de charge restent partiels."
+status: published
+reviewedOn: null
+---
+
+## Le problème
+
+Un copilote de conformité qui invente un article de loi est pire que pas de copilote. Vigie répond sur DORA, l'AI Act, le RGPD et la LCB-FT en citant l'article exact, et dit clairement quand les textes ne répondent pas.
+
+## Ce que j'ai construit
+
+Une recherche hybride sur Qdrant, une API FastAPI, un modèle exporté en ONNX et quantifié en int8, et un garde-fou qui bloque les injections de consigne. Une version ne part en production que si elle passe l'évaluation : les essais sont suivis dans MLflow, la charge est rejouée avec Locust, le déploiement vise un cluster k3s décrit avec Terraform et Docker Compose, et la chaîne tourne dans GitHub Actions.

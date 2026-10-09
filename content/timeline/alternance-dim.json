@@ -1,0 +1,29 @@
+{
+  "id": "alternance-dim",
+  "kind": "work",
+  "tag": "WORK",
+  "start": "2025-09",
+  "end": "2027-07",
+  "precision": "month",
+  "org": "Groupe hospitalier de psychiatrie",
+  "featured": true,
+  "cv": true,
+  "i18n": {
+    "fr": {
+      "role": "Ingénieur PMSI / Data Engineer, alternance",
+      "summary": "Département d'information médicale, groupe hospitalier de psychiatrie. Analyse BI et PMSI, ingénierie de données (Oracle, PL/SQL, PHP, Python)."
+    },
+    "en": {
+      "role": "PMSI engineer / Data Engineer, work-study",
+      "summary": "Medical information department, psychiatric hospital group. BI and PMSI analysis, data engineering (Oracle, PL/SQL, PHP, Python)."
+    },
+    "es": {
+      "role": "Ingeniero PMSI / Data Engineer, alternancia",
+      "summary": "Departamento de información médica, grupo hospitalario de psiquiatría. Análisis BI y PMSI, ingeniería de datos (Oracle, PL/SQL, PHP, Python)."
+    }
+  },
+  "provenance": {
+    "vaultId": "vault:998322c7fb",
+    "checkedOn": "2026-10-09"
+  }
+}

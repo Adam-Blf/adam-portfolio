@@ -1,0 +1,23 @@
+/* Jetons de la direction "poste de pilotage". Contrastes mesures par
+   tests/contrast.test.ts (WCAG 2.2) : texte >= 4,5:1, bordures et fonds de bouton >= 3:1. */
+:root{
+  --f-display:"Funnel Display","Funnel Display Repli",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-text:"Funnel Sans","Funnel Sans Repli",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"B612 Mono","B612 Mono Repli",ui-monospace,Consolas,monospace;
+  --rail:15.5rem;--r:3px;
+  color-scheme:dark;
+  --bg:#0A0D0C;--panel:#121715;--ink:#E9EEE9;--muted:#93A099;--line:rgba(233,238,233,.14);--edge:#6F7C75;
+  --amber:#FFB000;--amber-ink:#FFB000;--btn-bg:#FFB000;--btn-ink:#0A0D0C;--focus:#FFB000;--grid:rgba(233,238,233,.06);--err:#FF8A7A;
+}
+[data-theme="light"]{
+  color-scheme:light;
+  --bg:#ECEEE7;--panel:#F7F8F3;--ink:#101412;--muted:#4E5A54;--line:rgba(16,20,18,.18);--edge:#5F6B65;
+  --amber:#B87400;--amber-ink:#7A4700;--btn-bg:#101412;--btn-ink:#F7F8F3;--focus:#7A4700;--grid:rgba(16,20,18,.06);--err:#A12A1A;
+}
+@media (prefers-color-scheme:light){
+  :root:not([data-theme="dark"]){
+    color-scheme:light;
+    --bg:#ECEEE7;--panel:#F7F8F3;--ink:#101412;--muted:#4E5A54;--line:rgba(16,20,18,.18);--edge:#5F6B65;
+    --amber:#B87400;--amber-ink:#7A4700;--btn-bg:#101412;--btn-ink:#F7F8F3;--focus:#7A4700;--grid:rgba(16,20,18,.06);--err:#A12A1A;
+  }
+}

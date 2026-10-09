@@ -1,0 +1,24 @@
+---
+title: "Vigie"
+tagline: "Un copiloto de cumplimiento que cita el artículo exacto y sabe decir que no lo sabe."
+role: "Diseño y evaluación, con Emilien Morice"
+summary: "Copiloto RAG de cumplimiento bancario: cita el artículo exacto, avisa cuando los textos no responden y bloquea las inyecciones."
+results:
+  - { metric: "attacks_replayed", text: "360 ataques repetidos, 0 % de fuga" }
+  - { metric: null, text: "Barrera desactivada a propósito: 48,9 % de fuga, prueba de que funciona" }
+  - { metric: null, text: "Lighthouse móvil: 98, 100 y 100" }
+limits:
+  - "Recall@5 de 0,638 frente a un objetivo de 0,80."
+  - "Latencia p95 de 820 ms frente a un objetivo de 500 ms."
+  - "Despliegue canary no repetido con tráfico real; Kubernetes y las pruebas de carga siguen siendo parciales."
+status: published
+reviewedOn: null
+---
+
+## El problema
+
+Un copiloto de cumplimiento que se inventa un artículo de ley es peor que no tener copiloto. Vigie responde sobre DORA, la AI Act, el RGPD y la LCB-FT citando el artículo exacto, y dice con claridad cuando los textos no responden.
+
+## Lo que construí
+
+Una búsqueda híbrida sobre Qdrant, una API FastAPI, un modelo exportado a ONNX y cuantizado a int8, y una barrera que bloquea las inyecciones de instrucciones. Una versión solo pasa a producción si supera la evaluación: los experimentos se siguen en MLflow, la carga se repite con Locust, el despliegue apunta a un clúster k3s descrito con Terraform y Docker Compose, y la cadena corre en GitHub Actions.

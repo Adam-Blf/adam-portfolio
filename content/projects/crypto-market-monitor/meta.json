@@ -1,0 +1,45 @@
+{
+  "slug": "crypto-market-monitor",
+  "kind": "school",
+  "status": "shipped",
+  "period": {
+    "start": "2026-06",
+    "end": "2026-06"
+  },
+  "stack": [
+    "Kafka",
+    "Node.js",
+    "TypeScript",
+    "React",
+    "Docker Compose"
+  ],
+  "links": {
+    "repo": "https://github.com/Adam-Blf/crypto-market-monitor",
+    "demo": null
+  },
+  "coAuthors": [
+    "emilien-morice"
+  ],
+  "featured": true,
+  "order": 6,
+  "visibility": {
+    "publish": true,
+    "anonymized": false,
+    "approvals": {
+      "employer": null,
+      "client": null,
+      "coAuthors": [
+        {
+          "id": "emilien-morice",
+          "approvedOn": "2026-10-09"
+        }
+      ]
+    },
+    "reviewedBy": null,
+    "reviewedOn": null
+  },
+  "provenance": {
+    "vaultId": "vault:c9c86ff667",
+    "checkedOn": "2026-10-09"
+  }
+}

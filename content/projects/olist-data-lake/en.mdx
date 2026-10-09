@@ -1,0 +1,20 @@
+---
+title: "Olist medallion data lake"
+tagline: "From the raw stream to the aggregate, on an e-commerce dataset."
+role: "Final data engineering project of the first Master's year"
+summary: "Bronze, Silver, Gold architecture on the Olist e-commerce dataset: Kafka streaming, PySpark transformation, Hive aggregation."
+results:
+  - { metric: null, text: "Three layers: Bronze, Silver and Gold" }
+  - { metric: null, text: "Kafka streaming, PySpark transformation, Hive aggregation" }
+limits: []
+status: published
+reviewedOn: null
+---
+
+## The problem
+
+Building, on a realistic e-commerce dataset, a chain that starts from raw data and ends in aggregates ready for analysis.
+
+## What I built
+
+A medallion architecture: raw data arrives as a Kafka stream, PySpark cleans and structures it, Hive holds the Gold layer aggregates. The stack also includes Hadoop, FastAPI and Streamlit.

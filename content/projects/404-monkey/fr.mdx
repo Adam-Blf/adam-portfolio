@@ -1,0 +1,22 @@
+---
+title: "404 Monkey"
+tagline: "La facturation des freelances, des entreprises et des associations."
+role: "Conception et développement, pour BLF Lab's"
+summary: "SaaS de facturation pour freelances, entreprises et associations, avec paiement Stripe réel en production."
+results:
+  - { metric: null, text: "En production, avec paiement Stripe en mode réel" }
+  - { metric: null, text: "Deux profils : entreprise et association" }
+  - { metric: null, text: "Plan gratuit pour les associations, sur justificatif" }
+limits:
+  - "Un chantier multi-membres est en cours : il n'est pas encore en production."
+status: published
+reviewedOn: null
+---
+
+## Le problème
+
+Facturer proprement demande des règles différentes selon que l'on est freelance, entreprise ou association loi 1901. Le produit propose un profil par statut.
+
+## Ce que j'ai construit
+
+Une application Next.js 16 avec React 19 et Tailwind 4. Supabase porte l'authentification, Postgres et la sécurité par ligne (RLS), Stripe les paiements. Les tarifs suivent des paliers de nombre de clients, et la contribution volontaire reste strictement opt-in.

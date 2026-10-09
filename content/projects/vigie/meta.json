@@ -1,0 +1,50 @@
+{
+  "slug": "vigie",
+  "kind": "school",
+  "status": "wip",
+  "period": {
+    "start": "2026-10",
+    "end": null
+  },
+  "stack": [
+    "Python",
+    "FastAPI",
+    "Qdrant",
+    "ONNX",
+    "MLflow",
+    "Locust",
+    "Docker Compose",
+    "k3s",
+    "Terraform",
+    "GitHub Actions"
+  ],
+  "links": {
+    "repo": "https://github.com/Adam-Blf/vigie",
+    "demo": null
+  },
+  "coAuthors": [
+    "emilien-morice"
+  ],
+  "featured": true,
+  "order": 1,
+  "visibility": {
+    "publish": true,
+    "anonymized": false,
+    "approvals": {
+      "employer": null,
+      "client": null,
+      "coAuthors": [
+        {
+          "id": "emilien-morice",
+          "approvedOn": "2026-10-09"
+        }
+      ]
+    },
+    "reviewedBy": null,
+    "reviewedOn": null
+  },
+  "provenance": {
+    "vaultId": "vault:7618df2712",
+    "checkedOn": "2026-10-09"
+  }
+}

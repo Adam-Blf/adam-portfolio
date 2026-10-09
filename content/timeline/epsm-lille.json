@@ -1,0 +1,29 @@
+{
+  "id": "epsm-lille",
+  "kind": "work",
+  "tag": "WORK",
+  "start": "2024-12",
+  "end": "2025-09",
+  "precision": "month",
+  "org": "EPSM Lille-Métropole",
+  "featured": false,
+  "cv": true,
+  "i18n": {
+    "fr": {
+      "role": "Chargé de communication digitale, alternance, EPSM Lille-Métropole",
+      "summary": "Santé mentale."
+    },
+    "en": {
+      "role": "Digital communication officer, work-study, EPSM Lille-Métropole",
+      "summary": "Mental health."
+    },
+    "es": {
+      "role": "Responsable de comunicación digital, alternancia, EPSM Lille-Métropole",
+      "summary": "Salud mental."
+    }
+  },
+  "provenance": {
+    "vaultId": "vault:661ded8851",
+    "checkedOn": "2026-10-09"
+  }
+}

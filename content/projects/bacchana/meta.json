@@ -1,0 +1,38 @@
+{
+  "slug": "bacchana",
+  "kind": "studio",
+  "status": "shipped",
+  "period": {
+    "start": null,
+    "end": null
+  },
+  "stack": [
+    "React",
+    "Vite",
+    "PWA",
+    "Kotlin",
+    "SwiftUI"
+  ],
+  "links": {
+    "repo": null,
+    "demo": null
+  },
+  "coAuthors": [],
+  "featured": false,
+  "order": 9,
+  "visibility": {
+    "publish": true,
+    "anonymized": false,
+    "approvals": {
+      "employer": null,
+      "client": null,
+      "coAuthors": []
+    },
+    "reviewedBy": null,
+    "reviewedOn": null
+  },
+  "provenance": {
+    "vaultId": "vault:3564669aec",
+    "checkedOn": "2026-10-09"
+  }
+}

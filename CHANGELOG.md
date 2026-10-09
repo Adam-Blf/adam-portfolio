@@ -4,6 +4,33 @@ Toutes les évolutions notables de ce projet sont documentées ici.
 Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/),
 versionnage [semver](https://semver.org/lang/fr/).
 
+## [3.0.0] - 2026-10-09
+
+Refonte totale sur la direction "poste de pilotage". Le dépôt est réécrit en place ; l'état précédent reste disponible sous le tag `v2.1.1`.
+
+### Added
+
+- Site multi-pages en français (défaut), anglais et espagnol : accueil, parcours, projets et études de cas, notes, contact, CV imprimable au format Harvard, mentions légales, confidentialité. Chemins traduits, hreflang, sitemap, robots, JSON-LD Person (sans téléphone ni adresse), image OpenGraph par langue.
+- Rail latéral avec jauge de défilement réelle, panneaux à repères d'angle, journal de parcours, trace d'oscilloscope et compteurs animés avec GSAP et ScrollTrigger, chargés après l'hydratation et coupés sous `prefers-reduced-motion`.
+- Contenu en fichiers (`content/`) validés par Zod : autorisations, provenance, chiffres sourcés, compétences prouvées par des projets.
+- Douze études de cas, dont deux hospitalières anonymisées, sans lien vers le code.
+- Formulaire de contact (Resend) avec pot de miel, jeton horodaté signé et contrôle d'origine.
+- Polices Funnel Display, Funnel Sans et B612 Mono servies en local, avec repli à métriques ajustées.
+- Gardes de `tools/` (contenu, typographie, données personnelles, icônes, langues, schémas, routes, polices, CDN, budgets) vues rouges par des tests, tests Vitest des schémas, du formulaire, des contrastes et du script de synchro.
+- Script Deno `scripts/sync` : du vault vers une PR en brouillon, jamais de publication, permissions minimales.
+- Inventaire des boutons (`docs/boutons.md`) : libellé orienté bénéfice, stade d'audience, contraste mesuré.
+
+### Changed
+
+- Next.js 16, React 19, next-intl 4, TypeScript strict, rendu statique.
+- Icônes : Reicon uniquement. Logos LinkedIn et GitHub en SVG local (svgl.app).
+- Photo recadrée sur le visage, arrière-plan flouté, servie en AVIF et WebP.
+
+### Removed
+
+- Ancien code et faux contenus : composants du thème d'origine, simulateurs, marques et publications inventées, niveaux de compétence sans source, vidéo et images distantes, Lenis, framer-motion, split-type, lucide-react, Tailwind, `design-system/`, plan de restructuration et script `.cmd`.
+- Toute mention de disponibilité, de recherche, de certification Azure, de téléphone et de commune de résidence.
+
 ## [2.1.1] - 2026-10-09
 
 Correctif de discrétion : retrait de ce qui expose l'éditeur sur le site public.

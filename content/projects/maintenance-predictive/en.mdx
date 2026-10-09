@@ -1,0 +1,22 @@
+---
+title: "Industrial predictive maintenance"
+tagline: "Predicting a failure 24 hours ahead."
+role: "Master's project, with Emilien Morice"
+summary: "Four models compared to predict a failure 24 h ahead, SHAP interpretability, FastAPI service and Streamlit dashboard."
+results:
+  - { metric: null, text: "F1 of 0.886 and ROC-AUC of 0.995 with XGBoost" }
+  - { metric: "maintenance_rows", text: "24,042 rows, 15 variables, about 7% failures" }
+limits:
+  - "Measured on a course project, not on an installation in operation."
+  - "Failures are rare (about 7% of rows): accuracy alone would say nothing, hence the F1."
+status: published
+reviewedOn: null
+---
+
+## The problem
+
+Stopping a machine too late is expensive, and so is stopping it too early. The project tries to predict a failure 24 hours ahead from 15 measured variables.
+
+## What I built
+
+Four models compared: logistic regression, random forest, XGBoost and a multilayer perceptron. Interpretability goes through SHAP. The best model is served by a FastAPI service and a Streamlit dashboard.

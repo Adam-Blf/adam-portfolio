@@ -1,0 +1,29 @@
+{
+  "id": "pmm-kieffer",
+  "kind": "service",
+  "tag": "PMM",
+  "start": "2020-09",
+  "end": "2021-07",
+  "precision": "year",
+  "org": "Marine Nationale",
+  "featured": true,
+  "cv": true,
+  "i18n": {
+    "fr": {
+      "role": "Préparation Militaire Marine Kieffer",
+      "summary": "Marine Nationale, mention Assez Bien"
+    },
+    "en": {
+      "role": "Marine Kieffer military preparation",
+      "summary": "French Navy, Assez Bien distinction"
+    },
+    "es": {
+      "role": "Preparación Militar Marina Kieffer",
+      "summary": "Marina Nacional, mención Assez Bien"
+    }
+  },
+  "provenance": {
+    "vaultId": "vault:12c494ebca",
+    "checkedOn": "2026-10-09"
+  }
+}

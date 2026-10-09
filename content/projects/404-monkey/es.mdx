@@ -1,0 +1,22 @@
+---
+title: "404 Monkey"
+tagline: "La facturación de autónomos, empresas y asociaciones."
+role: "Diseño y desarrollo, para BLF Lab's"
+summary: "SaaS de facturación para autónomos, empresas y asociaciones, con pagos Stripe reales en producción."
+results:
+  - { metric: null, text: "En producción, con pagos Stripe en modo real" }
+  - { metric: null, text: "Dos perfiles: empresa y asociación" }
+  - { metric: null, text: "Plan gratuito para asociaciones, con justificante" }
+limits:
+  - "Hay un desarrollo multiusuario en curso: todavía no está en producción."
+status: published
+reviewedOn: null
+---
+
+## El problema
+
+Facturar bien exige reglas distintas según seas autónomo, empresa o asociación. El producto ofrece un perfil por estatus.
+
+## Lo que construí
+
+Una aplicación Next.js 16 con React 19 y Tailwind 4. Supabase se ocupa de la autenticación, Postgres y la seguridad por fila (RLS), y Stripe de los pagos. Las tarifas siguen tramos según el número de clientes, y la contribución voluntaria sigue siendo estrictamente opt-in.

@@ -1,0 +1,39 @@
+{
+  "slug": "olist-data-lake",
+  "kind": "school",
+  "status": "shipped",
+  "period": {
+    "start": null,
+    "end": null
+  },
+  "stack": [
+    "PySpark",
+    "Kafka",
+    "Hadoop",
+    "Hive",
+    "FastAPI",
+    "Streamlit"
+  ],
+  "links": {
+    "repo": "https://github.com/Adam-Blf/projet-dataeng-m1",
+    "demo": null
+  },
+  "coAuthors": [],
+  "featured": false,
+  "order": 7,
+  "visibility": {
+    "publish": true,
+    "anonymized": false,
+    "approvals": {
+      "employer": null,
+      "client": null,
+      "coAuthors": []
+    },
+    "reviewedBy": null,
+    "reviewedOn": null
+  },
+  "provenance": {
+    "vaultId": "vault:dc505c3023",
+    "checkedOn": "2026-10-09"
+  }
+}

@@ -1,0 +1,23 @@
+---
+title: "Estación PMSI"
+tagline: "Controlar ficheros reglamentarios sin que ningún dato salga del puesto."
+role: "Diseño y desarrollo, durante mi alternancia"
+summary: "Herramienta de escritorio que controla y prepara ficheros PMSI reglamentarios, 100 % local, para un centro de salud mental."
+results:
+  - { metric: "atih_formats", text: "23 formatos ATIH admitidos, en cuatro ámbitos de actividad" }
+  - { metric: "station_tests", text: "147 pruebas automatizadas" }
+  - { metric: null, text: "Binario portátil de 11 MB, sin ninguna llamada a una API externa" }
+limits:
+  - "Caso anonimizado: sin capturas, sin datos reales, sin código publicado."
+  - "Las cifras describen la herramienta, no su uso en el centro."
+status: published
+reviewedOn: null
+---
+
+## El problema
+
+En un centro de salud mental de la región de París, los ficheros reglamentarios del PMSI llegan en formatos heterogéneos, y un error de formato cuesta tiempo corregirlo.
+
+## Lo que construí
+
+Una aplicación de escritorio en Python: un núcleo de negocio probado, una interfaz pywebview, un backend FastAPI, un módulo XGBoost, controles de coherencia de identificadores y exportaciones normalizadas. El requisito de partida era simple: todo se queda en local, sin API externa. Los formatos cubren los ámbitos PSY, MCO, SSR y HAD.

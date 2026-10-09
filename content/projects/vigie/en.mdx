@@ -1,0 +1,24 @@
+---
+title: "Vigie"
+tagline: "A compliance copilot that cites the exact article and can say it does not know."
+role: "Design and evaluation, with Emilien Morice"
+summary: "RAG compliance copilot for banks: cites the exact article, says when the texts do not answer, blocks injections."
+results:
+  - { metric: "attacks_replayed", text: "360 attacks replayed, 0% leakage" }
+  - { metric: null, text: "Safeguard switched off on purpose: 48.9% leakage, proof that it does its job" }
+  - { metric: null, text: "Mobile Lighthouse: 98, 100 and 100" }
+limits:
+  - "Recall@5 of 0.638 against a 0.80 target."
+  - "p95 latency of 820 ms against a 500 ms target."
+  - "Canary deployment not replayed with real traffic; Kubernetes and load tests remain partial."
+status: published
+reviewedOn: null
+---
+
+## The problem
+
+A compliance copilot that invents a legal article is worse than no copilot. Vigie answers on DORA, the AI Act, GDPR and AML-CFT by citing the exact article, and says plainly when the texts do not answer.
+
+## What I built
+
+A hybrid search on Qdrant, a FastAPI service, a model exported to ONNX and quantised to int8, and a safeguard that blocks prompt injections. A version only goes to production if it passes the evaluation: runs are tracked in MLflow, load is replayed with Locust, deployment targets a k3s cluster described with Terraform and Docker Compose, and the pipeline runs in GitHub Actions.

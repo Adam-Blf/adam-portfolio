@@ -1,0 +1,23 @@
+---
+title: "Station PMSI"
+tagline: "Contrôler des fichiers réglementaires sans qu'aucune donnée ne quitte le poste."
+role: "Conception et développement, en alternance"
+summary: "Outil de bureau qui contrôle et prépare des fichiers PMSI réglementaires, 100 % en local, pour un établissement de santé mentale."
+results:
+  - { metric: "atih_formats", text: "23 formats ATIH pris en charge, sur quatre champs d'activité" }
+  - { metric: "station_tests", text: "147 tests automatisés" }
+  - { metric: null, text: "Binaire portable de 11 Mo, aucun appel à une API externe" }
+limits:
+  - "Étude de cas anonymisée : aucune capture, aucune donnée réelle, aucun code publié."
+  - "Les chiffres décrivent l'outil, pas son usage dans l'établissement."
+status: published
+reviewedOn: null
+---
+
+## Le problème
+
+Dans un établissement de santé mentale en Île-de-France, les fichiers réglementaires du PMSI arrivent dans des formats hétérogènes, et une erreur de format coûte du temps à corriger.
+
+## Ce que j'ai construit
+
+Une application de bureau en Python : noyau métier testé, interface pywebview, backend FastAPI, module XGBoost, contrôle de cohérence des identifiants et exports normalisés. L'exigence de départ était simple : tout reste en local, aucune API externe. Les formats couvrent les champs PSY, MCO, SSR et HAD.

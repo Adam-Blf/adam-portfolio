@@ -1,0 +1,38 @@
+{
+  "slug": "404-monkey",
+  "kind": "studio",
+  "status": "live",
+  "period": {
+    "start": null,
+    "end": null
+  },
+  "stack": [
+    "Next.js",
+    "React",
+    "Supabase",
+    "Stripe",
+    "Tailwind CSS"
+  ],
+  "links": {
+    "repo": "https://github.com/Adam-Blf/eden-facturation",
+    "demo": "https://facturation.beloucif.com"
+  },
+  "coAuthors": [],
+  "featured": true,
+  "order": 5,
+  "visibility": {
+    "publish": true,
+    "anonymized": false,
+    "approvals": {
+      "employer": null,
+      "client": null,
+      "coAuthors": []
+    },
+    "reviewedBy": null,
+    "reviewedOn": null
+  },
+  "provenance": {
+    "vaultId": "vault:95fb00a987",
+    "checkedOn": "2026-10-09"
+  }
+}

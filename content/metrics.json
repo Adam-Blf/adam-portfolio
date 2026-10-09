@@ -1,0 +1,43 @@
+{
+  "urban_sources": {
+    "value": 83,
+    "source": "urban-data-explorer",
+    "checkedOn": "2026-10-09"
+  },
+  "urban_tests": {
+    "value": 118,
+    "source": "urban-data-explorer",
+    "checkedOn": "2026-10-09"
+  },
+  "attacks_replayed": {
+    "value": 360,
+    "source": "vigie",
+    "checkedOn": "2026-10-09"
+  },
+  "atih_formats": {
+    "value": 23,
+    "source": "station-pmsi",
+    "checkedOn": "2026-10-09"
+  },
+  "station_tests": {
+    "value": 147,
+    "source": "station-pmsi",
+    "checkedOn": "2026-10-09"
+  },
+  "bde_students": {
+    "value": 700,
+    "source": "bde-isit",
+    "checkedOn": "2026-10-09",
+    "caveat": "declaratif, sans source publique tierce"
+  },
+  "crypto_commits": {
+    "value": 32,
+    "source": "crypto-market-monitor",
+    "checkedOn": "2026-10-09"
+  },
+  "maintenance_rows": {
+    "value": 24042,
+    "source": "maintenance-predictive",
+    "checkedOn": "2026-10-09"
+  }
+}

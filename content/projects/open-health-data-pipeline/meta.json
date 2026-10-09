@@ -1,0 +1,36 @@
+{
+  "slug": "open-health-data-pipeline",
+  "kind": "personal",
+  "status": "shipped",
+  "period": {
+    "start": null,
+    "end": null
+  },
+  "stack": [
+    "Python",
+    "pandas",
+    "pytest"
+  ],
+  "links": {
+    "repo": "https://github.com/Adam-Blf/open-health-data-pipeline",
+    "demo": null
+  },
+  "coAuthors": [],
+  "featured": false,
+  "order": 12,
+  "visibility": {
+    "publish": true,
+    "anonymized": false,
+    "approvals": {
+      "employer": null,
+      "client": null,
+      "coAuthors": []
+    },
+    "reviewedBy": null,
+    "reviewedOn": null
+  },
+  "provenance": {
+    "vaultId": "vault:9e7d798359",
+    "checkedOn": "2026-10-09"
+  }
+}

@@ -1,0 +1,22 @@
+---
+title: "404 Monkey"
+tagline: "Invoicing for freelancers, companies and non-profits."
+role: "Design and development, for BLF Lab's"
+summary: "Invoicing SaaS for freelancers, companies and non-profits, with live Stripe payments in production."
+results:
+  - { metric: null, text: "In production, with Stripe payments in live mode" }
+  - { metric: null, text: "Two profiles: company and non-profit" }
+  - { metric: null, text: "Free plan for non-profits, on proof of status" }
+limits:
+  - "A multi-member feature is in progress: it is not in production yet."
+status: published
+reviewedOn: null
+---
+
+## The problem
+
+Invoicing properly takes different rules depending on whether you are a freelancer, a company or a non-profit. The product offers one profile per status.
+
+## What I built
+
+A Next.js 16 application with React 19 and Tailwind 4. Supabase handles authentication, Postgres and row-level security (RLS), Stripe handles payments. Prices follow tiers based on the number of clients, and the voluntary contribution stays strictly opt-in.

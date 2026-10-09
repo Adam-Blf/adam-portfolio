@@ -1,0 +1,36 @@
+{
+  "slug": "nuit-efrei",
+  "kind": "client",
+  "status": "shipped",
+  "period": {
+    "start": null,
+    "end": "2026-05"
+  },
+  "stack": [
+    "Next.js",
+    "Tailwind CSS",
+    "framer-motion"
+  ],
+  "links": {
+    "repo": "https://github.com/Adam-Blf/la-nuit-de-l-efrei",
+    "demo": null
+  },
+  "coAuthors": [],
+  "featured": false,
+  "order": 11,
+  "visibility": {
+    "publish": true,
+    "anonymized": false,
+    "approvals": {
+      "employer": null,
+      "client": "2026-10-09",
+      "coAuthors": []
+    },
+    "reviewedBy": null,
+    "reviewedOn": null
+  },
+  "provenance": {
+    "vaultId": "vault:f5444311f9",
+    "checkedOn": "2026-10-09"
+  }
+}

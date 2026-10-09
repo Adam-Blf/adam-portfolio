@@ -1,0 +1,50 @@
+{
+  "slug": "urban-data-explorer",
+  "kind": "school",
+  "status": "shipped",
+  "period": {
+    "start": null,
+    "end": null
+  },
+  "stack": [
+    "Python",
+    "Polars",
+    "Shapely",
+    "Parquet",
+    "DuckDB",
+    "PostgreSQL",
+    "Kafka",
+    "FastAPI",
+    "React",
+    "MapLibre"
+  ],
+  "links": {
+    "repo": "https://github.com/Adam-Blf/urban-data-explorer",
+    "demo": null
+  },
+  "coAuthors": [
+    "emilien-morice"
+  ],
+  "featured": true,
+  "order": 2,
+  "visibility": {
+    "publish": true,
+    "anonymized": false,
+    "approvals": {
+      "employer": null,
+      "client": null,
+      "coAuthors": [
+        {
+          "id": "emilien-morice",
+          "approvedOn": "2026-10-09"
+        }
+      ]
+    },
+    "reviewedBy": null,
+    "reviewedOn": null
+  },
+  "provenance": {
+    "vaultId": "vault:d935c34c3c",
+    "checkedOn": "2026-10-09"
+  }
+}

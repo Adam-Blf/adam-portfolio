@@ -1,0 +1,19 @@
+---
+title: "Open health data pipeline"
+tagline: "Measuring re-identification risk before publishing."
+role: "Personal project"
+summary: "Ingestion, quality control and anonymisation of the FINESS register, with a re-identification risk engine."
+results:
+  - { metric: null, text: "k-anonymity, l-diversity, generalisation and suppression" }
+limits: []
+status: published
+reviewedOn: null
+---
+
+## The problem
+
+Publishing health data, even aggregated, means knowing whether a person or an institution can be found in it.
+
+## What I built
+
+A Python pipeline that ingests the FINESS register, checks data quality, then anonymises it. An engine measures re-identification risk with k-anonymity and l-diversity, and applies generalisation and suppression until the level is acceptable. Tests run with pytest.

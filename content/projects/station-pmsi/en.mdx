@@ -1,0 +1,23 @@
+---
+title: "PMSI Station"
+tagline: "Checking regulatory files without any data leaving the workstation."
+role: "Design and development, during my work-study contract"
+summary: "Desktop tool that checks and prepares regulatory PMSI files, 100% local, for a mental health institution."
+results:
+  - { metric: "atih_formats", text: "23 ATIH formats supported, across four fields of activity" }
+  - { metric: "station_tests", text: "147 automated tests" }
+  - { metric: null, text: "11 MB portable binary, no call to any external API" }
+limits:
+  - "Anonymised case study: no screenshot, no real data, no published code."
+  - "The figures describe the tool, not how it is used in the institution."
+status: published
+reviewedOn: null
+---
+
+## The problem
+
+In a mental health institution in the Paris region, the regulatory PMSI files come in heterogeneous formats, and a format error costs time to fix.
+
+## What I built
+
+A desktop application in Python: a tested business core, a pywebview interface, a FastAPI backend, an XGBoost module, identifier consistency checks and normalised exports. The starting requirement was simple: everything stays local, no external API. The formats cover the PSY, MCO, SSR and HAD fields.

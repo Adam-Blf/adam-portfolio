@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Carte OpenGraph</title>
+<style>
+@font-face{font-family:"Funnel Display";font-weight:300 800;src:url(../public/fonts/funnel-display-latin.woff2) format("woff2")}
+@font-face{font-family:"B612 Mono";font-weight:700;src:url(../public/fonts/b612mono-700-latin.woff2) format("woff2")}
+@font-face{font-family:"B612 Mono";font-weight:400;src:url(../public/fonts/b612mono-400-latin.woff2) format("woff2")}
+*{box-sizing:border-box}
+body{margin:0;width:1200px;height:630px;background:#0A0D0C;color:#E9EEE9;font-family:"Funnel Display",sans-serif;position:relative;overflow:hidden}
+.grid{position:absolute;inset:40px;border:1px solid rgba(233,238,233,.14);background:#121715;background-image:linear-gradient(rgba(233,238,233,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(233,238,233,.06) 1px,transparent 1px);background-size:44px 44px}
+.c{position:absolute;width:26px;height:26px;border:3px solid #FFB000}
+.tl{left:-1px;top:-1px;border-right:0;border-bottom:0}.br{right:-1px;bottom:-1px;border-left:0;border-top:0}
+.tag{position:absolute;left:90px;top:90px;font:400 22px "B612 Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:#93A099}
+.tag b{color:#FFB000;font-weight:700}
+h1{position:absolute;left:90px;top:150px;margin:0;font-size:132px;line-height:.98;font-weight:800;letter-spacing:-.03em}
+.role{position:absolute;left:90px;bottom:120px;font:700 34px "B612 Mono",monospace;color:#FFB000}
+.url{position:absolute;left:90px;bottom:80px;font:400 22px "B612 Mono",monospace;color:#93A099}
+svg{position:absolute;right:90px;bottom:90px;width:380px;height:140px}
+</style>
+</head>
+<body>
+<div class="grid"><i class="c tl"></i><i class="c br"></i></div>
+<div class="tag"><b>[01]</b> <span id="tag"></span></div>
+<h1>Adam<br>Beloucif</h1>
+<div class="role" id="role"></div>
+<div class="url">adam.beloucif.com</div>
+<svg viewBox="0 0 380 140" aria-hidden="true"><path id="p" fill="none" stroke="#FFB000" stroke-width="3"/></svg>
+<script>
+const L = { fr: ["Identité", "Data Engineer & IA"], en: ["Identity", "Data Engineer & AI"], es: ["Identidad", "Data Engineer e IA"] };
+const lang = new URLSearchParams(location.search).get("lang") || "fr";
+document.getElementById("tag").textContent = L[lang][0];
+document.getElementById("role").textContent = L[lang][1];
+let d = "";
+for (let x = 0; x <= 380; x += 4) {
+  const env = 0.35 + 0.65 * Math.sin(Math.PI * x / 380);
+  const y = 70 + env * 34 * Math.sin(x * 0.07) + env * 12 * Math.sin(x * 0.2);
+  d += (x ? "L" : "M") + x + " " + y.toFixed(1) + " ";
+}
+document.getElementById("p").setAttribute("d", d);
+</script>
+</body>
+</html>

@@ -9,45 +9,55 @@ concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: true
 
+permissions:
+  contents: read
+
 jobs:
-  guards:
-    name: Gardes de non-regression
+  verify:
+    name: Gardes, types, lint, tests, build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
           cache: npm
 
-      # Les gardes tournent AVANT l'installation : elles ne dependent d'aucun
-      # paquet, et un contenu mensonger doit faire echouer la CI meme si le
-      # build casse pour une autre raison.
-      - name: Contenu mensonger
-        run: node tools/check_no_fake_content.mjs
-
-      - name: Typographie
-        run: node tools/check_typography.mjs
-
-      - name: Coherence des routes, du sitemap et du robots
-        run: node tools/check_routes.mjs
-
-  build:
-    name: Typecheck et build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
+      - uses: denoland/setup-deno@v2
         with:
-          node-version: 22
-          cache: npm
+          deno-version: v2.x
 
       - run: npm ci
 
-      - name: Typecheck
-        run: npx tsc --noEmit
+      - name: Gardes de source (contenu, typographie, données personnelles, icônes, langues, schémas, routes, polices)
+        run: npm run guards
+
+      - name: Types
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Tests (gardes vues rouges, schémas, formulaire, contrastes, synchro)
+        run: npm test
+
+      - name: Contrôle du script Deno
+        run: deno check scripts/sync/main.ts
 
       - name: Build
         run: npm run build
+
+      - name: Gardes du build (aucun CDN, budgets de poids)
+        run: npm run guards:built
+
+  secrets:
+    name: Recherche de secrets
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

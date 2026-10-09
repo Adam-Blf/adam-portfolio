@@ -1,0 +1,21 @@
+---
+title: "Urban Data Explorer"
+tagline: "De la donnée ouverte brute à la carte interactive de Paris."
+role: "Conception de bout en bout, en binôme avec Emilien Morice"
+summary: "Plateforme de données de bout en bout : 83 sources ouvertes, pipeline médaillon, API sécurisée, indicateurs composites sur une carte."
+results:
+  - { metric: "urban_sources", text: "83 sources de données ouvertes, dont 30 via OpenStreetMap" }
+  - { metric: "urban_tests", text: "118 tests automatisés" }
+  - { metric: null, text: "4 indicateurs composites construits par fusion de jeux de données" }
+limits: []
+status: published
+reviewedOn: null
+---
+
+## Le problème
+
+Les données urbaines de Paris sont dispersées, dans des formats différents et de qualité inégale. Le projet les rassemble, les nettoie et les rend lisibles sur une carte. C'était le projet d'examen d'Architecture de données du Mastère.
+
+## Ce que j'ai construit
+
+Un pipeline en couches Bronze, Silver et Gold. Ingestion et transformation avec Python et Polars, géométries avec Shapely, stockage en Parquet partitionné, requêtes avec DuckDB puis PostgreSQL, flux Kafka, API FastAPI protégée par JWT, carte React avec MapLibre. Quatre familles de sources, 83 au total. La CI exécute ruff et pytest.

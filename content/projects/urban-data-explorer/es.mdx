@@ -1,0 +1,21 @@
+---
+title: "Urban Data Explorer"
+tagline: "De los datos abiertos en bruto al mapa interactivo de París."
+role: "Diseño de extremo a extremo, con Emilien Morice"
+summary: "Plataforma de datos de extremo a extremo: 83 fuentes abiertas, pipeline medallón, API protegida e indicadores compuestos en un mapa."
+results:
+  - { metric: "urban_sources", text: "83 fuentes de datos abiertos, 30 de ellas vía OpenStreetMap" }
+  - { metric: "urban_tests", text: "118 pruebas automatizadas" }
+  - { metric: null, text: "4 indicadores compuestos construidos fusionando conjuntos de datos" }
+limits: []
+status: published
+reviewedOn: null
+---
+
+## El problema
+
+Los datos urbanos de París están dispersos, en formatos distintos y con calidad desigual. El proyecto los reúne, los limpia y los hace legibles en un mapa. Fue el proyecto de examen de Arquitectura de datos del máster.
+
+## Lo que construí
+
+Un pipeline en capas Bronce, Plata y Oro. Ingesta y transformación con Python y Polars, geometrías con Shapely, almacenamiento en Parquet particionado, consultas con DuckDB y luego PostgreSQL, flujos Kafka, una API FastAPI protegida con JWT y un mapa React con MapLibre. Cuatro familias de fuentes, 83 en total. La CI ejecuta ruff y pytest.
