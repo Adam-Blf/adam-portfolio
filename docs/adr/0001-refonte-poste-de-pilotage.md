@@ -19,7 +19,7 @@ Réécrire le portfolio en place, en multi-pages, avec Next.js 16 en rendu stati
 | Pas de flux RSS | aucune note publiée au lancement |
 | Projet hospitalier publiable si anonymisé | décision d'Adam du 09/10/2026 : anonymisation sans lien de code ni nom d'établissement ; l'accord écrit reste à recueillir (voir le rapport) |
 | CV en Georgia, pas en Cambria | Cambria est fermée à un autre projet dans le registre des polices et n'est pas redistribuable ; Georgia donne le même registre serif |
-| `prefetch={false}` sur les liens légaux du pied de page | le préchargement par segments de Next 16 y renvoyait des 404 dans la console |
+| Liens internes en simples ancres, sans composant de navigation client | le site est statique : un composant de lien par ancre coûtait de l'hydratation et le préchargement ajoutait une vingtaine de requêtes ; la langue et la page courante sont repérées dans le navigateur par `useBrowserPath` |
 
 ## Conséquences
 
