@@ -123,7 +123,7 @@
       "heading": "Parlons données.",
       "text": "Une question sur un projet, une idée à tester, un échange sur la data à l'hôpital : écrivez-moi, je réponds par e-mail.",
       "offTitle": "Hors écran",
-      "offText": "Rugby, hockey, cours de danse bénévoles chaque week-end, et hard techno sous le nom de Belou."
+      "offText": "Rugby, hockey, cours de danse bénévoles chaque week-end, et musique numérique techno sous le nom de Belou."
     }
   },
   "about": {
@@ -179,7 +179,7 @@
           "text": "Deux sports qui me passionnent."
         },
         {
-          "title": "Hard techno",
+          "title": "Musique numérique techno",
           "text": "Sous le nom de Belou, entre 150 et 170 BPM."
         }
       ]
@@ -243,7 +243,7 @@
     "languagesLabel": "Langues",
     "languages": "français (langue maternelle), anglais et espagnol courants",
     "interestsLabel": "Centres d'intérêt",
-    "interests": "rugby, hockey, danse, hard techno",
+    "interests": "rugby, hockey, danse, musique numérique techno",
     "labelled": "{label} :",
     "engagement": [
       {

@@ -89,7 +89,7 @@
       "heading": "Hablemos de datos.",
       "text": "Una pregunta sobre un proyecto, una idea que probar, una conversación sobre datos en el hospital: escríbeme, respondo por correo.",
       "offTitle": "Fuera de la pantalla",
-      "offText": "Rugby, hockey, clases de baile voluntarias cada fin de semana y hard techno bajo el nombre de Belou."
+      "offText": "Rugby, hockey, clases de baile voluntarias cada fin de semana y música digital techno bajo el nombre de Belou."
     }
   },
   "about": {
@@ -128,7 +128,7 @@
       "heading": "Fuera de la pantalla",
       "items": [
         { "title": "Rugby y hockey", "text": "Dos deportes que me apasionan." },
-        { "title": "Hard techno", "text": "Bajo el nombre de Belou, entre 150 y 170 BPM." }
+        { "title": "Música digital techno", "text": "Bajo el nombre de Belou, entre 150 y 170 BPM." }
       ]
     },
     "ctaProjects": "Ver lo que han producido estas competencias"
@@ -180,7 +180,7 @@
     "languagesLabel": "Idiomas",
     "languages": "francés (lengua materna), inglés y español fluidos",
     "interestsLabel": "Intereses",
-    "interests": "rugby, hockey, baile, hard techno",
+    "interests": "rugby, hockey, baile, música digital techno",
     "labelled": "{label}:",
     "engagement": [{ "title": "Clases de baile voluntarias", "where": "", "when": "cada fin de semana", "sub": "" }]
   },
