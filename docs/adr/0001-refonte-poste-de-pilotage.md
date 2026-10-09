@@ -13,7 +13,7 @@ Réécrire le portfolio en place, en multi-pages, avec Next.js 16 en rendu stati
 | Pas de Tailwind | la maquette est en CSS pur sur des jetons ; Tailwind n'apportait que du poids et une seconde source de vérité pour les couleurs |
 | Pas de `@gsap/react` | GSAP est importé dynamiquement hors du chemin du LCP ; `gsap.context` et `matchMedia` nettoyés au démontage suffisent, sans paquet de plus |
 | Pas de couverture par projet | aucune image sourcée : les panneaux de données portent le projet, aucune illustration inventée |
-| Budget JS initial à 170 Ko gzip au lieu de 110 | le socle App Router (react-dom 70 Ko, routeur 45 Ko) dépasse déjà 110 Ko ; mesuré à 156 Ko, sous le plafond de 200 Ko de la demande |
+| Budget JS initial à 170 Ko gzip au lieu de 110 | le socle App Router (react-dom 70 Ko, routeur 45 Ko) dépasse déjà 110 Ko ; mesuré à 141 Ko, sous le plafond de 200 Ko de la demande |
 | Cas sabotés construits dans les tests, pas committés | un fichier sabordé dans le dépôt ferait échouer la garde qu'il sert à tester |
 | Image OpenGraph par langue, pas par page | un visuel de marque suffit ; titre et description sont propres à chaque page |
 | Pas de flux RSS | aucune note publiée au lancement |
