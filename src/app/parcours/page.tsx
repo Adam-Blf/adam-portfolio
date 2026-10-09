@@ -115,15 +115,7 @@ export default function ParcoursPage() {
             Reconnaissance & Diplômes
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-[#F5F3EF]/10 border border-[#F5F3EF]/15 rounded-2xl p-6 hover:bg-[#F5F3EF]/15 transition-all">
-              <span className="text-[10px] font-mono text-[#8E8E8E] uppercase tracking-widest">MICROSOFT AZURE</span>
-              <h3 className="text-lg font-bold uppercase mt-1 mb-2">AZ-900 & AI-900</h3>
-              <p className="text-xs text-[#8E8E8E] leading-relaxed">
-                Certifications Microsoft Azure Fundamentals & AI Fundamentals en préparation finale pour avril 2026.
-              </p>
-            </div>
-
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-[#F5F3EF]/10 border border-[#F5F3EF]/15 rounded-2xl p-6 hover:bg-[#F5F3EF]/15 transition-all">
               <span className="text-[10px] font-mono text-[#8E8E8E] uppercase tracking-widest">MARINE NATIONALE</span>
               <h3 className="text-lg font-bold uppercase mt-1 mb-2">PMM Kieffer (Mention AB)</h3>

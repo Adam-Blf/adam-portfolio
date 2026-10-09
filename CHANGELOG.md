@@ -4,6 +4,21 @@ Toutes les évolutions notables de ce projet sont documentées ici.
 Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/),
 versionnage [semver](https://semver.org/lang/fr/).
 
+## [2.1.1] - 2026-10-09
+
+Correctif de discrétion : retrait de ce qui expose l'éditeur sur le site public.
+
+### Removed
+
+- Mentions de disponibilité et de recherche (bandeau du hero, étiquette de contact, mot-clé des métadonnées).
+- Certifications Azure présentées comme en préparation (CV, parcours, compétences, chronologies).
+- Numéro de téléphone (contact, CV, mentions légales).
+- Noms de produits d'IA dans le texte visible, remplacés par des termes génériques.
+
+### Fixed
+
+- Date de début de BLF Lab's corrigée (août 2026, date d'immatriculation).
+
 ## [2.1.0] - 2026-08-08
 
 Lot 1 de la refonte v3 : vérité du contenu et conformité légale. Aucune phrase du

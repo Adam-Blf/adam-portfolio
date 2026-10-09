@@ -65,7 +65,7 @@ export default function Hero() {
         <div className="flex items-center gap-2 px-3 py-1 rounded-full border border-[#0A0A0A]/20 bg-[#F5F3EF]/60 backdrop-blur-xs">
           <Sparkles className="w-3.5 h-3.5 text-[#0A0A0A]" />
           <span className="text-[11px] font-bold tracking-[0.25em] uppercase text-[#0A0A0A]">
-            DISPONIBLE EN ALTERNANCE - SEPT. 2026
+            DATA ENGINEER & FULLSTACK DEVELOPER
           </span>
         </div>
         <div className="text-xs font-mono tracking-wider text-[#8E8E8E] uppercase">

@@ -2,7 +2,7 @@
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Printer, Mail, Phone, MapPin, Globe, Github, Linkedin, ExternalLink } from "lucide-react";
+import { Printer, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from "lucide-react";
 
 export default function CvPage() {
   const handlePrint = () => {
@@ -70,10 +70,6 @@ export default function CvPage() {
                 Le contact public est l'adresse academique.
               */}
               <div className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5" />
-                <span>+33 7 86 46 68 34</span>
-              </div>
-              <div className="flex items-center gap-2">
                 <MapPin className="w-3.5 h-3.5" />
                 <span>Paris / Chevilly-Larue (94)</span>
               </div>
@@ -128,7 +124,7 @@ export default function CvPage() {
                     EFREI Paris x Université Panthéon-Assas - 2025 - 2027
                   </span>
                   <p className="text-[#0A0A0A]/70 mt-1">
-                    Architectures Data Lake Médaillon (Spark, Kafka, Hive), RAG & LLMs. RNCP 40875.
+                    Architectures Data Lake Médaillon (Spark, Kafka, Hive), RAG & IA générative. RNCP 40875.
                   </p>
                 </div>
                 <div>
@@ -150,14 +146,6 @@ export default function CvPage() {
                 03 / CERTIFICATIONS & MILITAIRE
               </h2>
               <div className="space-y-4 text-xs">
-                <div>
-                  <span className="font-bold text-[#0A0A0A] block uppercase">
-                    Microsoft Azure AZ-900 & AI-900
-                  </span>
-                  <span className="font-mono text-[#8E8E8E] block">
-                    Certifications officielles en préparation (Avril 2026)
-                  </span>
-                </div>
                 <div>
                   <span className="font-bold text-[#0A0A0A] block uppercase">
                     Préparation Militaire Marine (PMM Kieffer)

@@ -43,7 +43,7 @@ export const timelineData: TimelineItem[] = [
     ],
   },
   {
-    period: "2025 - AUJOURD'HUI",
+    period: "AOÛT 2026 - AUJOURD\'HUI",
     role: "Fondateur",
     organization: "BLF Lab's",
     location: "Chevilly-Larue, à distance",
@@ -69,9 +69,8 @@ export const timelineData: TimelineItem[] = [
       "Formation en ingénierie de données massives, architectures décisionnelles distribuées et intelligence artificielle appliquée. Titre RNCP niveau 7 (40875).",
     deliverables: [
       "Conception d'une architecture Data Lake en médaillon (Apache Spark, Kafka, Hadoop)",
-      "Développement d'un assistant médical RAG avec embeddings vectoriels et LLM",
+      "Développement d'un assistant médical RAG avec embeddings vectoriels et IA générative",
       "Projets machine learning supervisé et prédiction de séries temporelles",
-      "Préparation des certifications Azure AZ-900 et AI-900 (avril 2026)",
     ],
     skills: ["PySpark", "Kafka", "Hadoop", "SQL", "Scikit-Learn", "RAG", "Azure"],
   },

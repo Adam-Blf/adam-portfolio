@@ -13,7 +13,6 @@ export const EDITOR = {
   name: "Adam Beloucif",
   role: "Editeur et directeur de la publication",
   email: "adam.beloucif@efrei.net",
-  phone: "+33 7 86 46 68 34",
   /**
    * Statut au 2026-08-08 : editeur NON professionnel, personne physique.
    * L'article 1-1 II de la LCEN ouvre dans ce cas un droit a l'anonymat vis a

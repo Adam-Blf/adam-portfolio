@@ -19,7 +19,6 @@ export const metadata: Metadata = {
     "404 Monkey",
     "EFREI",
     "Panthéon Assas",
-    "alternance Data Engineer",
     "Île-de-France",
   ],
   authors: [{ name: "Adam Beloucif", url: "https://adam.beloucif.com" }],

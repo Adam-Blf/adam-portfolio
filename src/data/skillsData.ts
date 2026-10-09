@@ -21,7 +21,7 @@ export const skillsData: SkillCategory[] = [
       { name: "Apache Kafka", level: "Avancé", description: "Streams temps réel, pub/sub, intégration pipelines Big Data", featured: true },
       { name: "SQL & Relational DB", level: "Expert", description: "PostgreSQL, Supabase, Oracle, PL/SQL, requêtes complexes", featured: true },
       { name: "NoSQL & Data Lakes", level: "Avancé", description: "Cassandra, MongoDB, Hive, Hadoop HDFS, BigQuery", featured: false },
-      { name: "Cloud & DevSecOps", level: "Avancé", description: "Vercel, Docker, GitHub Actions CI/CD, Azure (Prép AZ-900 / AI-900)", featured: false }
+      { name: "Cloud & DevSecOps", level: "Avancé", description: "Vercel, Docker, GitHub Actions CI/CD, Azure", featured: false }
     ]
   },
   {
@@ -54,7 +54,7 @@ export const skillsData: SkillCategory[] = [
     iconName: "Cpu",
     skills: [
       { name: "MediaPipe & OpenCV", level: "Expert", description: "Tracking 3D des mains, visage et pose pour interprétation de signes", featured: true },
-      { name: "RAG & LLM Integration", level: "Avancé", description: "Sentence-Transformers, vector DBs, pipelines RAG sans hallucination", featured: true },
+      { name: "RAG & IA générative", level: "Avancé", description: "Embeddings sémantiques, vector DBs, pipelines RAG sans hallucination", featured: true },
       { name: "Scikit-Learn & XGBoost", level: "Avancé", description: "Classification, régression, arbres de décision & scoring prédictif", featured: false },
       { name: "Deep Learning", level: "Intermédiaire", description: "Réseaux LSTM, RNN, PyTorch pour séries temporelles et audio", featured: false }
     ]

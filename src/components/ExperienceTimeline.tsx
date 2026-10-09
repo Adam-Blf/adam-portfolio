@@ -27,8 +27,8 @@ const timelineData: TimelineItem[] = [
     organization: "EFREI Paris x Université Paris-Panthéon-Assas",
     type: "EDUCATION",
     description:
-      "Formation d'excellence RNCP 40875. Architectures Médaillon, Data Lakes, Hadoop, Spark, Kafka, LLM Fine-Tuning, Agents Autonomes et Préparation Certifications Azure (AZ-900 / AI-900).",
-    tags: ["Data Lake", "Spark", "LLM Fine-Tuning", "BigQuery", "Azure"],
+      "Formation d'excellence RNCP 40875. Architectures Médaillon, Data Lakes, Hadoop, Spark, Kafka, fine-tuning de modèles de langage, Agents Autonomes et Cloud Azure.",
+    tags: ["Data Lake", "Spark", "Fine-Tuning NLP", "BigQuery", "Azure"],
   },
   {
     year: "2024 - 2025",
