@@ -1,0 +1,35 @@
+{
+  "slug": "ohypnozen",
+  "kind": "client",
+  "status": "live",
+  "period": {
+    "start": null,
+    "end": null
+  },
+  "stack": [
+    "Next.js",
+    "Tailwind CSS"
+  ],
+  "links": {
+    "repo": null,
+    "demo": "https://ohypnozen.com"
+  },
+  "coAuthors": [],
+  "featured": false,
+  "order": 10,
+  "visibility": {
+    "publish": true,
+    "anonymized": false,
+    "approvals": {
+      "employer": null,
+      "client": "2026-10-09",
+      "coAuthors": []
+    },
+    "reviewedBy": null,
+    "reviewedOn": null
+  },
+  "provenance": {
+    "vaultId": "vault:172cecddfd",
+    "checkedOn": "2026-10-09"
+  }
+}

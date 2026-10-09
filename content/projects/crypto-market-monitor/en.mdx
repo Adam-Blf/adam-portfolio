@@ -1,0 +1,21 @@
+---
+title: "Crypto Market Monitor"
+tagline: "An end-to-end real-time pipeline, in three days."
+role: "Master's project, with Emilien Morice"
+summary: "Real-time Kafka pipeline on six cryptocurrency pairs: VWAP, moving average, volume z-score, React dashboard."
+results:
+  - { metric: "crypto_commits", text: "32 commits in three days, from 24 to 26 June 2026" }
+  - { metric: null, text: "Six pairs, two exchanges, four Docker Compose services" }
+limits:
+  - "Three-day sprint: a real-time pipeline demonstration, not a trading system."
+status: published
+reviewedOn: null
+---
+
+## The problem
+
+Showing that market data can flow from the raw stream to the screen, with indicators computed on the fly.
+
+## What I built
+
+WebSocket ingestion from two exchanges, Kafka in KRaft mode 3.7, computation of the VWAP, the 20-period moving average (SMA-20) and the volume z-score in Node.js and TypeScript, a REST and Socket.IO API, a React 18 dashboard. Everything starts with Docker Compose, in four services.

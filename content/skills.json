@@ -1,0 +1,243 @@
+[
+  {
+    "family": "data",
+    "items": [
+      {
+        "name": "Python",
+        "proofs": [
+          "vigie",
+          "urban-data-explorer",
+          "crypto-market-monitor",
+          "station-pmsi"
+        ]
+      },
+      {
+        "name": "SQL",
+        "proofs": [
+          "urban-data-explorer",
+          "alternance"
+        ]
+      },
+      {
+        "name": "PL/SQL Oracle",
+        "proofs": [
+          "alternance"
+        ]
+      },
+      {
+        "name": "PHP",
+        "proofs": [
+          "alternance"
+        ]
+      },
+      {
+        "name": "Polars",
+        "proofs": [
+          "urban-data-explorer"
+        ]
+      },
+      {
+        "name": "DuckDB",
+        "proofs": [
+          "urban-data-explorer"
+        ]
+      },
+      {
+        "name": "PostgreSQL",
+        "proofs": [
+          "urban-data-explorer"
+        ]
+      },
+      {
+        "name": "Architecture médaillon",
+        "proofs": [
+          "urban-data-explorer",
+          "olist-data-lake"
+        ]
+      },
+      {
+        "name": "PySpark",
+        "proofs": [
+          "olist-data-lake"
+        ]
+      },
+      {
+        "name": "Kafka",
+        "proofs": [
+          "crypto-market-monitor",
+          "olist-data-lake"
+        ]
+      },
+      {
+        "name": "Hive",
+        "proofs": [
+          "olist-data-lake"
+        ]
+      }
+    ]
+  },
+  {
+    "family": "quality",
+    "items": [
+      {
+        "name": "k-anonymat",
+        "proofs": [
+          "open-health-data-pipeline"
+        ]
+      },
+      {
+        "name": "RGPD",
+        "proofs": [
+          "alternance",
+          "open-health-data-pipeline"
+        ]
+      }
+    ]
+  },
+  {
+    "family": "bi",
+    "items": [
+      {
+        "name": "Business Objects",
+        "proofs": [
+          "alternance"
+        ]
+      },
+      {
+        "name": "PMSI-Pilot",
+        "proofs": [
+          "alternance"
+        ]
+      },
+      {
+        "name": "BIQuery",
+        "proofs": [
+          "alternance"
+        ]
+      },
+      {
+        "name": "Formats ATIH",
+        "proofs": [
+          "station-pmsi"
+        ]
+      }
+    ]
+  },
+  {
+    "family": "ai",
+    "items": [
+      {
+        "name": "scikit-learn",
+        "proofs": [
+          "maintenance-predictive"
+        ]
+      },
+      {
+        "name": "XGBoost",
+        "proofs": [
+          "maintenance-predictive",
+          "station-pmsi"
+        ]
+      },
+      {
+        "name": "SHAP",
+        "proofs": [
+          "maintenance-predictive"
+        ]
+      },
+      {
+        "name": "RAG",
+        "proofs": [
+          "vigie"
+        ]
+      }
+    ]
+  },
+  {
+    "family": "mlops",
+    "items": [
+      {
+        "name": "MLflow",
+        "proofs": [
+          "vigie"
+        ]
+      },
+      {
+        "name": "ONNX",
+        "proofs": [
+          "vigie"
+        ]
+      },
+      {
+        "name": "Docker",
+        "proofs": [
+          "vigie",
+          "crypto-market-monitor"
+        ]
+      },
+      {
+        "name": "Kubernetes (k3s)",
+        "proofs": [
+          "vigie"
+        ]
+      },
+      {
+        "name": "GitHub Actions",
+        "proofs": [
+          "vigie",
+          "urban-data-explorer"
+        ]
+      }
+    ]
+  },
+  {
+    "family": "web",
+    "items": [
+      {
+        "name": "TypeScript",
+        "proofs": [
+          "crypto-market-monitor"
+        ]
+      },
+      {
+        "name": "React",
+        "proofs": [
+          "crypto-market-monitor",
+          "urban-data-explorer",
+          "404-monkey"
+        ]
+      },
+      {
+        "name": "Next.js",
+        "proofs": [
+          "404-monkey",
+          "ohypnozen",
+          "nuit-efrei",
+          "planning-equipes"
+        ]
+      },
+      {
+        "name": "Supabase",
+        "proofs": [
+          "404-monkey",
+          "planning-equipes"
+        ]
+      },
+      {
+        "name": "Stripe",
+        "proofs": [
+          "404-monkey"
+        ]
+      },
+      {
+        "name": "FastAPI",
+        "proofs": [
+          "vigie",
+          "urban-data-explorer",
+          "station-pmsi",
+          "maintenance-predictive"
+        ]
+      }
+    ]
+  }
+]

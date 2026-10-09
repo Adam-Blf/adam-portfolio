@@ -1,0 +1,46 @@
+{
+  "slug": "maintenance-predictive",
+  "kind": "school",
+  "status": "shipped",
+  "period": {
+    "start": "2026-04",
+    "end": "2026-04"
+  },
+  "stack": [
+    "Python",
+    "scikit-learn",
+    "XGBoost",
+    "SHAP",
+    "FastAPI",
+    "Streamlit"
+  ],
+  "links": {
+    "repo": "https://github.com/Adam-Blf/maintenance-predictive-industrielle",
+    "demo": null
+  },
+  "coAuthors": [
+    "emilien-morice"
+  ],
+  "featured": true,
+  "order": 4,
+  "visibility": {
+    "publish": true,
+    "anonymized": false,
+    "approvals": {
+      "employer": null,
+      "client": null,
+      "coAuthors": [
+        {
+          "id": "emilien-morice",
+          "approvedOn": "2026-10-09"
+        }
+      ]
+    },
+    "reviewedBy": null,
+    "reviewedOn": null
+  },
+  "provenance": {
+    "vaultId": "vault:3960a410ca",
+    "checkedOn": "2026-10-09"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "slug": "station-pmsi",
+  "kind": "hospital",
+  "status": "shipped",
+  "period": {
+    "start": null,
+    "end": null
+  },
+  "stack": [
+    "Python",
+    "FastAPI",
+    "pywebview",
+    "XGBoost"
+  ],
+  "links": {
+    "repo": null,
+    "demo": null
+  },
+  "coAuthors": [],
+  "featured": true,
+  "order": 3,
+  "visibility": {
+    "publish": true,
+    "anonymized": true,
+    "approvals": {
+      "employer": null,
+      "client": null,
+      "coAuthors": []
+    },
+    "reviewedBy": null,
+    "reviewedOn": null
+  },
+  "provenance": {
+    "vaultId": "vault:d2402cecae",
+    "checkedOn": "2026-10-09"
+  }
+}

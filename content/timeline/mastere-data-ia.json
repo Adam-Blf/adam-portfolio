@@ -1,0 +1,29 @@
+{
+  "id": "mastere-data-ia",
+  "kind": "education",
+  "tag": "EDU",
+  "start": "2025-09",
+  "end": "2027-07",
+  "precision": "year",
+  "org": "EFREI x Université Paris-Panthéon-Assas",
+  "featured": true,
+  "cv": true,
+  "i18n": {
+    "fr": {
+      "role": "Mastère Data Engineering & IA",
+      "summary": "EFREI x Université Paris-Panthéon-Assas, titre RNCP niveau 7. M1 validé, M2 en cours."
+    },
+    "en": {
+      "role": "Master's in Data Engineering & AI (Mastère)",
+      "summary": "EFREI x Université Paris-Panthéon-Assas, RNCP level 7 title. First year passed, second year in progress."
+    },
+    "es": {
+      "role": "Máster en Data Engineering & IA (Mastère)",
+      "summary": "EFREI x Université Paris-Panthéon-Assas, título RNCP nivel 7. Primer curso superado, segundo en curso."
+    }
+  },
+  "provenance": {
+    "vaultId": "vault:d71216555a",
+    "checkedOn": "2026-10-09"
+  }
+}

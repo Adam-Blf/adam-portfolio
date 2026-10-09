@@ -1,0 +1,22 @@
+---
+title: "Mantenimiento predictivo industrial"
+tagline: "Prever una avería con 24 horas de antelación."
+role: "Proyecto del máster, con Emilien Morice"
+summary: "Cuatro modelos comparados para prever una avería a 24 h, interpretabilidad SHAP, API FastAPI y panel Streamlit."
+results:
+  - { metric: null, text: "F1 de 0,886 y ROC-AUC de 0,995 con XGBoost" }
+  - { metric: "maintenance_rows", text: "24 042 filas, 15 variables, cerca de un 7 % de averías" }
+limits:
+  - "Medido en un proyecto de curso, no en una instalación en explotación."
+  - "Las averías son raras (cerca del 7 % de las filas): la exactitud sola no diría nada, de ahí el F1."
+status: published
+reviewedOn: null
+---
+
+## El problema
+
+Parar una máquina demasiado tarde sale caro, y pararla demasiado pronto también. El proyecto intenta prever una avería con 24 horas de antelación a partir de 15 variables medidas.
+
+## Lo que construí
+
+Cuatro modelos comparados: regresión logística, bosque aleatorio, XGBoost y perceptrón multicapa. La interpretabilidad pasa por SHAP. El mejor modelo se sirve con una API FastAPI y un panel Streamlit.

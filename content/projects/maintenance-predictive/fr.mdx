@@ -1,0 +1,22 @@
+---
+title: "Maintenance prédictive industrielle"
+tagline: "Prévoir une panne à 24 heures."
+role: "Projet du Mastère, en binôme avec Emilien Morice"
+summary: "Quatre modèles comparés pour prévoir une panne à 24 h, interprétabilité SHAP, API FastAPI et tableau de bord Streamlit."
+results:
+  - { metric: null, text: "F1 de 0,886 et ROC-AUC de 0,995 avec XGBoost" }
+  - { metric: "maintenance_rows", text: "24 042 lignes, 15 variables, environ 7 % de pannes" }
+limits:
+  - "Mesures obtenues sur un projet de cours, pas sur une installation en exploitation."
+  - "Les pannes sont rares (environ 7 % des lignes) : l'exactitude seule ne dirait rien, d'où le F1."
+status: published
+reviewedOn: null
+---
+
+## Le problème
+
+Arrêter une machine trop tard coûte cher, l'arrêter trop tôt aussi. Le projet cherche à prédire une panne à 24 heures à partir de 15 variables mesurées.
+
+## Ce que j'ai construit
+
+Quatre modèles comparés : régression logistique, forêt aléatoire, XGBoost et perceptron multicouche. L'interprétabilité passe par SHAP. Le meilleur modèle est servi par une API FastAPI et un tableau de bord Streamlit.

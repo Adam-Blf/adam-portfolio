@@ -1,0 +1,21 @@
+---
+title: "Urban Data Explorer"
+tagline: "From raw open data to an interactive map of Paris."
+role: "End-to-end design, with Emilien Morice"
+summary: "End-to-end data platform: 83 open sources, medallion pipeline, secured API, composite indicators on a map."
+results:
+  - { metric: "urban_sources", text: "83 open data sources, 30 of them through OpenStreetMap" }
+  - { metric: "urban_tests", text: "118 automated tests" }
+  - { metric: null, text: "4 composite indicators built by merging datasets" }
+limits: []
+status: published
+reviewedOn: null
+---
+
+## The problem
+
+Urban data for Paris is scattered, in different formats and of uneven quality. The project gathers it, cleans it and makes it readable on a map. It was the exam project of the Data Architecture course in the Master's.
+
+## What I built
+
+A pipeline in Bronze, Silver and Gold layers. Ingestion and transformation with Python and Polars, geometries with Shapely, partitioned Parquet storage, queries with DuckDB then PostgreSQL, Kafka streams, a FastAPI service protected by JWT, a React map with MapLibre. Four families of sources, 83 in total. CI runs ruff and pytest.

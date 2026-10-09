@@ -1,0 +1,29 @@
+{
+  "id": "blf-labs",
+  "kind": "work",
+  "tag": "WORK",
+  "start": "2026-08",
+  "end": null,
+  "precision": "month",
+  "org": "BLF Lab's",
+  "featured": false,
+  "cv": true,
+  "i18n": {
+    "fr": {
+      "role": "Fondateur, BLF Lab's",
+      "summary": "Studio de développement : sites, applications web et mobiles, outils data. Micro-entreprise immatriculée en août 2026."
+    },
+    "en": {
+      "role": "Founder, BLF Lab's",
+      "summary": "Development studio: websites, web and mobile apps, data tools. Sole proprietorship registered in August 2026."
+    },
+    "es": {
+      "role": "Fundador, BLF Lab's",
+      "summary": "Estudio de desarrollo: sitios web, aplicaciones web y móviles, herramientas de datos. Microempresa registrada en agosto de 2026."
+    }
+  },
+  "provenance": {
+    "vaultId": "vault:79b55009d3",
+    "checkedOn": "2026-10-09"
+  }
+}

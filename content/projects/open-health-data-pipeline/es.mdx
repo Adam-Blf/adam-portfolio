@@ -1,0 +1,19 @@
+---
+title: "Pipeline de datos abiertos de salud"
+tagline: "Medir el riesgo de reidentificación antes de publicar."
+role: "Proyecto personal"
+summary: "Ingesta, control de calidad y anonimización del registro FINESS, con un motor de riesgo de reidentificación."
+results:
+  - { metric: null, text: "k-anonimato, l-diversidad, generalización y supresión" }
+limits: []
+status: published
+reviewedOn: null
+---
+
+## El problema
+
+Publicar un dato de salud, aunque sea agregado, exige saber si se puede encontrar en él a una persona o a un centro.
+
+## Lo que construí
+
+Un pipeline en Python que ingiere el registro FINESS, controla la calidad de los datos y luego los anonimiza. Un motor mide el riesgo de reidentificación con k-anonimato y l-diversidad, y aplica generalización y supresión hasta un nivel aceptable. Las pruebas corren con pytest.

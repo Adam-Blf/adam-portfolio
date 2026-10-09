@@ -1,0 +1,21 @@
+---
+title: "Crypto Market Monitor"
+tagline: "Un pipeline temps réel de bout en bout, en trois jours."
+role: "Projet du Mastère, en binôme avec Emilien Morice"
+summary: "Pipeline Kafka temps réel sur six paires de cryptomonnaies : VWAP, moyenne mobile, z-score de volume, tableau de bord React."
+results:
+  - { metric: "crypto_commits", text: "32 commits en trois jours, du 24 au 26 juin 2026" }
+  - { metric: null, text: "Six paires, deux places de marché, quatre services Docker Compose" }
+limits:
+  - "Sprint de trois jours : une démonstration de pipeline temps réel, pas un système de trading."
+status: published
+reviewedOn: null
+---
+
+## Le problème
+
+Montrer qu'on sait faire circuler une donnée de marché du flux brut à l'écran, avec des indicateurs calculés au fil de l'eau.
+
+## Ce que j'ai construit
+
+Ingestion WebSocket de deux places de marché, Kafka en mode KRaft 3.7, calcul du VWAP, de la moyenne mobile sur 20 périodes (SMA-20) et du z-score de volume en Node.js et TypeScript, API REST et Socket.IO, tableau de bord React 18. L'ensemble démarre avec Docker Compose, en quatre services.

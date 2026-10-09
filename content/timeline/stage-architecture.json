@@ -1,0 +1,29 @@
+{
+  "id": "stage-architecture",
+  "kind": "work",
+  "tag": "WORK",
+  "start": "2024-05",
+  "end": "2024-07",
+  "precision": "month",
+  "org": "Agence d'architecture parisienne",
+  "featured": false,
+  "cv": false,
+  "i18n": {
+    "fr": {
+      "role": "Stagiaire communication, agence d'architecture parisienne",
+      "summary": "Stage de trois mois."
+    },
+    "en": {
+      "role": "Communication intern, Parisian architecture firm",
+      "summary": "Three-month internship."
+    },
+    "es": {
+      "role": "Prácticas de comunicación, estudio de arquitectura parisino",
+      "summary": "Prácticas de tres meses."
+    }
+  },
+  "provenance": {
+    "vaultId": "vault:50a645ec1f",
+    "checkedOn": "2026-10-09"
+  }
+}

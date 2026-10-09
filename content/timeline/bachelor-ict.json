@@ -1,0 +1,29 @@
+{
+  "id": "bachelor-ict",
+  "kind": "education",
+  "tag": "EDU",
+  "start": "2022",
+  "end": "2025",
+  "precision": "year",
+  "org": "EFREI x ISIT",
+  "featured": true,
+  "cv": true,
+  "i18n": {
+    "fr": {
+      "role": "Bachelor International Communication & Technology",
+      "summary": "EFREI x ISIT, double diplôme, échange universitaire à Málaga"
+    },
+    "en": {
+      "role": "Bachelor in International Communication & Technology",
+      "summary": "EFREI x ISIT, double degree, university exchange in Málaga"
+    },
+    "es": {
+      "role": "Bachelor en International Communication & Technology",
+      "summary": "EFREI x ISIT, doble titulación, intercambio universitario en Málaga"
+    }
+  },
+  "provenance": {
+    "vaultId": "vault:c28162b4cd",
+    "checkedOn": "2026-10-09"
+  }
+}

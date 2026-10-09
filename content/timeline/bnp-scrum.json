@@ -1,0 +1,29 @@
+{
+  "id": "bnp-scrum",
+  "kind": "work",
+  "tag": "WORK",
+  "start": "2023-05",
+  "end": "2023-07",
+  "precision": "month",
+  "org": "BNP Paribas",
+  "featured": false,
+  "cv": true,
+  "i18n": {
+    "fr": {
+      "role": "Assistant Scrum Master, BNP Paribas",
+      "summary": "Équipe de huit personnes."
+    },
+    "en": {
+      "role": "Assistant Scrum Master, BNP Paribas",
+      "summary": "Team of eight people."
+    },
+    "es": {
+      "role": "Asistente de Scrum Master, BNP Paribas",
+      "summary": "Equipo de ocho personas."
+    }
+  },
+  "provenance": {
+    "vaultId": "vault:6610d252d1",
+    "checkedOn": "2026-10-09"
+  }
+}

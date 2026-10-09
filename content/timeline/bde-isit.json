@@ -1,0 +1,29 @@
+{
+  "id": "bde-isit",
+  "kind": "leadership",
+  "tag": "LEAD",
+  "start": "2024-02",
+  "end": "2025-09",
+  "precision": "year",
+  "org": "BDE ISIT",
+  "featured": true,
+  "cv": true,
+  "i18n": {
+    "fr": {
+      "role": "Vice-Président du BDE ISIT, deux mandats",
+      "summary": "700 étudiants, 40 nationalités, 9 langues de travail"
+    },
+    "en": {
+      "role": "Vice-President of the ISIT student union, two terms",
+      "summary": "700 students, 40 nationalities, 9 working languages"
+    },
+    "es": {
+      "role": "Vicepresidente del BDE ISIT, dos mandatos",
+      "summary": "700 estudiantes, 40 nacionalidades, 9 lenguas de trabajo"
+    }
+  },
+  "provenance": {
+    "vaultId": "vault:c28162b4cd",
+    "checkedOn": "2026-10-09"
+  }
+}
